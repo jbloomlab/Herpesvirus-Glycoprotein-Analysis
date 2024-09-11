@@ -1,0 +1,49 @@
+# Description:
+# Main snakemake file that contains the rules, the output files, and 
+# configures the order of rule execution.
+
+# Author:
+# Caleb Carr
+
+# Imports
+import pandas as pd 
+import os
+from snakemake.utils import min_version
+min_version("7.25.4")
+
+# Initialize config file global variable
+configfile: "Configure/config.yml"
+
+
+# Rules included from Rules/ directory 
+include: "Rules/download_and_process_accessions.smk"
+include: "Rules/extract_ORFs.smk"
+include: "Rules/align_sequences.smk"
+include: "Rules/augur_processing.smk"
+
+GENES = [
+    "HSV1_gB",
+    "HSV1_gD",
+    "HSV1_gH",
+    "HSV1_gL",
+]
+
+# Output files
+rule all:
+    """ 
+    This rule controls all the output files expected from the workflow. 
+    """
+    input:
+        # Auspice
+        expand("auspice/Herpesvirus-Glycoprotein-Analysis_{gene}.json", gene=GENES)
+
+# Make DAG of rule execution
+rule make_DAG:
+    """
+    This rule produces a DAG graph of rule execution order.
+    """
+    shell:
+        """
+        mkdir -p Results/DAG/
+        snakemake --rulegraph | dot -Tpdf > Results/DAG/dag.pdf
+        """
