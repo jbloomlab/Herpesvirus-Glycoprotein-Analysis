@@ -6,9 +6,11 @@ Analysis performed by Caleb Carr.
 
 ## Nextstrain visualizations of the trees
 
-- HSV1 [https://nextstrain.org/community/jbloomlab/Herpesvirus-Glycoprotein-Analysis/HSV1/gB](https://nextstrain.org/community/jbloomlab/Herpesvirus-Glycoprotein-Analysis/HSV1/gB)
+- HSV1: [https://nextstrain.org/community/jbloomlab/Herpesvirus-Glycoprotein-Analysis/HSV1/gB](https://nextstrain.org/community/jbloomlab/Herpesvirus-Glycoprotein-Analysis/HSV1/gB)
+- EBV: [https://nextstrain.org/community/jbloomlab/Herpesvirus-Glycoprotein-Analysis/EBV/gB](https://nextstrain.org/community/jbloomlab/Herpesvirus-Glycoprotein-Analysis/EBV/gB)
 
 ## Organization of this repo
 
 - [`HSV1`](HSV1/): Contains the analysis workflow for HSV-1
+- [`EBV`](EBV/): Contains the analysis workflow for EBV
 - [`auspice`](auspice/): Contains the final nextstrain tree files for each herpesvirus that then can be viewed using [Nextstrain community share via GitHub](https://docs.nextstrain.org/en/latest/guides/share/community-builds.html). Note that these final files are manually copied from each individual herpesvirus directory.

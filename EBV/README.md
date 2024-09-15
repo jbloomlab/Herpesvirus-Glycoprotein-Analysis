@@ -1,16 +1,16 @@
-# Phylogeny analysis for HSV-1 glycoproteins
+# Phylogeny analysis for EBV glycoproteins
 
-This repo analyzes the current HSV-1 sequences that have been sequenced by running a [snakemake](https://snakemake.readthedocs.io/) pipeline that downloads sequences based a list of accessions, processes the sequences, and constructs a phylogenetic Nextstrain tree that can be viewed using [Auspice](https://auspice.us/).
+This repo analyzes the current EBV sequences that have been sequenced by running a [snakemake](https://snakemake.readthedocs.io/) pipeline that downloads sequences based a list of accessions, processes the sequences, and constructs a phylogenetic Nextstrain tree that can be viewed using [Auspice](https://auspice.us/).
 
 Analysis performed by Caleb Carr.
 
 ## Genbank accessions
 
-To download the accessions, go to [NCBI Virus](https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/) and click *Search by virus*. In the *Search by virus name or taxonomy* box, enter *Human alphaherpesvirus 1 (Herpes simplex virus type 1), taxid:10298* and hit enter. Then click the  *Download* option, select *Accession List* and *Nucleotide* options and hit *Next*. On the next page, select *Download All Records* and hit *Next*. On the next page, select *Accession with version* and click *Download*. Sequences are downloaded from the list of accessions because more information is extracted from the genbank file during the download process. The current accession list was downloaded on September 10th, 2024. 
+To download the accessions, go to [NCBI Virus](https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/) and click *Search by virus*. In the *Search by virus name or taxonomy* box, enter *Human gammaherpesvirus 4 (Epstein-Barr virus), taxid:10376* and hit enter. Then click the  *Download* option, select *Accession List* and *Nucleotide* options and hit *Next*. On the next page, select *Download All Records* and hit *Next*. On the next page, select *Accession with version* and click *Download*. Sequences are downloaded from the list of accessions because more information is extracted from the genbank file during the download process. The current accession list was downloaded on September 10th, 2024. 
 
 ## Outgroup for rooting tree
 
-The HSV-2 reference genome (*accession: NC_001798.2*) is used to root the tree but the sequence is removed from the tree and alignments.  
+The Callitrichine herpesvirus 3  reference genome (*accession: NC_004367.1*) is used to root the tree but the sequence is removed from the tree and alignments.  
 
 ## Snakemake pipeline
 
@@ -25,7 +25,7 @@ conda env create -f environment.yml
 Then activate the conda environment with:
 
 ```
-conda activate HSV1_nextstrain_analysis
+conda activate EBV_nextstrain_analysis
 ```
 
 and then run the pipeline on a computing cluster with [slurm](https://slurm.schedmd.com/documentation.html), which uses the configuration specified in [cluster.yml](cluster.yml):
