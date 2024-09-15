@@ -1,0 +1,239 @@
+Running snakemake...
+Assuming unrestricted shared filesystem usage.
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 16
+Rules claiming more threads will be scaled down.
+Job stats:
+job                                count
+-------------------------------  -------
+align_protein_sequences                4
+all                                    1
+ancestral_tree_sequences               4
+check_number_ORFs_found                4
+colors                                 4
+create_codon_alignment                 4
+create_new_references                  4
+download_and_process_accessions        4
+edit_codon_fasta_headers               4
+edit_protein_fasta_headers             4
+export_tree                            4
+get_codon_sequences                    4
+get_protein_sequences                  4
+refine_tree_sequences                  4
+root_and_remove_outgroup               4
+traits_tree_sequences                  4
+translate_tree_sequences               4
+tree_sequences                         4
+total                                 69
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:49:15 2024]
+localrule create_new_references:
+    input: Configure/Input_Data/EBV_reference_genome_NC_007605.gb
+    output: Results/EBV_gp42/EBV_gp42_reference.gb
+    log: Results/Logs/EBV_gp42/create_new_references.txt
+    jobid: 41
+    reason: Missing output files: Results/EBV_gp42/EBV_gp42_reference.gb
+    wildcards: gene=EBV_gp42
+    resources: tmpdir=/loc/scratch/61843231
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:49:19 2024]
+Finished job 41.
+1 of 69 steps (1%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:49:19 2024]
+localrule download_and_process_accessions:
+    input: Configure/Input_Data/all_EBV_accessions_091024.txt
+    output: Results/EBV_gp42/nucleotide.fasta, Results/EBV_gp42/metadata.tsv
+    log: Results/Logs/EBV_gp42/download_and_process_accessions.txt
+    jobid: 6
+    reason: Missing output files: Results/EBV_gp42/nucleotide.fasta, Results/EBV_gp42/metadata.tsv
+    wildcards: gene=EBV_gp42
+    resources: tmpdir=/loc/scratch/61843231
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 16:50:15 2024]
+Finished job 6.
+2 of 69 steps (3%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 16:50:15 2024]
+localrule colors:
+    input: Configure/Input_Data/color_schemes.tsv, Configure/Input_Data/color_orderings.tsv, Results/EBV_gp42/metadata.tsv
+    output: Results/EBV_gp42/Trees/colors.tsv
+    jobid: 42
+    reason: Missing output files: Results/EBV_gp42/Trees/colors.tsv; Input files updated by another job: Results/EBV_gp42/metadata.tsv
+    wildcards: gene=EBV_gp42
+    resources: tmpdir=/loc/scratch/61843231
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+No traits found for virus
+[Wed Sep 11 16:50:18 2024]
+Finished job 42.
+3 of 69 steps (4%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 16:50:18 2024]
+localrule get_codon_sequences:
+    input: Results/EBV_gp42/nucleotide.fasta
+    output: Results/EBV_gp42/ORF_sequences/codon_temp.fasta
+    log: Results/Logs/EBV_gp42/get_codon_sequences.txt
+    jobid: 8
+    reason: Missing output files: Results/EBV_gp42/ORF_sequences/codon_temp.fasta; Input files updated by another job: Results/EBV_gp42/nucleotide.fasta
+    wildcards: gene=EBV_gp42
+    resources: tmpdir=/loc/scratch/61843231
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 16:50:19 2024]
+Finished job 8.
+4 of 69 steps (6%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 16:50:19 2024]
+localrule get_protein_sequences:
+    input: Results/EBV_gp42/nucleotide.fasta
+    output: Results/EBV_gp42/ORF_sequences/protein_temp.fasta
+    log: Results/Logs/EBV_gp42/get_protein_sequences.txt
+    jobid: 7
+    reason: Missing output files: Results/EBV_gp42/ORF_sequences/protein_temp.fasta; Input files updated by another job: Results/EBV_gp42/nucleotide.fasta
+    wildcards: gene=EBV_gp42
+    resources: tmpdir=/loc/scratch/61843231
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 16:50:19 2024]
+Finished job 7.
+5 of 69 steps (7%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 16:50:19 2024]
+localrule edit_protein_fasta_headers:
+    input: Results/EBV_gp42/ORF_sequences/protein_temp.fasta
+    output: Results/EBV_gp42/ORF_sequences/protein.fasta
+    log: Results/Logs/EBV_gp42/edit_protein_fasta_headers.txt
+    jobid: 36
+    reason: Missing output files: Results/EBV_gp42/ORF_sequences/protein.fasta; Input files updated by another job: Results/EBV_gp42/ORF_sequences/protein_temp.fasta
+    wildcards: gene=EBV_gp42
+    resources: tmpdir=/loc/scratch/61843231
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 16:50:20 2024]
+Finished job 36.
+6 of 69 steps (9%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 16:50:20 2024]
+localrule check_number_ORFs_found:
+    input: Results/EBV_gp42/nucleotide.fasta, Results/EBV_gp42/ORF_sequences/protein_temp.fasta, Results/EBV_gp42/ORF_sequences/codon_temp.fasta
+    output: Results/EBV_gp42/ORF_sequences/ORF_extraction_verification.txt
+    jobid: 5
+    reason: Missing output files: Results/EBV_gp42/ORF_sequences/ORF_extraction_verification.txt; Input files updated by another job: Results/EBV_gp42/nucleotide.fasta, Results/EBV_gp42/ORF_sequences/protein_temp.fasta, Results/EBV_gp42/ORF_sequences/codon_temp.fasta
+    wildcards: gene=EBV_gp42
+    resources: tmpdir=/loc/scratch/61843231
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+Traceback (most recent call last):
+  File "/fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/EBV/.snakemake/scripts/tmp8y3t3agg.extracted_sequence_verification.py", line 119, in <module>
+    main()
+  File "/fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/EBV/.snakemake/scripts/tmp8y3t3agg.extracted_sequence_verification.py", line 110, in main
+    assert_num_orfs_match_sequences(
+  File "/fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/EBV/.snakemake/scripts/tmp8y3t3agg.extracted_sequence_verification.py", line 53, in assert_num_orfs_match_sequences
+    protein_name = protein_list[orf_index]
+                   ~~~~~~~~~~~~^^^^^^^^^^^
+IndexError: list index out of range
+RuleException:
+CalledProcessError in file /fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/EBV/Rules/extract_ORFs.smk, line 77:
+Command 'source /home/ccarr/miniconda3/bin/activate '/fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/EBV/.snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_'; set -euo pipefail;  python /fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/EBV/.snakemake/scripts/tmp8y3t3agg.extracted_sequence_verification.py' returned non-zero exit status 1.
+[Wed Sep 11 16:50:21 2024]
+Error in rule check_number_ORFs_found:
+    jobid: 5
+    input: Results/EBV_gp42/nucleotide.fasta, Results/EBV_gp42/ORF_sequences/protein_temp.fasta, Results/EBV_gp42/ORF_sequences/codon_temp.fasta
+    output: Results/EBV_gp42/ORF_sequences/ORF_extraction_verification.txt
+    conda-env: /fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/EBV/.snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+
+Trying to restart job 5.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 16:50:21 2024]
+localrule check_number_ORFs_found:
+    input: Results/EBV_gp42/nucleotide.fasta, Results/EBV_gp42/ORF_sequences/protein_temp.fasta, Results/EBV_gp42/ORF_sequences/codon_temp.fasta
+    output: Results/EBV_gp42/ORF_sequences/ORF_extraction_verification.txt
+    jobid: 5
+    reason: Missing output files: Results/EBV_gp42/ORF_sequences/ORF_extraction_verification.txt; Input files updated by another job: Results/EBV_gp42/nucleotide.fasta, Results/EBV_gp42/ORF_sequences/protein_temp.fasta, Results/EBV_gp42/ORF_sequences/codon_temp.fasta
+    wildcards: gene=EBV_gp42
+    resources: tmpdir=/loc/scratch/61843231
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+Traceback (most recent call last):
+  File "/fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/EBV/.snakemake/scripts/tmpr2pjbd1i.extracted_sequence_verification.py", line 119, in <module>
+    main()
+  File "/fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/EBV/.snakemake/scripts/tmpr2pjbd1i.extracted_sequence_verification.py", line 110, in main
+    assert_num_orfs_match_sequences(
+  File "/fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/EBV/.snakemake/scripts/tmpr2pjbd1i.extracted_sequence_verification.py", line 53, in assert_num_orfs_match_sequences
+    protein_name = protein_list[orf_index]
+                   ~~~~~~~~~~~~^^^^^^^^^^^
+IndexError: list index out of range
+RuleException:
+CalledProcessError in file /fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/EBV/Rules/extract_ORFs.smk, line 77:
+Command 'source /home/ccarr/miniconda3/bin/activate '/fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/EBV/.snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_'; set -euo pipefail;  python /fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/EBV/.snakemake/scripts/tmpr2pjbd1i.extracted_sequence_verification.py' returned non-zero exit status 1.
+[Wed Sep 11 16:50:22 2024]
+Error in rule check_number_ORFs_found:
+    jobid: 5
+    input: Results/EBV_gp42/nucleotide.fasta, Results/EBV_gp42/ORF_sequences/protein_temp.fasta, Results/EBV_gp42/ORF_sequences/codon_temp.fasta
+    output: Results/EBV_gp42/ORF_sequences/ORF_extraction_verification.txt
+    conda-env: /fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/EBV/.snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+
+Trying to restart job 5.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 16:50:22 2024]
+localrule check_number_ORFs_found:
+    input: Results/EBV_gp42/nucleotide.fasta, Results/EBV_gp42/ORF_sequences/protein_temp.fasta, Results/EBV_gp42/ORF_sequences/codon_temp.fasta
+    output: Results/EBV_gp42/ORF_sequences/ORF_extraction_verification.txt
+    jobid: 5
+    reason: Missing output files: Results/EBV_gp42/ORF_sequences/ORF_extraction_verification.txt; Input files updated by another job: Results/EBV_gp42/nucleotide.fasta, Results/EBV_gp42/ORF_sequences/protein_temp.fasta, Results/EBV_gp42/ORF_sequences/codon_temp.fasta
+    wildcards: gene=EBV_gp42
+    resources: tmpdir=/loc/scratch/61843231
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+Traceback (most recent call last):
+  File "/fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/EBV/.snakemake/scripts/tmpboa7ydni.extracted_sequence_verification.py", line 119, in <module>
+    main()
+  File "/fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/EBV/.snakemake/scripts/tmpboa7ydni.extracted_sequence_verification.py", line 110, in main
+    assert_num_orfs_match_sequences(
+  File "/fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/EBV/.snakemake/scripts/tmpboa7ydni.extracted_sequence_verification.py", line 53, in assert_num_orfs_match_sequences
+    protein_name = protein_list[orf_index]
+                   ~~~~~~~~~~~~^^^^^^^^^^^
+IndexError: list index out of range
+RuleException:
+CalledProcessError in file /fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/EBV/Rules/extract_ORFs.smk, line 77:
+Command 'source /home/ccarr/miniconda3/bin/activate '/fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/EBV/.snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_'; set -euo pipefail;  python /fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/EBV/.snakemake/scripts/tmpboa7ydni.extracted_sequence_verification.py' returned non-zero exit status 1.
+[Wed Sep 11 16:50:22 2024]
+Error in rule check_number_ORFs_found:
+    jobid: 5
+    input: Results/EBV_gp42/nucleotide.fasta, Results/EBV_gp42/ORF_sequences/protein_temp.fasta, Results/EBV_gp42/ORF_sequences/codon_temp.fasta
+    output: Results/EBV_gp42/ORF_sequences/ORF_extraction_verification.txt
+    conda-env: /fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/EBV/.snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-09-11T144910.734419.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

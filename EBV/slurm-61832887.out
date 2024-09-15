@@ -1,0 +1,1194 @@
+Running snakemake...
+Assuming unrestricted shared filesystem usage.
+Building DAG of jobs...
+Creating conda environment environment.yml...
+Downloading and installing remote packages.
+Environment for /fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/EBV/Rules/../environment.yml created (location: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_)
+Using shell: /bin/bash
+Provided cores: 16
+Rules claiming more threads will be scaled down.
+Job stats:
+job                                count
+-------------------------------  -------
+align_protein_sequences                4
+all                                    1
+ancestral_tree_sequences               4
+colors                                 4
+create_codon_alignment                 4
+create_new_references                  4
+download_and_process_accessions        4
+edit_codon_fasta_headers               4
+edit_protein_fasta_headers             4
+export_tree                            4
+get_codon_sequences                    4
+get_protein_sequences                  4
+refine_tree_sequences                  4
+root_and_remove_outgroup               4
+traits_tree_sequences                  4
+translate_tree_sequences               4
+tree_sequences                         4
+total                                 65
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:18:14 2024]
+localrule create_new_references:
+    input: Configure/Input_Data/EBV_reference_genome_NC_007605.gb
+    output: Results/EBV_gL/EBV_gL_reference.gb
+    log: Results/Logs/EBV_gL/create_new_references.txt
+    jobid: 63
+    reason: Missing output files: Results/EBV_gL/EBV_gL_reference.gb
+    wildcards: gene=EBV_gL
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:18:15 2024]
+Finished job 63.
+1 of 65 steps (2%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:18:15 2024]
+localrule create_new_references:
+    input: Configure/Input_Data/EBV_reference_genome_NC_007605.gb
+    output: Results/EBV_gB/EBV_gB_reference.gb
+    log: Results/Logs/EBV_gB/create_new_references.txt
+    jobid: 15
+    reason: Missing output files: Results/EBV_gB/EBV_gB_reference.gb
+    wildcards: gene=EBV_gB
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:18:16 2024]
+Finished job 15.
+2 of 65 steps (3%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:18:16 2024]
+localrule create_new_references:
+    input: Configure/Input_Data/EBV_reference_genome_NC_007605.gb
+    output: Results/EBV_gp42/EBV_gp42_reference.gb
+    log: Results/Logs/EBV_gp42/create_new_references.txt
+    jobid: 31
+    reason: Missing output files: Results/EBV_gp42/EBV_gp42_reference.gb
+    wildcards: gene=EBV_gp42
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:18:17 2024]
+Finished job 31.
+3 of 65 steps (5%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:18:17 2024]
+localrule download_and_process_accessions:
+    input: Configure/Input_Data/full_length_EBV_test.txt
+    output: Results/EBV_gp42/nucleotide.fasta, Results/EBV_gp42/metadata.tsv
+    log: Results/Logs/EBV_gp42/download_and_process_accessions.txt
+    jobid: 25
+    reason: Missing output files: Results/EBV_gp42/nucleotide.fasta, Results/EBV_gp42/metadata.tsv
+    wildcards: gene=EBV_gp42
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:19:10 2024]
+Finished job 25.
+4 of 65 steps (6%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:19:10 2024]
+localrule get_codon_sequences:
+    input: Results/EBV_gp42/nucleotide.fasta
+    output: Results/EBV_gp42/ORF_sequences/codon_temp.fasta
+    log: Results/Logs/EBV_gp42/get_codon_sequences.txt
+    jobid: 27
+    reason: Missing output files: Results/EBV_gp42/ORF_sequences/codon_temp.fasta; Input files updated by another job: Results/EBV_gp42/nucleotide.fasta
+    wildcards: gene=EBV_gp42
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:19:11 2024]
+Finished job 27.
+5 of 65 steps (8%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:19:11 2024]
+localrule edit_codon_fasta_headers:
+    input: Results/EBV_gp42/ORF_sequences/codon_temp.fasta
+    output: Results/EBV_gp42/ORF_sequences/codon.fasta
+    log: Results/Logs/EBV_gp42/edit_codon_fasta_headers.txt
+    jobid: 26
+    reason: Missing output files: Results/EBV_gp42/ORF_sequences/codon.fasta; Input files updated by another job: Results/EBV_gp42/ORF_sequences/codon_temp.fasta
+    wildcards: gene=EBV_gp42
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:19:12 2024]
+Finished job 26.
+6 of 65 steps (9%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:19:12 2024]
+localrule get_protein_sequences:
+    input: Results/EBV_gp42/nucleotide.fasta
+    output: Results/EBV_gp42/ORF_sequences/protein_temp.fasta
+    log: Results/Logs/EBV_gp42/get_protein_sequences.txt
+    jobid: 24
+    reason: Missing output files: Results/EBV_gp42/ORF_sequences/protein_temp.fasta; Input files updated by another job: Results/EBV_gp42/nucleotide.fasta
+    wildcards: gene=EBV_gp42
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:19:12 2024]
+Finished job 24.
+7 of 65 steps (11%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:19:12 2024]
+localrule colors:
+    input: Configure/Input_Data/color_schemes.tsv, Configure/Input_Data/color_orderings.tsv, Results/EBV_gp42/metadata.tsv
+    output: Results/EBV_gp42/Trees/colors.tsv
+    jobid: 32
+    reason: Missing output files: Results/EBV_gp42/Trees/colors.tsv; Input files updated by another job: Results/EBV_gp42/metadata.tsv
+    wildcards: gene=EBV_gp42
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+No traits found for virus
+[Wed Sep 11 14:19:13 2024]
+Finished job 32.
+8 of 65 steps (12%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:19:13 2024]
+localrule download_and_process_accessions:
+    input: Configure/Input_Data/full_length_EBV_test.txt
+    output: Results/EBV_gH/nucleotide.fasta, Results/EBV_gH/metadata.tsv
+    log: Results/Logs/EBV_gH/download_and_process_accessions.txt
+    jobid: 41
+    reason: Missing output files: Results/EBV_gH/metadata.tsv, Results/EBV_gH/nucleotide.fasta
+    wildcards: gene=EBV_gH
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:20:05 2024]
+Finished job 41.
+9 of 65 steps (14%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:20:05 2024]
+localrule get_codon_sequences:
+    input: Results/EBV_gH/nucleotide.fasta
+    output: Results/EBV_gH/ORF_sequences/codon_temp.fasta
+    log: Results/Logs/EBV_gH/get_codon_sequences.txt
+    jobid: 43
+    reason: Missing output files: Results/EBV_gH/ORF_sequences/codon_temp.fasta; Input files updated by another job: Results/EBV_gH/nucleotide.fasta
+    wildcards: gene=EBV_gH
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:20:05 2024]
+Finished job 43.
+10 of 65 steps (15%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:20:05 2024]
+localrule edit_codon_fasta_headers:
+    input: Results/EBV_gH/ORF_sequences/codon_temp.fasta
+    output: Results/EBV_gH/ORF_sequences/codon.fasta
+    log: Results/Logs/EBV_gH/edit_codon_fasta_headers.txt
+    jobid: 42
+    reason: Missing output files: Results/EBV_gH/ORF_sequences/codon.fasta; Input files updated by another job: Results/EBV_gH/ORF_sequences/codon_temp.fasta
+    wildcards: gene=EBV_gH
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:20:07 2024]
+Finished job 42.
+11 of 65 steps (17%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:20:07 2024]
+localrule get_protein_sequences:
+    input: Results/EBV_gH/nucleotide.fasta
+    output: Results/EBV_gH/ORF_sequences/protein_temp.fasta
+    log: Results/Logs/EBV_gH/get_protein_sequences.txt
+    jobid: 40
+    reason: Missing output files: Results/EBV_gH/ORF_sequences/protein_temp.fasta; Input files updated by another job: Results/EBV_gH/nucleotide.fasta
+    wildcards: gene=EBV_gH
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:20:07 2024]
+Finished job 40.
+12 of 65 steps (18%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:20:07 2024]
+localrule colors:
+    input: Configure/Input_Data/color_schemes.tsv, Configure/Input_Data/color_orderings.tsv, Results/EBV_gH/metadata.tsv
+    output: Results/EBV_gH/Trees/colors.tsv
+    jobid: 48
+    reason: Missing output files: Results/EBV_gH/Trees/colors.tsv; Input files updated by another job: Results/EBV_gH/metadata.tsv
+    wildcards: gene=EBV_gH
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+No traits found for virus
+[Wed Sep 11 14:20:08 2024]
+Finished job 48.
+13 of 65 steps (20%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:20:08 2024]
+localrule edit_protein_fasta_headers:
+    input: Results/EBV_gH/ORF_sequences/protein_temp.fasta
+    output: Results/EBV_gH/ORF_sequences/protein.fasta
+    log: Results/Logs/EBV_gH/edit_protein_fasta_headers.txt
+    jobid: 39
+    reason: Missing output files: Results/EBV_gH/ORF_sequences/protein.fasta; Input files updated by another job: Results/EBV_gH/ORF_sequences/protein_temp.fasta
+    wildcards: gene=EBV_gH
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:20:09 2024]
+Finished job 39.
+14 of 65 steps (22%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:20:09 2024]
+localrule align_protein_sequences:
+    input: Results/EBV_gH/ORF_sequences/protein.fasta
+    output: Results/EBV_gH/Alignments/protein.fasta
+    log: Results/Logs/EBV_gH/align_protein_sequences.txt
+    jobid: 38
+    reason: Missing output files: Results/EBV_gH/Alignments/protein.fasta; Input files updated by another job: Results/EBV_gH/ORF_sequences/protein.fasta
+    wildcards: gene=EBV_gH
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:20:10 2024]
+Finished job 38.
+15 of 65 steps (23%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:20:10 2024]
+localrule edit_protein_fasta_headers:
+    input: Results/EBV_gp42/ORF_sequences/protein_temp.fasta
+    output: Results/EBV_gp42/ORF_sequences/protein.fasta
+    log: Results/Logs/EBV_gp42/edit_protein_fasta_headers.txt
+    jobid: 23
+    reason: Missing output files: Results/EBV_gp42/ORF_sequences/protein.fasta; Input files updated by another job: Results/EBV_gp42/ORF_sequences/protein_temp.fasta
+    wildcards: gene=EBV_gp42
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:20:11 2024]
+Finished job 23.
+16 of 65 steps (25%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:20:11 2024]
+localrule align_protein_sequences:
+    input: Results/EBV_gp42/ORF_sequences/protein.fasta
+    output: Results/EBV_gp42/Alignments/protein.fasta
+    log: Results/Logs/EBV_gp42/align_protein_sequences.txt
+    jobid: 22
+    reason: Missing output files: Results/EBV_gp42/Alignments/protein.fasta; Input files updated by another job: Results/EBV_gp42/ORF_sequences/protein.fasta
+    wildcards: gene=EBV_gp42
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:20:11 2024]
+Finished job 22.
+17 of 65 steps (26%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:20:11 2024]
+localrule create_codon_alignment:
+    input: Results/EBV_gp42/Alignments/protein.fasta, Results/EBV_gp42/ORF_sequences/codon.fasta
+    output: Results/EBV_gp42/Alignments/codon.fasta
+    log: Results/Logs/EBV_gp42/create_codon_alignment.txt
+    jobid: 21
+    reason: Missing output files: Results/EBV_gp42/Alignments/codon.fasta; Input files updated by another job: Results/EBV_gp42/Alignments/protein.fasta, Results/EBV_gp42/ORF_sequences/codon.fasta
+    wildcards: gene=EBV_gp42
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:20:12 2024]
+Finished job 21.
+18 of 65 steps (28%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:20:12 2024]
+localrule tree_sequences:
+    input: Results/EBV_gp42/Alignments/codon.fasta
+    output: Results/EBV_gp42/Trees/tree_raw.nwk
+    log: Results/Logs/EBV_gp42/tree_sequences.txt
+    jobid: 20
+    reason: Missing output files: Results/EBV_gp42/Trees/tree_raw.nwk; Input files updated by another job: Results/EBV_gp42/Alignments/codon.fasta
+    wildcards: gene=EBV_gp42
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:20:17 2024]
+Finished job 20.
+19 of 65 steps (29%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:20:17 2024]
+localrule root_and_remove_outgroup:
+    input: Results/EBV_gp42/Trees/tree_raw.nwk, Results/EBV_gp42/Alignments/protein.fasta, Results/EBV_gp42/Alignments/codon.fasta
+    output: Results/EBV_gp42/Trees/tree_no_outgroup.nwk, Results/EBV_gp42/Alignments/protein_no_outgroup.fasta, Results/EBV_gp42/Alignments/codon_no_outgroup.fasta
+    log: Results/Logs/EBV_gp42/root_and_remove_outgroup.txt
+    jobid: 19
+    reason: Missing output files: Results/EBV_gp42/Alignments/codon_no_outgroup.fasta, Results/EBV_gp42/Trees/tree_no_outgroup.nwk; Input files updated by another job: Results/EBV_gp42/Alignments/protein.fasta, Results/EBV_gp42/Alignments/codon.fasta, Results/EBV_gp42/Trees/tree_raw.nwk
+    wildcards: gene=EBV_gp42
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:20:18 2024]
+Finished job 19.
+20 of 65 steps (31%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:20:18 2024]
+localrule refine_tree_sequences:
+    input: Results/EBV_gp42/Alignments/codon_no_outgroup.fasta, Results/EBV_gp42/Trees/tree_no_outgroup.nwk, Results/EBV_gp42/metadata.tsv
+    output: Results/EBV_gp42/Trees/tree.nwk, Results/EBV_gp42/Trees/tree_branch_lengths.json
+    log: Results/Logs/EBV_gp42/refine_tree_sequences.txt
+    jobid: 18
+    reason: Missing output files: Results/EBV_gp42/Trees/tree.nwk, Results/EBV_gp42/Trees/tree_branch_lengths.json; Input files updated by another job: Results/EBV_gp42/Alignments/codon_no_outgroup.fasta, Results/EBV_gp42/Trees/tree_no_outgroup.nwk, Results/EBV_gp42/metadata.tsv
+    wildcards: gene=EBV_gp42
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:20:20 2024]
+Finished job 18.
+21 of 65 steps (32%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:20:20 2024]
+localrule traits_tree_sequences:
+    input: Results/EBV_gp42/Trees/tree.nwk, Results/EBV_gp42/metadata.tsv
+    output: Results/EBV_gp42/Trees/tree_traits.json
+    log: Results/Logs/EBV_gp42/traits_tree_sequences.txt
+    jobid: 28
+    reason: Missing output files: Results/EBV_gp42/Trees/tree_traits.json; Input files updated by another job: Results/EBV_gp42/Trees/tree.nwk, Results/EBV_gp42/metadata.tsv
+    wildcards: gene=EBV_gp42
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:20:22 2024]
+Finished job 28.
+22 of 65 steps (34%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:20:22 2024]
+localrule ancestral_tree_sequences:
+    input: Results/EBV_gp42/Trees/tree.nwk, Results/EBV_gp42/Alignments/codon_no_outgroup.fasta
+    output: Results/EBV_gp42/Trees/tree_muts.json
+    log: Results/Logs/EBV_gp42/ancestral_tree_sequences.txt
+    jobid: 29
+    reason: Missing output files: Results/EBV_gp42/Trees/tree_muts.json; Input files updated by another job: Results/EBV_gp42/Trees/tree.nwk, Results/EBV_gp42/Alignments/codon_no_outgroup.fasta
+    wildcards: gene=EBV_gp42
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:20:24 2024]
+Finished job 29.
+23 of 65 steps (35%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:20:24 2024]
+localrule translate_tree_sequences:
+    input: Results/EBV_gp42/Trees/tree.nwk, Results/EBV_gp42/Trees/tree_muts.json, Results/EBV_gp42/EBV_gp42_reference.gb
+    output: Results/EBV_gp42/Trees/tree_aa_muts.json, Results/EBV_gp42/Augur_AA_Alignements/EBV_gp42.fasta
+    log: Results/Logs/EBV_gp42/translate_tree_sequences.txt
+    jobid: 30
+    reason: Missing output files: Results/EBV_gp42/Trees/tree_aa_muts.json; Input files updated by another job: Results/EBV_gp42/Trees/tree.nwk, Results/EBV_gp42/EBV_gp42_reference.gb, Results/EBV_gp42/Trees/tree_muts.json
+    wildcards: gene=EBV_gp42
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:20:26 2024]
+Finished job 30.
+24 of 65 steps (37%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:20:26 2024]
+localrule export_tree:
+    input: Results/EBV_gp42/Trees/tree.nwk, Results/EBV_gp42/metadata.tsv, Results/EBV_gp42/Trees/tree_branch_lengths.json, Results/EBV_gp42/Trees/tree_traits.json, Results/EBV_gp42/Trees/tree_muts.json, Results/EBV_gp42/Trees/tree_aa_muts.json, Configure/Input_Data/auspice_config.json, Results/EBV_gp42/Trees/colors.tsv, Configure/Input_Data/lat_longs.tsv
+    output: auspice/Herpesvirus-Glycoprotein-Analysis_EBV_gp42.json
+    jobid: 17
+    reason: Missing output files: auspice/Herpesvirus-Glycoprotein-Analysis_EBV_gp42.json; Input files updated by another job: Results/EBV_gp42/Trees/tree_traits.json, Results/EBV_gp42/Trees/tree_branch_lengths.json, Results/EBV_gp42/Trees/tree_aa_muts.json, Results/EBV_gp42/Trees/colors.tsv, Results/EBV_gp42/Trees/tree.nwk, Results/EBV_gp42/Trees/tree_muts.json, Results/EBV_gp42/metadata.tsv
+    wildcards: gene=EBV_gp42
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+WARNING: Requested color-by field 'phylogroup' does not exist and will not be used as a coloring or exported.
+
+Validating schema of 'Results/EBV_gp42/Trees/tree_muts.json'...
+Validating schema of 'Results/EBV_gp42/Trees/tree_aa_muts.json'...
+Validating config file Configure/Input_Data/auspice_config.json against the JSON schema
+Validating schema of 'Configure/Input_Data/auspice_config.json'...
+Validating produced JSON
+Validating schema of 'auspice/Herpesvirus-Glycoprotein-Analysis_EBV_gp42.json'...
+Validating that the JSON is internally consistent...
+Validation of 'auspice/Herpesvirus-Glycoprotein-Analysis_EBV_gp42.json' succeeded.
+
+[Wed Sep 11 14:20:27 2024]
+Finished job 17.
+25 of 65 steps (38%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:20:27 2024]
+localrule download_and_process_accessions:
+    input: Configure/Input_Data/full_length_EBV_test.txt
+    output: Results/EBV_gL/nucleotide.fasta, Results/EBV_gL/metadata.tsv
+    log: Results/Logs/EBV_gL/download_and_process_accessions.txt
+    jobid: 57
+    reason: Missing output files: Results/EBV_gL/nucleotide.fasta, Results/EBV_gL/metadata.tsv
+    wildcards: gene=EBV_gL
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:21:22 2024]
+Finished job 57.
+26 of 65 steps (40%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:21:22 2024]
+localrule get_codon_sequences:
+    input: Results/EBV_gL/nucleotide.fasta
+    output: Results/EBV_gL/ORF_sequences/codon_temp.fasta
+    log: Results/Logs/EBV_gL/get_codon_sequences.txt
+    jobid: 59
+    reason: Missing output files: Results/EBV_gL/ORF_sequences/codon_temp.fasta; Input files updated by another job: Results/EBV_gL/nucleotide.fasta
+    wildcards: gene=EBV_gL
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:21:22 2024]
+Finished job 59.
+27 of 65 steps (42%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:21:23 2024]
+localrule edit_codon_fasta_headers:
+    input: Results/EBV_gL/ORF_sequences/codon_temp.fasta
+    output: Results/EBV_gL/ORF_sequences/codon.fasta
+    log: Results/Logs/EBV_gL/edit_codon_fasta_headers.txt
+    jobid: 58
+    reason: Missing output files: Results/EBV_gL/ORF_sequences/codon.fasta; Input files updated by another job: Results/EBV_gL/ORF_sequences/codon_temp.fasta
+    wildcards: gene=EBV_gL
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:21:23 2024]
+Finished job 58.
+28 of 65 steps (43%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:21:23 2024]
+localrule get_protein_sequences:
+    input: Results/EBV_gL/nucleotide.fasta
+    output: Results/EBV_gL/ORF_sequences/protein_temp.fasta
+    log: Results/Logs/EBV_gL/get_protein_sequences.txt
+    jobid: 56
+    reason: Missing output files: Results/EBV_gL/ORF_sequences/protein_temp.fasta; Input files updated by another job: Results/EBV_gL/nucleotide.fasta
+    wildcards: gene=EBV_gL
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:21:24 2024]
+Finished job 56.
+29 of 65 steps (45%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:21:24 2024]
+localrule colors:
+    input: Configure/Input_Data/color_schemes.tsv, Configure/Input_Data/color_orderings.tsv, Results/EBV_gL/metadata.tsv
+    output: Results/EBV_gL/Trees/colors.tsv
+    jobid: 64
+    reason: Missing output files: Results/EBV_gL/Trees/colors.tsv; Input files updated by another job: Results/EBV_gL/metadata.tsv
+    wildcards: gene=EBV_gL
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+No traits found for virus
+[Wed Sep 11 14:21:25 2024]
+Finished job 64.
+30 of 65 steps (46%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:21:25 2024]
+localrule edit_protein_fasta_headers:
+    input: Results/EBV_gL/ORF_sequences/protein_temp.fasta
+    output: Results/EBV_gL/ORF_sequences/protein.fasta
+    log: Results/Logs/EBV_gL/edit_protein_fasta_headers.txt
+    jobid: 55
+    reason: Missing output files: Results/EBV_gL/ORF_sequences/protein.fasta; Input files updated by another job: Results/EBV_gL/ORF_sequences/protein_temp.fasta
+    wildcards: gene=EBV_gL
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:21:25 2024]
+Finished job 55.
+31 of 65 steps (48%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:21:25 2024]
+localrule download_and_process_accessions:
+    input: Configure/Input_Data/full_length_EBV_test.txt
+    output: Results/EBV_gB/nucleotide.fasta, Results/EBV_gB/metadata.tsv
+    log: Results/Logs/EBV_gB/download_and_process_accessions.txt
+    jobid: 9
+    reason: Missing output files: Results/EBV_gB/nucleotide.fasta, Results/EBV_gB/metadata.tsv
+    wildcards: gene=EBV_gB
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:22:19 2024]
+Finished job 9.
+32 of 65 steps (49%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:22:19 2024]
+localrule align_protein_sequences:
+    input: Results/EBV_gL/ORF_sequences/protein.fasta
+    output: Results/EBV_gL/Alignments/protein.fasta
+    log: Results/Logs/EBV_gL/align_protein_sequences.txt
+    jobid: 54
+    reason: Missing output files: Results/EBV_gL/Alignments/protein.fasta; Input files updated by another job: Results/EBV_gL/ORF_sequences/protein.fasta
+    wildcards: gene=EBV_gL
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:22:19 2024]
+Finished job 54.
+33 of 65 steps (51%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:22:19 2024]
+localrule get_codon_sequences:
+    input: Results/EBV_gB/nucleotide.fasta
+    output: Results/EBV_gB/ORF_sequences/codon_temp.fasta
+    log: Results/Logs/EBV_gB/get_codon_sequences.txt
+    jobid: 11
+    reason: Missing output files: Results/EBV_gB/ORF_sequences/codon_temp.fasta; Input files updated by another job: Results/EBV_gB/nucleotide.fasta
+    wildcards: gene=EBV_gB
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:22:20 2024]
+Finished job 11.
+34 of 65 steps (52%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:22:20 2024]
+localrule edit_codon_fasta_headers:
+    input: Results/EBV_gB/ORF_sequences/codon_temp.fasta
+    output: Results/EBV_gB/ORF_sequences/codon.fasta
+    log: Results/Logs/EBV_gB/edit_codon_fasta_headers.txt
+    jobid: 10
+    reason: Missing output files: Results/EBV_gB/ORF_sequences/codon.fasta; Input files updated by another job: Results/EBV_gB/ORF_sequences/codon_temp.fasta
+    wildcards: gene=EBV_gB
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:22:21 2024]
+Finished job 10.
+35 of 65 steps (54%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:22:21 2024]
+localrule get_protein_sequences:
+    input: Results/EBV_gB/nucleotide.fasta
+    output: Results/EBV_gB/ORF_sequences/protein_temp.fasta
+    log: Results/Logs/EBV_gB/get_protein_sequences.txt
+    jobid: 8
+    reason: Missing output files: Results/EBV_gB/ORF_sequences/protein_temp.fasta; Input files updated by another job: Results/EBV_gB/nucleotide.fasta
+    wildcards: gene=EBV_gB
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:22:21 2024]
+Finished job 8.
+36 of 65 steps (55%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:22:21 2024]
+localrule colors:
+    input: Configure/Input_Data/color_schemes.tsv, Configure/Input_Data/color_orderings.tsv, Results/EBV_gB/metadata.tsv
+    output: Results/EBV_gB/Trees/colors.tsv
+    jobid: 16
+    reason: Missing output files: Results/EBV_gB/Trees/colors.tsv; Input files updated by another job: Results/EBV_gB/metadata.tsv
+    wildcards: gene=EBV_gB
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+No traits found for virus
+[Wed Sep 11 14:22:22 2024]
+Finished job 16.
+37 of 65 steps (57%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:22:22 2024]
+localrule edit_protein_fasta_headers:
+    input: Results/EBV_gB/ORF_sequences/protein_temp.fasta
+    output: Results/EBV_gB/ORF_sequences/protein.fasta
+    log: Results/Logs/EBV_gB/edit_protein_fasta_headers.txt
+    jobid: 7
+    reason: Missing output files: Results/EBV_gB/ORF_sequences/protein.fasta; Input files updated by another job: Results/EBV_gB/ORF_sequences/protein_temp.fasta
+    wildcards: gene=EBV_gB
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:22:22 2024]
+Finished job 7.
+38 of 65 steps (58%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:22:23 2024]
+localrule create_codon_alignment:
+    input: Results/EBV_gH/Alignments/protein.fasta, Results/EBV_gH/ORF_sequences/codon.fasta
+    output: Results/EBV_gH/Alignments/codon.fasta
+    log: Results/Logs/EBV_gH/create_codon_alignment.txt
+    jobid: 37
+    reason: Missing output files: Results/EBV_gH/Alignments/codon.fasta; Input files updated by another job: Results/EBV_gH/Alignments/protein.fasta, Results/EBV_gH/ORF_sequences/codon.fasta
+    wildcards: gene=EBV_gH
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:22:23 2024]
+Finished job 37.
+39 of 65 steps (60%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:22:23 2024]
+localrule tree_sequences:
+    input: Results/EBV_gH/Alignments/codon.fasta
+    output: Results/EBV_gH/Trees/tree_raw.nwk
+    log: Results/Logs/EBV_gH/tree_sequences.txt
+    jobid: 36
+    reason: Missing output files: Results/EBV_gH/Trees/tree_raw.nwk; Input files updated by another job: Results/EBV_gH/Alignments/codon.fasta
+    wildcards: gene=EBV_gH
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:22:26 2024]
+Finished job 36.
+40 of 65 steps (62%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:22:27 2024]
+localrule root_and_remove_outgroup:
+    input: Results/EBV_gH/Trees/tree_raw.nwk, Results/EBV_gH/Alignments/protein.fasta, Results/EBV_gH/Alignments/codon.fasta
+    output: Results/EBV_gH/Trees/tree_no_outgroup.nwk, Results/EBV_gH/Alignments/protein_no_outgroup.fasta, Results/EBV_gH/Alignments/codon_no_outgroup.fasta
+    log: Results/Logs/EBV_gH/root_and_remove_outgroup.txt
+    jobid: 35
+    reason: Missing output files: Results/EBV_gH/Alignments/codon_no_outgroup.fasta, Results/EBV_gH/Trees/tree_no_outgroup.nwk; Input files updated by another job: Results/EBV_gH/Alignments/codon.fasta, Results/EBV_gH/Alignments/protein.fasta, Results/EBV_gH/Trees/tree_raw.nwk
+    wildcards: gene=EBV_gH
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:22:27 2024]
+Finished job 35.
+41 of 65 steps (63%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:22:27 2024]
+localrule align_protein_sequences:
+    input: Results/EBV_gB/ORF_sequences/protein.fasta
+    output: Results/EBV_gB/Alignments/protein.fasta
+    log: Results/Logs/EBV_gB/align_protein_sequences.txt
+    jobid: 6
+    reason: Missing output files: Results/EBV_gB/Alignments/protein.fasta; Input files updated by another job: Results/EBV_gB/ORF_sequences/protein.fasta
+    wildcards: gene=EBV_gB
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:22:29 2024]
+Finished job 6.
+42 of 65 steps (65%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:22:29 2024]
+localrule create_codon_alignment:
+    input: Results/EBV_gB/Alignments/protein.fasta, Results/EBV_gB/ORF_sequences/codon.fasta
+    output: Results/EBV_gB/Alignments/codon.fasta
+    log: Results/Logs/EBV_gB/create_codon_alignment.txt
+    jobid: 5
+    reason: Missing output files: Results/EBV_gB/Alignments/codon.fasta; Input files updated by another job: Results/EBV_gB/Alignments/protein.fasta, Results/EBV_gB/ORF_sequences/codon.fasta
+    wildcards: gene=EBV_gB
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:22:30 2024]
+Finished job 5.
+43 of 65 steps (66%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:22:30 2024]
+localrule refine_tree_sequences:
+    input: Results/EBV_gH/Alignments/codon_no_outgroup.fasta, Results/EBV_gH/Trees/tree_no_outgroup.nwk, Results/EBV_gH/metadata.tsv
+    output: Results/EBV_gH/Trees/tree.nwk, Results/EBV_gH/Trees/tree_branch_lengths.json
+    log: Results/Logs/EBV_gH/refine_tree_sequences.txt
+    jobid: 34
+    reason: Missing output files: Results/EBV_gH/Trees/tree.nwk, Results/EBV_gH/Trees/tree_branch_lengths.json; Input files updated by another job: Results/EBV_gH/Alignments/codon_no_outgroup.fasta, Results/EBV_gH/metadata.tsv, Results/EBV_gH/Trees/tree_no_outgroup.nwk
+    wildcards: gene=EBV_gH
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:22:32 2024]
+Finished job 34.
+44 of 65 steps (68%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:22:32 2024]
+localrule traits_tree_sequences:
+    input: Results/EBV_gH/Trees/tree.nwk, Results/EBV_gH/metadata.tsv
+    output: Results/EBV_gH/Trees/tree_traits.json
+    log: Results/Logs/EBV_gH/traits_tree_sequences.txt
+    jobid: 44
+    reason: Missing output files: Results/EBV_gH/Trees/tree_traits.json; Input files updated by another job: Results/EBV_gH/Trees/tree.nwk, Results/EBV_gH/metadata.tsv
+    wildcards: gene=EBV_gH
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:22:34 2024]
+Finished job 44.
+45 of 65 steps (69%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:22:34 2024]
+localrule ancestral_tree_sequences:
+    input: Results/EBV_gH/Trees/tree.nwk, Results/EBV_gH/Alignments/codon_no_outgroup.fasta
+    output: Results/EBV_gH/Trees/tree_muts.json
+    log: Results/Logs/EBV_gH/ancestral_tree_sequences.txt
+    jobid: 45
+    reason: Missing output files: Results/EBV_gH/Trees/tree_muts.json; Input files updated by another job: Results/EBV_gH/Trees/tree.nwk, Results/EBV_gH/Alignments/codon_no_outgroup.fasta
+    wildcards: gene=EBV_gH
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:22:35 2024]
+Finished job 45.
+46 of 65 steps (71%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:22:35 2024]
+localrule create_codon_alignment:
+    input: Results/EBV_gL/Alignments/protein.fasta, Results/EBV_gL/ORF_sequences/codon.fasta
+    output: Results/EBV_gL/Alignments/codon.fasta
+    log: Results/Logs/EBV_gL/create_codon_alignment.txt
+    jobid: 53
+    reason: Missing output files: Results/EBV_gL/Alignments/codon.fasta; Input files updated by another job: Results/EBV_gL/ORF_sequences/codon.fasta, Results/EBV_gL/Alignments/protein.fasta
+    wildcards: gene=EBV_gL
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:22:36 2024]
+Finished job 53.
+47 of 65 steps (72%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:22:36 2024]
+localrule tree_sequences:
+    input: Results/EBV_gL/Alignments/codon.fasta
+    output: Results/EBV_gL/Trees/tree_raw.nwk
+    log: Results/Logs/EBV_gL/tree_sequences.txt
+    jobid: 52
+    reason: Missing output files: Results/EBV_gL/Trees/tree_raw.nwk; Input files updated by another job: Results/EBV_gL/Alignments/codon.fasta
+    wildcards: gene=EBV_gL
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:22:39 2024]
+Finished job 52.
+48 of 65 steps (74%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:22:39 2024]
+localrule root_and_remove_outgroup:
+    input: Results/EBV_gL/Trees/tree_raw.nwk, Results/EBV_gL/Alignments/protein.fasta, Results/EBV_gL/Alignments/codon.fasta
+    output: Results/EBV_gL/Trees/tree_no_outgroup.nwk, Results/EBV_gL/Alignments/protein_no_outgroup.fasta, Results/EBV_gL/Alignments/codon_no_outgroup.fasta
+    log: Results/Logs/EBV_gL/root_and_remove_outgroup.txt
+    jobid: 51
+    reason: Missing output files: Results/EBV_gL/Trees/tree_no_outgroup.nwk, Results/EBV_gL/Alignments/codon_no_outgroup.fasta; Input files updated by another job: Results/EBV_gL/Trees/tree_raw.nwk, Results/EBV_gL/Alignments/protein.fasta, Results/EBV_gL/Alignments/codon.fasta
+    wildcards: gene=EBV_gL
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:22:40 2024]
+Finished job 51.
+49 of 65 steps (75%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:22:40 2024]
+localrule refine_tree_sequences:
+    input: Results/EBV_gL/Alignments/codon_no_outgroup.fasta, Results/EBV_gL/Trees/tree_no_outgroup.nwk, Results/EBV_gL/metadata.tsv
+    output: Results/EBV_gL/Trees/tree.nwk, Results/EBV_gL/Trees/tree_branch_lengths.json
+    log: Results/Logs/EBV_gL/refine_tree_sequences.txt
+    jobid: 50
+    reason: Missing output files: Results/EBV_gL/Trees/tree_branch_lengths.json, Results/EBV_gL/Trees/tree.nwk; Input files updated by another job: Results/EBV_gL/Trees/tree_no_outgroup.nwk, Results/EBV_gL/metadata.tsv, Results/EBV_gL/Alignments/codon_no_outgroup.fasta
+    wildcards: gene=EBV_gL
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:22:42 2024]
+Finished job 50.
+50 of 65 steps (77%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:22:42 2024]
+localrule ancestral_tree_sequences:
+    input: Results/EBV_gL/Trees/tree.nwk, Results/EBV_gL/Alignments/codon_no_outgroup.fasta
+    output: Results/EBV_gL/Trees/tree_muts.json
+    log: Results/Logs/EBV_gL/ancestral_tree_sequences.txt
+    jobid: 61
+    reason: Missing output files: Results/EBV_gL/Trees/tree_muts.json; Input files updated by another job: Results/EBV_gL/Trees/tree.nwk, Results/EBV_gL/Alignments/codon_no_outgroup.fasta
+    wildcards: gene=EBV_gL
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:22:43 2024]
+Finished job 61.
+51 of 65 steps (78%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:22:43 2024]
+localrule translate_tree_sequences:
+    input: Results/EBV_gL/Trees/tree.nwk, Results/EBV_gL/Trees/tree_muts.json, Results/EBV_gL/EBV_gL_reference.gb
+    output: Results/EBV_gL/Trees/tree_aa_muts.json, Results/EBV_gL/Augur_AA_Alignements/EBV_gL.fasta
+    log: Results/Logs/EBV_gL/translate_tree_sequences.txt
+    jobid: 62
+    reason: Missing output files: Results/EBV_gL/Trees/tree_aa_muts.json; Input files updated by another job: Results/EBV_gL/EBV_gL_reference.gb, Results/EBV_gL/Trees/tree.nwk, Results/EBV_gL/Trees/tree_muts.json
+    wildcards: gene=EBV_gL
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:22:45 2024]
+Finished job 62.
+52 of 65 steps (80%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:22:45 2024]
+localrule traits_tree_sequences:
+    input: Results/EBV_gL/Trees/tree.nwk, Results/EBV_gL/metadata.tsv
+    output: Results/EBV_gL/Trees/tree_traits.json
+    log: Results/Logs/EBV_gL/traits_tree_sequences.txt
+    jobid: 60
+    reason: Missing output files: Results/EBV_gL/Trees/tree_traits.json; Input files updated by another job: Results/EBV_gL/Trees/tree.nwk, Results/EBV_gL/metadata.tsv
+    wildcards: gene=EBV_gL
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:22:47 2024]
+Finished job 60.
+53 of 65 steps (82%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:22:47 2024]
+localrule export_tree:
+    input: Results/EBV_gL/Trees/tree.nwk, Results/EBV_gL/metadata.tsv, Results/EBV_gL/Trees/tree_branch_lengths.json, Results/EBV_gL/Trees/tree_traits.json, Results/EBV_gL/Trees/tree_muts.json, Results/EBV_gL/Trees/tree_aa_muts.json, Configure/Input_Data/auspice_config.json, Results/EBV_gL/Trees/colors.tsv, Configure/Input_Data/lat_longs.tsv
+    output: auspice/Herpesvirus-Glycoprotein-Analysis_EBV_gL.json
+    jobid: 49
+    reason: Missing output files: auspice/Herpesvirus-Glycoprotein-Analysis_EBV_gL.json; Input files updated by another job: Results/EBV_gL/Trees/tree_branch_lengths.json, Results/EBV_gL/Trees/tree_aa_muts.json, Results/EBV_gL/Trees/tree_traits.json, Results/EBV_gL/Trees/tree_muts.json, Results/EBV_gL/Trees/colors.tsv, Results/EBV_gL/Trees/tree.nwk, Results/EBV_gL/metadata.tsv
+    wildcards: gene=EBV_gL
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+WARNING: Requested color-by field 'phylogroup' does not exist and will not be used as a coloring or exported.
+
+Validating schema of 'Results/EBV_gL/Trees/tree_muts.json'...
+Validating schema of 'Results/EBV_gL/Trees/tree_aa_muts.json'...
+Validating config file Configure/Input_Data/auspice_config.json against the JSON schema
+Validating schema of 'Configure/Input_Data/auspice_config.json'...
+Validating produced JSON
+Validating schema of 'auspice/Herpesvirus-Glycoprotein-Analysis_EBV_gL.json'...
+Validating that the JSON is internally consistent...
+Validation of 'auspice/Herpesvirus-Glycoprotein-Analysis_EBV_gL.json' succeeded.
+
+[Wed Sep 11 14:22:49 2024]
+Finished job 49.
+54 of 65 steps (83%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:22:49 2024]
+localrule create_new_references:
+    input: Configure/Input_Data/EBV_reference_genome_NC_007605.gb
+    output: Results/EBV_gH/EBV_gH_reference.gb
+    log: Results/Logs/EBV_gH/create_new_references.txt
+    jobid: 47
+    reason: Missing output files: Results/EBV_gH/EBV_gH_reference.gb
+    wildcards: gene=EBV_gH
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:22:49 2024]
+Finished job 47.
+55 of 65 steps (85%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:22:49 2024]
+localrule tree_sequences:
+    input: Results/EBV_gB/Alignments/codon.fasta
+    output: Results/EBV_gB/Trees/tree_raw.nwk
+    log: Results/Logs/EBV_gB/tree_sequences.txt
+    jobid: 4
+    reason: Missing output files: Results/EBV_gB/Trees/tree_raw.nwk; Input files updated by another job: Results/EBV_gB/Alignments/codon.fasta
+    wildcards: gene=EBV_gB
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:22:52 2024]
+Finished job 4.
+56 of 65 steps (86%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:22:52 2024]
+localrule root_and_remove_outgroup:
+    input: Results/EBV_gB/Trees/tree_raw.nwk, Results/EBV_gB/Alignments/protein.fasta, Results/EBV_gB/Alignments/codon.fasta
+    output: Results/EBV_gB/Trees/tree_no_outgroup.nwk, Results/EBV_gB/Alignments/protein_no_outgroup.fasta, Results/EBV_gB/Alignments/codon_no_outgroup.fasta
+    log: Results/Logs/EBV_gB/root_and_remove_outgroup.txt
+    jobid: 3
+    reason: Missing output files: Results/EBV_gB/Trees/tree_no_outgroup.nwk, Results/EBV_gB/Alignments/codon_no_outgroup.fasta; Input files updated by another job: Results/EBV_gB/Alignments/codon.fasta, Results/EBV_gB/Alignments/protein.fasta, Results/EBV_gB/Trees/tree_raw.nwk
+    wildcards: gene=EBV_gB
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:22:53 2024]
+Finished job 3.
+57 of 65 steps (88%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:22:53 2024]
+localrule refine_tree_sequences:
+    input: Results/EBV_gB/Alignments/codon_no_outgroup.fasta, Results/EBV_gB/Trees/tree_no_outgroup.nwk, Results/EBV_gB/metadata.tsv
+    output: Results/EBV_gB/Trees/tree.nwk, Results/EBV_gB/Trees/tree_branch_lengths.json
+    log: Results/Logs/EBV_gB/refine_tree_sequences.txt
+    jobid: 2
+    reason: Missing output files: Results/EBV_gB/Trees/tree.nwk, Results/EBV_gB/Trees/tree_branch_lengths.json; Input files updated by another job: Results/EBV_gB/metadata.tsv, Results/EBV_gB/Trees/tree_no_outgroup.nwk, Results/EBV_gB/Alignments/codon_no_outgroup.fasta
+    wildcards: gene=EBV_gB
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:22:55 2024]
+Finished job 2.
+58 of 65 steps (89%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:22:55 2024]
+localrule translate_tree_sequences:
+    input: Results/EBV_gH/Trees/tree.nwk, Results/EBV_gH/Trees/tree_muts.json, Results/EBV_gH/EBV_gH_reference.gb
+    output: Results/EBV_gH/Trees/tree_aa_muts.json, Results/EBV_gH/Augur_AA_Alignements/EBV_gH.fasta
+    log: Results/Logs/EBV_gH/translate_tree_sequences.txt
+    jobid: 46
+    reason: Missing output files: Results/EBV_gH/Trees/tree_aa_muts.json; Input files updated by another job: Results/EBV_gH/Trees/tree.nwk, Results/EBV_gH/EBV_gH_reference.gb, Results/EBV_gH/Trees/tree_muts.json
+    wildcards: gene=EBV_gH
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:22:56 2024]
+Finished job 46.
+59 of 65 steps (91%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:22:56 2024]
+localrule traits_tree_sequences:
+    input: Results/EBV_gB/Trees/tree.nwk, Results/EBV_gB/metadata.tsv
+    output: Results/EBV_gB/Trees/tree_traits.json
+    log: Results/Logs/EBV_gB/traits_tree_sequences.txt
+    jobid: 12
+    reason: Missing output files: Results/EBV_gB/Trees/tree_traits.json; Input files updated by another job: Results/EBV_gB/Trees/tree.nwk, Results/EBV_gB/metadata.tsv
+    wildcards: gene=EBV_gB
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:22:58 2024]
+Finished job 12.
+60 of 65 steps (92%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:22:58 2024]
+localrule ancestral_tree_sequences:
+    input: Results/EBV_gB/Trees/tree.nwk, Results/EBV_gB/Alignments/codon_no_outgroup.fasta
+    output: Results/EBV_gB/Trees/tree_muts.json
+    log: Results/Logs/EBV_gB/ancestral_tree_sequences.txt
+    jobid: 13
+    reason: Missing output files: Results/EBV_gB/Trees/tree_muts.json; Input files updated by another job: Results/EBV_gB/Trees/tree.nwk, Results/EBV_gB/Alignments/codon_no_outgroup.fasta
+    wildcards: gene=EBV_gB
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:23:00 2024]
+Finished job 13.
+61 of 65 steps (94%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:23:00 2024]
+localrule translate_tree_sequences:
+    input: Results/EBV_gB/Trees/tree.nwk, Results/EBV_gB/Trees/tree_muts.json, Results/EBV_gB/EBV_gB_reference.gb
+    output: Results/EBV_gB/Trees/tree_aa_muts.json, Results/EBV_gB/Augur_AA_Alignements/EBV_gB.fasta
+    log: Results/Logs/EBV_gB/translate_tree_sequences.txt
+    jobid: 14
+    reason: Missing output files: Results/EBV_gB/Trees/tree_aa_muts.json; Input files updated by another job: Results/EBV_gB/EBV_gB_reference.gb, Results/EBV_gB/Trees/tree.nwk, Results/EBV_gB/Trees/tree_muts.json
+    wildcards: gene=EBV_gB
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+[Wed Sep 11 14:23:02 2024]
+Finished job 14.
+62 of 65 steps (95%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:23:02 2024]
+localrule export_tree:
+    input: Results/EBV_gB/Trees/tree.nwk, Results/EBV_gB/metadata.tsv, Results/EBV_gB/Trees/tree_branch_lengths.json, Results/EBV_gB/Trees/tree_traits.json, Results/EBV_gB/Trees/tree_muts.json, Results/EBV_gB/Trees/tree_aa_muts.json, Configure/Input_Data/auspice_config.json, Results/EBV_gB/Trees/colors.tsv, Configure/Input_Data/lat_longs.tsv
+    output: auspice/Herpesvirus-Glycoprotein-Analysis_EBV_gB.json
+    jobid: 1
+    reason: Missing output files: auspice/Herpesvirus-Glycoprotein-Analysis_EBV_gB.json; Input files updated by another job: Results/EBV_gB/Trees/tree_traits.json, Results/EBV_gB/metadata.tsv, Results/EBV_gB/Trees/tree_aa_muts.json, Results/EBV_gB/Trees/tree_branch_lengths.json, Results/EBV_gB/Trees/colors.tsv, Results/EBV_gB/Trees/tree.nwk, Results/EBV_gB/Trees/tree_muts.json
+    wildcards: gene=EBV_gB
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+WARNING: Requested color-by field 'phylogroup' does not exist and will not be used as a coloring or exported.
+
+Validating schema of 'Results/EBV_gB/Trees/tree_muts.json'...
+Validating schema of 'Results/EBV_gB/Trees/tree_aa_muts.json'...
+Validating config file Configure/Input_Data/auspice_config.json against the JSON schema
+Validating schema of 'Configure/Input_Data/auspice_config.json'...
+Validating produced JSON
+Validating schema of 'auspice/Herpesvirus-Glycoprotein-Analysis_EBV_gB.json'...
+Validating that the JSON is internally consistent...
+Validation of 'auspice/Herpesvirus-Glycoprotein-Analysis_EBV_gB.json' succeeded.
+
+[Wed Sep 11 14:23:04 2024]
+Finished job 1.
+63 of 65 steps (97%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:23:04 2024]
+localrule export_tree:
+    input: Results/EBV_gH/Trees/tree.nwk, Results/EBV_gH/metadata.tsv, Results/EBV_gH/Trees/tree_branch_lengths.json, Results/EBV_gH/Trees/tree_traits.json, Results/EBV_gH/Trees/tree_muts.json, Results/EBV_gH/Trees/tree_aa_muts.json, Configure/Input_Data/auspice_config.json, Results/EBV_gH/Trees/colors.tsv, Configure/Input_Data/lat_longs.tsv
+    output: auspice/Herpesvirus-Glycoprotein-Analysis_EBV_gH.json
+    jobid: 33
+    reason: Missing output files: auspice/Herpesvirus-Glycoprotein-Analysis_EBV_gH.json; Input files updated by another job: Results/EBV_gH/Trees/tree.nwk, Results/EBV_gH/Trees/tree_muts.json, Results/EBV_gH/Trees/colors.tsv, Results/EBV_gH/Trees/tree_traits.json, Results/EBV_gH/Trees/tree_branch_lengths.json, Results/EBV_gH/metadata.tsv, Results/EBV_gH/Trees/tree_aa_muts.json
+    wildcards: gene=EBV_gH
+    resources: tmpdir=/loc/scratch/61832887
+
+Activating conda environment: .snakemake/conda/5e304da8a87c07a4a5292d86628e6ffc_
+WARNING: Requested color-by field 'phylogroup' does not exist and will not be used as a coloring or exported.
+
+Validating schema of 'Results/EBV_gH/Trees/tree_muts.json'...
+Validating schema of 'Results/EBV_gH/Trees/tree_aa_muts.json'...
+Validating config file Configure/Input_Data/auspice_config.json against the JSON schema
+Validating schema of 'Configure/Input_Data/auspice_config.json'...
+Validating produced JSON
+Validating schema of 'auspice/Herpesvirus-Glycoprotein-Analysis_EBV_gH.json'...
+Validating that the JSON is internally consistent...
+Validation of 'auspice/Herpesvirus-Glycoprotein-Analysis_EBV_gH.json' succeeded.
+
+[Wed Sep 11 14:23:05 2024]
+Finished job 33.
+64 of 65 steps (98%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep 11 14:23:05 2024]
+localrule all:
+    input: auspice/Herpesvirus-Glycoprotein-Analysis_EBV_gB.json, auspice/Herpesvirus-Glycoprotein-Analysis_EBV_gp42.json, auspice/Herpesvirus-Glycoprotein-Analysis_EBV_gH.json, auspice/Herpesvirus-Glycoprotein-Analysis_EBV_gL.json
+    jobid: 0
+    reason: Input files updated by another job: auspice/Herpesvirus-Glycoprotein-Analysis_EBV_gp42.json, auspice/Herpesvirus-Glycoprotein-Analysis_EBV_gH.json, auspice/Herpesvirus-Glycoprotein-Analysis_EBV_gL.json, auspice/Herpesvirus-Glycoprotein-Analysis_EBV_gB.json
+    resources: tmpdir=/loc/scratch/61832887
+
+[Wed Sep 11 14:23:05 2024]
+Finished job 0.
+65 of 65 steps (100%) done
+Complete log: .snakemake/log/2024-09-11T140253.152641.snakemake.log
+Run of snakemake complete.

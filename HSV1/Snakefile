@@ -34,6 +34,8 @@ rule all:
     This rule controls all the output files expected from the workflow. 
     """
     input:
+        # ORF extraction log
+        expand("Results/{gene}/ORF_sequences/ORF_extraction_verification.txt", gene=GENES),
         # Auspice
         expand("auspice/Herpesvirus-Glycoprotein-Analysis_{gene}.json", gene=GENES)
 

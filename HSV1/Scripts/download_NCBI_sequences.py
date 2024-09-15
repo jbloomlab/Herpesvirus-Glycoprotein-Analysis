@@ -260,6 +260,8 @@ def read_and_process_accession_list(
                             strain = strain.replace(char, "")
                     if "/organism" in line:
                         virus = line.replace("\n", "").replace("\"", "").split("=")[1]
+                        if virus == "Human alphaherpesvirus 1 strain 17" or virus == "Human alphaherpesvirus 1 strain RH2":
+                            virus = "Human alphaherpesvirus 1"
                     if "/host" in line:
                         host = line.replace("\n", "").replace("\"", "").split("=")[1]
                     if "/geo_loc_name" in line:
@@ -381,7 +383,7 @@ def read_and_process_accession_list(
 
                 if remove_duplicates == "Yes":
                     # Check if nulceotide sequence is a duplicate
-                    if nucleotide_sequence in seen_sequences:
+                    if nucleotide_sequence in seen_sequences and accession_from_list[:-2] not in snakemake.params.accessions_to_include:
                         log_file.write(f"{accession_from_list} excluded because duplicate sequence!\n")
                         removed_accessions_count += 1
                         continue

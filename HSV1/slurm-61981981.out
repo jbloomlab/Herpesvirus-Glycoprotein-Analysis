@@ -1,0 +1,170 @@
+Running snakemake...
+Assuming unrestricted shared filesystem usage.
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 16
+Rules claiming more threads will be scaled down.
+Job stats:
+job                           count
+--------------------------  -------
+all                               1
+ancestral_tree_sequences          3
+export_tree                       4
+refine_tree_sequences             3
+root_and_remove_outgroup          2
+strip_codon_alignment_gaps        1
+traits_tree_sequences             3
+translate_tree_sequences          3
+tree_sequences                    2
+total                            22
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Sep 12 11:32:53 2024]
+localrule refine_tree_sequences:
+    input: Results/HSV1_gH/Alignments/codon_ungapped_no_outgroup.fasta, Results/HSV1_gH/Trees/tree_no_outgroup.nwk, Results/HSV1_gH/metadata.tsv
+    output: Results/HSV1_gH/Trees/tree.nwk, Results/HSV1_gH/Trees/tree_branch_lengths.json
+    log: Results/Logs/HSV1_gH/refine_tree_sequences.txt
+    jobid: 48
+    reason: Missing output files: Results/HSV1_gH/Trees/tree_branch_lengths.json, Results/HSV1_gH/Trees/tree.nwk; Updated input files: Results/HSV1_gH/Trees/tree_no_outgroup.nwk, Results/HSV1_gH/Alignments/codon_ungapped_no_outgroup.fasta
+    wildcards: gene=HSV1_gH
+    resources: tmpdir=/loc/scratch/61981981
+
+Activating conda environment: .snakemake/conda/768efdd1ddbfaa7755324fb50ebd3862_
+[Thu Sep 12 11:33:00 2024]
+Finished job 48.
+1 of 22 steps (5%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Sep 12 11:33:01 2024]
+localrule ancestral_tree_sequences:
+    input: Results/HSV1_gH/Trees/tree.nwk, Results/HSV1_gH/Alignments/codon_ungapped_no_outgroup.fasta
+    output: Results/HSV1_gH/Trees/tree_muts.json
+    log: Results/Logs/HSV1_gH/ancestral_tree_sequences.txt
+    jobid: 58
+    reason: Missing output files: Results/HSV1_gH/Trees/tree_muts.json; Input files updated by another job: Results/HSV1_gH/Trees/tree.nwk
+    wildcards: gene=HSV1_gH
+    resources: tmpdir=/loc/scratch/61981981
+
+Activating conda environment: .snakemake/conda/768efdd1ddbfaa7755324fb50ebd3862_
+[Thu Sep 12 11:33:04 2024]
+Finished job 58.
+2 of 22 steps (9%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Sep 12 11:33:04 2024]
+localrule translate_tree_sequences:
+    input: Results/HSV1_gH/Trees/tree.nwk, Results/HSV1_gH/Trees/tree_muts.json, Results/HSV1_gH/HSV1_gH_reference.gb
+    output: Results/HSV1_gH/Trees/tree_aa_muts.json, Results/HSV1_gH/Augur_AA_Alignements/HSV1_gH.fasta
+    log: Results/Logs/HSV1_gH/translate_tree_sequences.txt
+    jobid: 59
+    reason: Missing output files: Results/HSV1_gH/Trees/tree_aa_muts.json; Input files updated by another job: Results/HSV1_gH/Trees/tree_muts.json, Results/HSV1_gH/Trees/tree.nwk
+    wildcards: gene=HSV1_gH
+    resources: tmpdir=/loc/scratch/61981981
+
+Activating conda environment: .snakemake/conda/768efdd1ddbfaa7755324fb50ebd3862_
+[Thu Sep 12 11:33:05 2024]
+Finished job 59.
+3 of 22 steps (14%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Sep 12 11:33:05 2024]
+localrule traits_tree_sequences:
+    input: Results/HSV1_gH/Trees/tree.nwk, Results/HSV1_gH/metadata.tsv
+    output: Results/HSV1_gH/Trees/tree_traits.json
+    log: Results/Logs/HSV1_gH/traits_tree_sequences.txt
+    jobid: 57
+    reason: Missing output files: Results/HSV1_gH/Trees/tree_traits.json; Input files updated by another job: Results/HSV1_gH/Trees/tree.nwk
+    wildcards: gene=HSV1_gH
+    resources: tmpdir=/loc/scratch/61981981
+
+Activating conda environment: .snakemake/conda/768efdd1ddbfaa7755324fb50ebd3862_
+[Thu Sep 12 11:33:11 2024]
+Finished job 57.
+4 of 22 steps (18%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Sep 12 11:33:11 2024]
+localrule export_tree:
+    input: Results/HSV1_gH/Trees/tree.nwk, Results/HSV1_gH/metadata.tsv, Results/HSV1_gH/Trees/tree_branch_lengths.json, Results/HSV1_gH/Trees/tree_traits.json, Results/HSV1_gH/Trees/tree_muts.json, Results/HSV1_gH/Trees/tree_aa_muts.json, Configure/Input_Data/auspice_config.json, Results/HSV1_gH/Trees/colors.tsv, Configure/Input_Data/lat_longs.tsv
+    output: auspice/Herpesvirus-Glycoprotein-Analysis_HSV1_gH.json
+    jobid: 47
+    reason: Missing output files: auspice/Herpesvirus-Glycoprotein-Analysis_HSV1_gH.json; Input files updated by another job: Results/HSV1_gH/Trees/tree_muts.json, Results/HSV1_gH/Trees/tree_branch_lengths.json, Results/HSV1_gH/Trees/tree_aa_muts.json, Results/HSV1_gH/Trees/tree_traits.json, Results/HSV1_gH/Trees/tree.nwk
+    wildcards: gene=HSV1_gH
+    resources: tmpdir=/loc/scratch/61981981
+
+Activating conda environment: .snakemake/conda/768efdd1ddbfaa7755324fb50ebd3862_
+/bin/bash: -c: line 0: syntax error near unexpected token `('
+/bin/bash: -c: line 0: `source /home/ccarr/miniconda3/bin/activate '/fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/HSV1/.snakemake/conda/768efdd1ddbfaa7755324fb50ebd3862_'; set -euo pipefail;  augur export v2 --tree Results/HSV1_gH/Trees/tree.nwk --title Natural diversity of Herpes simplex virus (HSV-1) glycoprotein H --metadata Results/HSV1_gH/metadata.tsv --node-data Results/HSV1_gH/Trees/tree_branch_lengths.json Results/HSV1_gH/Trees/tree_traits.json Results/HSV1_gH/Trees/tree_muts.json Results/HSV1_gH/Trees/tree_aa_muts.json --include-root-sequence-inline --colors Results/HSV1_gH/Trees/colors.tsv --lat-longs Configure/Input_Data/lat_longs.tsv --auspice-config Configure/Input_Data/auspice_config.json --output auspice/Herpesvirus-Glycoprotein-Analysis_HSV1_gH.json'
+[Thu Sep 12 11:33:11 2024]
+Error in rule export_tree:
+    jobid: 47
+    input: Results/HSV1_gH/Trees/tree.nwk, Results/HSV1_gH/metadata.tsv, Results/HSV1_gH/Trees/tree_branch_lengths.json, Results/HSV1_gH/Trees/tree_traits.json, Results/HSV1_gH/Trees/tree_muts.json, Results/HSV1_gH/Trees/tree_aa_muts.json, Configure/Input_Data/auspice_config.json, Results/HSV1_gH/Trees/colors.tsv, Configure/Input_Data/lat_longs.tsv
+    output: auspice/Herpesvirus-Glycoprotein-Analysis_HSV1_gH.json
+    conda-env: /fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/HSV1/.snakemake/conda/768efdd1ddbfaa7755324fb50ebd3862_
+    shell:
+        augur export v2 --tree Results/HSV1_gH/Trees/tree.nwk --title Natural diversity of Herpes simplex virus (HSV-1) glycoprotein H --metadata Results/HSV1_gH/metadata.tsv --node-data Results/HSV1_gH/Trees/tree_branch_lengths.json Results/HSV1_gH/Trees/tree_traits.json Results/HSV1_gH/Trees/tree_muts.json Results/HSV1_gH/Trees/tree_aa_muts.json --include-root-sequence-inline --colors Results/HSV1_gH/Trees/colors.tsv --lat-longs Configure/Input_Data/lat_longs.tsv --auspice-config Configure/Input_Data/auspice_config.json --output auspice/Herpesvirus-Glycoprotein-Analysis_HSV1_gH.json
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Trying to restart job 47.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Sep 12 11:33:11 2024]
+localrule export_tree:
+    input: Results/HSV1_gH/Trees/tree.nwk, Results/HSV1_gH/metadata.tsv, Results/HSV1_gH/Trees/tree_branch_lengths.json, Results/HSV1_gH/Trees/tree_traits.json, Results/HSV1_gH/Trees/tree_muts.json, Results/HSV1_gH/Trees/tree_aa_muts.json, Configure/Input_Data/auspice_config.json, Results/HSV1_gH/Trees/colors.tsv, Configure/Input_Data/lat_longs.tsv
+    output: auspice/Herpesvirus-Glycoprotein-Analysis_HSV1_gH.json
+    jobid: 47
+    reason: Missing output files: auspice/Herpesvirus-Glycoprotein-Analysis_HSV1_gH.json; Input files updated by another job: Results/HSV1_gH/Trees/tree_muts.json, Results/HSV1_gH/Trees/tree_branch_lengths.json, Results/HSV1_gH/Trees/tree_aa_muts.json, Results/HSV1_gH/Trees/tree_traits.json, Results/HSV1_gH/Trees/tree.nwk
+    wildcards: gene=HSV1_gH
+    resources: tmpdir=/loc/scratch/61981981
+
+Activating conda environment: .snakemake/conda/768efdd1ddbfaa7755324fb50ebd3862_
+/bin/bash: -c: line 0: syntax error near unexpected token `('
+/bin/bash: -c: line 0: `source /home/ccarr/miniconda3/bin/activate '/fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/HSV1/.snakemake/conda/768efdd1ddbfaa7755324fb50ebd3862_'; set -euo pipefail;  augur export v2 --tree Results/HSV1_gH/Trees/tree.nwk --title Natural diversity of Herpes simplex virus (HSV-1) glycoprotein H --metadata Results/HSV1_gH/metadata.tsv --node-data Results/HSV1_gH/Trees/tree_branch_lengths.json Results/HSV1_gH/Trees/tree_traits.json Results/HSV1_gH/Trees/tree_muts.json Results/HSV1_gH/Trees/tree_aa_muts.json --include-root-sequence-inline --colors Results/HSV1_gH/Trees/colors.tsv --lat-longs Configure/Input_Data/lat_longs.tsv --auspice-config Configure/Input_Data/auspice_config.json --output auspice/Herpesvirus-Glycoprotein-Analysis_HSV1_gH.json'
+[Thu Sep 12 11:33:11 2024]
+Error in rule export_tree:
+    jobid: 47
+    input: Results/HSV1_gH/Trees/tree.nwk, Results/HSV1_gH/metadata.tsv, Results/HSV1_gH/Trees/tree_branch_lengths.json, Results/HSV1_gH/Trees/tree_traits.json, Results/HSV1_gH/Trees/tree_muts.json, Results/HSV1_gH/Trees/tree_aa_muts.json, Configure/Input_Data/auspice_config.json, Results/HSV1_gH/Trees/colors.tsv, Configure/Input_Data/lat_longs.tsv
+    output: auspice/Herpesvirus-Glycoprotein-Analysis_HSV1_gH.json
+    conda-env: /fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/HSV1/.snakemake/conda/768efdd1ddbfaa7755324fb50ebd3862_
+    shell:
+        augur export v2 --tree Results/HSV1_gH/Trees/tree.nwk --title Natural diversity of Herpes simplex virus (HSV-1) glycoprotein H --metadata Results/HSV1_gH/metadata.tsv --node-data Results/HSV1_gH/Trees/tree_branch_lengths.json Results/HSV1_gH/Trees/tree_traits.json Results/HSV1_gH/Trees/tree_muts.json Results/HSV1_gH/Trees/tree_aa_muts.json --include-root-sequence-inline --colors Results/HSV1_gH/Trees/colors.tsv --lat-longs Configure/Input_Data/lat_longs.tsv --auspice-config Configure/Input_Data/auspice_config.json --output auspice/Herpesvirus-Glycoprotein-Analysis_HSV1_gH.json
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Trying to restart job 47.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Sep 12 11:33:11 2024]
+localrule export_tree:
+    input: Results/HSV1_gH/Trees/tree.nwk, Results/HSV1_gH/metadata.tsv, Results/HSV1_gH/Trees/tree_branch_lengths.json, Results/HSV1_gH/Trees/tree_traits.json, Results/HSV1_gH/Trees/tree_muts.json, Results/HSV1_gH/Trees/tree_aa_muts.json, Configure/Input_Data/auspice_config.json, Results/HSV1_gH/Trees/colors.tsv, Configure/Input_Data/lat_longs.tsv
+    output: auspice/Herpesvirus-Glycoprotein-Analysis_HSV1_gH.json
+    jobid: 47
+    reason: Missing output files: auspice/Herpesvirus-Glycoprotein-Analysis_HSV1_gH.json; Input files updated by another job: Results/HSV1_gH/Trees/tree_muts.json, Results/HSV1_gH/Trees/tree_branch_lengths.json, Results/HSV1_gH/Trees/tree_aa_muts.json, Results/HSV1_gH/Trees/tree_traits.json, Results/HSV1_gH/Trees/tree.nwk
+    wildcards: gene=HSV1_gH
+    resources: tmpdir=/loc/scratch/61981981
+
+Activating conda environment: .snakemake/conda/768efdd1ddbfaa7755324fb50ebd3862_
+/bin/bash: -c: line 0: syntax error near unexpected token `('
+/bin/bash: -c: line 0: `source /home/ccarr/miniconda3/bin/activate '/fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/HSV1/.snakemake/conda/768efdd1ddbfaa7755324fb50ebd3862_'; set -euo pipefail;  augur export v2 --tree Results/HSV1_gH/Trees/tree.nwk --title Natural diversity of Herpes simplex virus (HSV-1) glycoprotein H --metadata Results/HSV1_gH/metadata.tsv --node-data Results/HSV1_gH/Trees/tree_branch_lengths.json Results/HSV1_gH/Trees/tree_traits.json Results/HSV1_gH/Trees/tree_muts.json Results/HSV1_gH/Trees/tree_aa_muts.json --include-root-sequence-inline --colors Results/HSV1_gH/Trees/colors.tsv --lat-longs Configure/Input_Data/lat_longs.tsv --auspice-config Configure/Input_Data/auspice_config.json --output auspice/Herpesvirus-Glycoprotein-Analysis_HSV1_gH.json'
+[Thu Sep 12 11:33:11 2024]
+Error in rule export_tree:
+    jobid: 47
+    input: Results/HSV1_gH/Trees/tree.nwk, Results/HSV1_gH/metadata.tsv, Results/HSV1_gH/Trees/tree_branch_lengths.json, Results/HSV1_gH/Trees/tree_traits.json, Results/HSV1_gH/Trees/tree_muts.json, Results/HSV1_gH/Trees/tree_aa_muts.json, Configure/Input_Data/auspice_config.json, Results/HSV1_gH/Trees/colors.tsv, Configure/Input_Data/lat_longs.tsv
+    output: auspice/Herpesvirus-Glycoprotein-Analysis_HSV1_gH.json
+    conda-env: /fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/HSV1/.snakemake/conda/768efdd1ddbfaa7755324fb50ebd3862_
+    shell:
+        augur export v2 --tree Results/HSV1_gH/Trees/tree.nwk --title Natural diversity of Herpes simplex virus (HSV-1) glycoprotein H --metadata Results/HSV1_gH/metadata.tsv --node-data Results/HSV1_gH/Trees/tree_branch_lengths.json Results/HSV1_gH/Trees/tree_traits.json Results/HSV1_gH/Trees/tree_muts.json Results/HSV1_gH/Trees/tree_aa_muts.json --include-root-sequence-inline --colors Results/HSV1_gH/Trees/colors.tsv --lat-longs Configure/Input_Data/lat_longs.tsv --auspice-config Configure/Input_Data/auspice_config.json --output auspice/Herpesvirus-Glycoprotein-Analysis_HSV1_gH.json
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-09-12T113247.063293.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

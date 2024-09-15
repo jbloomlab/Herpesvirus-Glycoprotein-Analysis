@@ -27,11 +27,14 @@ max_frac_N:
 Remove_duplicates: 'Yes'
 
 # Sequences to remove
-Accessions_to_exclude: 
+Accessions_to_exclude:
   - ON783217 # Oxford nanopore sequence that is highly diverged
   - ON783216 # Oxford nanopore sequence that is highly diverged
   - ON783215 # Oxford nanopore sequence that is highly diverged
   - ON783214 # Oxford nanopore sequence that is highly diverged
+
+# Sequences to make sure are included
+Accessions_to_include: []
 
 # Gene name groupings
 Gene_groupings:
@@ -61,14 +64,18 @@ Gene_groupings:
 # HSV-2 NC_001798.2
 Outgroup: HG52_NC_001798_2016-05-16
 
-# Strains to drop during Augur processing
-Dropped_strains: Configure/Input_Data/dropped_strains.txt
-
 # Auspice configuration
 Auspice_config: Configure/Input_Data/auspice_config.json
 Color_schemes: Configure/Input_Data/color_schemes.tsv
 Color_orderings: Configure/Input_Data/color_orderings.tsv
 Lat_longs: Configure/Input_Data/lat_longs.tsv
+
+# Tree titles
+Auspice_tree_titles:
+  HSV1_gB: "'Natural diversity of Herpes Simplex Virus Type 1 glycoprotein B'"
+  HSV1_gD: "'Natural diversity of Herpes Simplex Virus Type 1 glycoprotein D'"
+  HSV1_gH: "'Natural diversity of Herpes Simplex Virus Type 1 glycoprotein H'"
+  HSV1_gL: "'Natural diversity of Herpes Simplex Virus Type 1 glycoprotein L'"
 
 #################################################---END INPUT DATA---#########################################################
 
