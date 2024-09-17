@@ -1,0 +1,170 @@
+Running snakemake...
+Assuming unrestricted shared filesystem usage.
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 16
+Rules claiming more threads will be scaled down.
+Job stats:
+job                                count
+-------------------------------  -------
+align_protein_sequences                2
+all                                    1
+ancestral_tree_sequences               3
+check_number_ORFs_found                2
+colors                                 2
+create_codon_alignment                 2
+download_and_process_accessions        1
+edit_codon_fasta_headers               2
+edit_protein_fasta_headers             2
+export_tree                            4
+get_codon_sequences                    2
+get_protein_sequences                  2
+refine_tree_sequences                  3
+root_and_remove_outgroup               3
+strip_codon_alignment_gaps             2
+strip_protein_alignment_gaps           2
+traits_tree_sequences                  4
+translate_tree_sequences               3
+tree_sequences                         3
+total                                 45
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 13:23:12 2024]
+localrule get_codon_sequences:
+    input: Results/HSV2_gB/nucleotide.fasta
+    output: Results/HSV2_gB/ORF_sequences/codon_temp.fasta
+    log: Results/Logs/HSV2_gB/get_codon_sequences.txt
+    jobid: 4
+    reason: Missing output files: Results/HSV2_gB/ORF_sequences/codon_temp.fasta
+    wildcards: gene=HSV2_gB
+    resources: tmpdir=/loc/scratch/62456605
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 13:23:12 2024]
+Finished job 4.
+1 of 45 steps (2%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 13:23:12 2024]
+localrule get_protein_sequences:
+    input: Results/HSV2_gB/nucleotide.fasta
+    output: Results/HSV2_gB/ORF_sequences/protein_temp.fasta
+    log: Results/Logs/HSV2_gB/get_protein_sequences.txt
+    jobid: 3
+    reason: Missing output files: Results/HSV2_gB/ORF_sequences/protein_temp.fasta
+    wildcards: gene=HSV2_gB
+    resources: tmpdir=/loc/scratch/62456605
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 13:23:13 2024]
+Finished job 3.
+2 of 45 steps (4%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 13:23:13 2024]
+localrule check_number_ORFs_found:
+    input: Results/HSV2_gB/nucleotide.fasta, Results/HSV2_gB/ORF_sequences/protein_temp.fasta, Results/HSV2_gB/ORF_sequences/codon_temp.fasta
+    output: Results/HSV2_gB/ORF_sequences/ORF_extraction_verification.txt
+    jobid: 1
+    reason: Missing output files: Results/HSV2_gB/ORF_sequences/ORF_extraction_verification.txt; Input files updated by another job: Results/HSV2_gB/ORF_sequences/protein_temp.fasta, Results/HSV2_gB/ORF_sequences/codon_temp.fasta
+    wildcards: gene=HSV2_gB
+    resources: tmpdir=/loc/scratch/62456605
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+Traceback (most recent call last):
+  File "/fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/HSV2/.snakemake/scripts/tmpyybazr9i.extracted_sequence_verification.py", line 125, in <module>
+    main()
+  File "/fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/HSV2/.snakemake/scripts/tmpyybazr9i.extracted_sequence_verification.py", line 116, in main
+    assert_num_orfs_match_sequences(
+  File "/fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/HSV2/.snakemake/scripts/tmpyybazr9i.extracted_sequence_verification.py", line 45, in assert_num_orfs_match_sequences
+    assert len(protein_list) == len(codon_list), "Uneven protein and nucleotide ORFs detected!"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Uneven protein and nucleotide ORFs detected!
+RuleException:
+CalledProcessError in file /fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/HSV2/Rules/extract_ORFs.smk, line 77:
+Command 'source /home/ccarr/miniconda3/bin/activate '/fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/HSV2/.snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_'; set -euo pipefail;  python /fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/HSV2/.snakemake/scripts/tmpyybazr9i.extracted_sequence_verification.py' returned non-zero exit status 1.
+[Mon Sep 16 13:23:16 2024]
+Error in rule check_number_ORFs_found:
+    jobid: 1
+    input: Results/HSV2_gB/nucleotide.fasta, Results/HSV2_gB/ORF_sequences/protein_temp.fasta, Results/HSV2_gB/ORF_sequences/codon_temp.fasta
+    output: Results/HSV2_gB/ORF_sequences/ORF_extraction_verification.txt
+    conda-env: /fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/HSV2/.snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+
+Trying to restart job 1.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 13:23:16 2024]
+localrule check_number_ORFs_found:
+    input: Results/HSV2_gB/nucleotide.fasta, Results/HSV2_gB/ORF_sequences/protein_temp.fasta, Results/HSV2_gB/ORF_sequences/codon_temp.fasta
+    output: Results/HSV2_gB/ORF_sequences/ORF_extraction_verification.txt
+    jobid: 1
+    reason: Missing output files: Results/HSV2_gB/ORF_sequences/ORF_extraction_verification.txt; Input files updated by another job: Results/HSV2_gB/ORF_sequences/protein_temp.fasta, Results/HSV2_gB/ORF_sequences/codon_temp.fasta
+    wildcards: gene=HSV2_gB
+    resources: tmpdir=/loc/scratch/62456605
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+Traceback (most recent call last):
+  File "/fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/HSV2/.snakemake/scripts/tmpb7c3b4ma.extracted_sequence_verification.py", line 125, in <module>
+    main()
+  File "/fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/HSV2/.snakemake/scripts/tmpb7c3b4ma.extracted_sequence_verification.py", line 116, in main
+    assert_num_orfs_match_sequences(
+  File "/fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/HSV2/.snakemake/scripts/tmpb7c3b4ma.extracted_sequence_verification.py", line 45, in assert_num_orfs_match_sequences
+    assert len(protein_list) == len(codon_list), "Uneven protein and nucleotide ORFs detected!"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Uneven protein and nucleotide ORFs detected!
+RuleException:
+CalledProcessError in file /fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/HSV2/Rules/extract_ORFs.smk, line 77:
+Command 'source /home/ccarr/miniconda3/bin/activate '/fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/HSV2/.snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_'; set -euo pipefail;  python /fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/HSV2/.snakemake/scripts/tmpb7c3b4ma.extracted_sequence_verification.py' returned non-zero exit status 1.
+[Mon Sep 16 13:23:17 2024]
+Error in rule check_number_ORFs_found:
+    jobid: 1
+    input: Results/HSV2_gB/nucleotide.fasta, Results/HSV2_gB/ORF_sequences/protein_temp.fasta, Results/HSV2_gB/ORF_sequences/codon_temp.fasta
+    output: Results/HSV2_gB/ORF_sequences/ORF_extraction_verification.txt
+    conda-env: /fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/HSV2/.snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+
+Trying to restart job 1.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 13:23:17 2024]
+localrule check_number_ORFs_found:
+    input: Results/HSV2_gB/nucleotide.fasta, Results/HSV2_gB/ORF_sequences/protein_temp.fasta, Results/HSV2_gB/ORF_sequences/codon_temp.fasta
+    output: Results/HSV2_gB/ORF_sequences/ORF_extraction_verification.txt
+    jobid: 1
+    reason: Missing output files: Results/HSV2_gB/ORF_sequences/ORF_extraction_verification.txt; Input files updated by another job: Results/HSV2_gB/ORF_sequences/protein_temp.fasta, Results/HSV2_gB/ORF_sequences/codon_temp.fasta
+    wildcards: gene=HSV2_gB
+    resources: tmpdir=/loc/scratch/62456605
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+Traceback (most recent call last):
+  File "/fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/HSV2/.snakemake/scripts/tmp5lzbeg6z.extracted_sequence_verification.py", line 125, in <module>
+    main()
+  File "/fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/HSV2/.snakemake/scripts/tmp5lzbeg6z.extracted_sequence_verification.py", line 116, in main
+    assert_num_orfs_match_sequences(
+  File "/fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/HSV2/.snakemake/scripts/tmp5lzbeg6z.extracted_sequence_verification.py", line 45, in assert_num_orfs_match_sequences
+    assert len(protein_list) == len(codon_list), "Uneven protein and nucleotide ORFs detected!"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Uneven protein and nucleotide ORFs detected!
+RuleException:
+CalledProcessError in file /fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/HSV2/Rules/extract_ORFs.smk, line 77:
+Command 'source /home/ccarr/miniconda3/bin/activate '/fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/HSV2/.snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_'; set -euo pipefail;  python /fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/HSV2/.snakemake/scripts/tmp5lzbeg6z.extracted_sequence_verification.py' returned non-zero exit status 1.
+[Mon Sep 16 13:23:17 2024]
+Error in rule check_number_ORFs_found:
+    jobid: 1
+    input: Results/HSV2_gB/nucleotide.fasta, Results/HSV2_gB/ORF_sequences/protein_temp.fasta, Results/HSV2_gB/ORF_sequences/codon_temp.fasta
+    output: Results/HSV2_gB/ORF_sequences/ORF_extraction_verification.txt
+    conda-env: /fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/HSV2/.snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-09-16T132301.321160.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

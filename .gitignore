@@ -49,3 +49,27 @@ EBV/Results/EBV_gL/*
 !EBV/Results/EBV_gL/metadata.tsv
 !EBV/Results/EBV_gL/nucleotide.fasta
 ####################################---END EBV---##########################################
+
+####################################---START HSV2---#######################################
+HSV2/Results/*
+
+!HSV2/Results/HSV2_gB
+HSV2/Results/HSV2_gB/*
+!HSV2/Results/HSV2_gB/metadata.tsv
+!HSV2/Results/HSV2_gB/nucleotide.fasta
+
+!HSV2/Results/HSV2_gD
+HSV2/Results/HSV2_gD/*
+!HSV2/Results/HSV2_gD/metadata.tsv
+!HSV2/Results/HSV2_gD/nucleotide.fasta
+
+!HSV2/Results/HSV2_gH
+HSV2/Results/HSV2_gH/*
+!HSV2/Results/HSV2_gH/metadata.tsv
+!HSV2/Results/HSV2_gH/nucleotide.fasta
+
+!HSV2/Results/HSV2_gL
+HSV2/Results/HSV2_gL/*
+!HSV2/Results/HSV2_gL/metadata.tsv
+!HSV2/Results/HSV2_gL/nucleotide.fasta
+####################################---END HSV2---#########################################

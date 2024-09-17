@@ -1,0 +1,63 @@
+{
+  "maintainers": [
+    {
+      "name": "the Bloom lab",
+      "url": "https://jbloomlab.github.io/"
+    }
+  ],
+  "colorings": [
+    {
+      "key": "gt",
+      "title": "Genotype",
+      "type": "categorical"
+    },
+    {
+      "key": "region",
+      "title": "Region",
+      "type": "categorical"
+    },
+    {
+      "key": "country",
+      "title": "Country",
+      "type": "categorical"
+    },
+    {
+      "key": "host",
+      "title": "Host",
+      "type": "categorical"
+    },
+    {
+      "key": "date",
+      "title": "Date",
+      "type": "temporal"
+    },
+    {
+      "key": "virus",
+      "title": "Virus",
+      "type": "categorical"
+    }
+  ],
+  "geo_resolutions": [
+    "country",
+    "region"
+  ],
+  "panels": [
+    "tree",
+    "entropy"
+  ],
+  "display_defaults": {
+    "map_triplicate": true,
+    "distance_measure": "div",
+    "transmission_lines": false,
+    "color_by" : "virus"
+  },
+  "filters": [
+    "virus",
+    "region",
+    "country",
+    "host"
+  ],
+  "metadata_columns": [
+    "accession"
+  ]
+}

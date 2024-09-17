@@ -1,0 +1,2854 @@
+{
+  "version": "v2",
+  "meta": {
+    "title": "Natural diversity of Herpes Simplex Virus Type 2 glycoprotein L",
+    "updated": "2024-09-16",
+    "maintainers": [
+      {
+        "name": "the Bloom lab",
+        "url": "https://jbloomlab.github.io/"
+      }
+    ],
+    "display_defaults": {
+      "map_triplicate": true,
+      "distance_measure": "div",
+      "transmission_lines": false,
+      "color_by": "virus"
+    },
+    "genome_annotations": {
+      "nuc": {
+        "end": 675,
+        "start": 1,
+        "strand": "+",
+        "type": "source",
+        "seqid": "Results/HSV2_gL/HSV2_gL_reference.gb"
+      },
+      "HSV2_gL": {
+        "end": 675,
+        "seqid": "Results/HSV2_gL/HSV2_gL_reference.gb",
+        "start": 1,
+        "strand": "+",
+        "type": "CDS"
+      }
+    },
+    "colorings": [
+      {
+        "key": "gt",
+        "title": "Genotype",
+        "type": "categorical"
+      },
+      {
+        "key": "region",
+        "title": "Region",
+        "type": "categorical",
+        "scale": [
+          [
+            "Africa",
+            "#4A8CC2"
+          ],
+          [
+            "Europe",
+            "#71B486"
+          ],
+          [
+            "South America",
+            "#ABBD52"
+          ],
+          [
+            "North America",
+            "#DEA73C"
+          ]
+        ]
+      },
+      {
+        "key": "country",
+        "title": "Country",
+        "type": "categorical",
+        "scale": [
+          [
+            "Zambia",
+            "#60AA9E"
+          ],
+          [
+            "Uganda",
+            "#80B974"
+          ],
+          [
+            "Tanzania",
+            "#A6BE55"
+          ],
+          [
+            "United Kingdom",
+            "#CBB742"
+          ],
+          [
+            "France",
+            "#E29D39"
+          ],
+          [
+            "Peru",
+            "#E56A2F"
+          ],
+          [
+            "USA",
+            "#DB2823"
+          ]
+        ]
+      },
+      {
+        "key": "host",
+        "title": "Host",
+        "type": "categorical"
+      },
+      {
+        "key": "date",
+        "title": "Date",
+        "type": "temporal"
+      },
+      {
+        "key": "virus",
+        "title": "Virus",
+        "type": "categorical"
+      }
+    ],
+    "filters": [
+      "virus",
+      "region",
+      "country",
+      "host"
+    ],
+    "geo_resolutions": [
+      {
+        "key": "country",
+        "demes": {
+          "USA": {
+            "latitude": 39.7837304,
+            "longitude": -100.4458824
+          },
+          "Uganda": {
+            "latitude": 1.861287,
+            "longitude": 32.55149
+          },
+          "Peru": {
+            "latitude": -9.650468,
+            "longitude": -75.328211
+          },
+          "Zambia": {
+            "latitude": -14.5186239,
+            "longitude": 27.5599164
+          },
+          "United Kingdom": {
+            "latitude": 54.242833,
+            "longitude": -2.088739
+          },
+          "Tanzania": {
+            "latitude": -6.5247123,
+            "longitude": 35.7878438
+          },
+          "France": {
+            "latitude": 46.2276,
+            "longitude": 2.2137
+          }
+        }
+      },
+      {
+        "key": "region",
+        "demes": {
+          "North America": {
+            "latitude": 28.2367447,
+            "longitude": -97.738017
+          },
+          "South America": {
+            "latitude": -13.083583,
+            "longitude": -58.470721
+          },
+          "Europe": {
+            "latitude": 49.646237,
+            "longitude": 10.799454
+          },
+          "Africa": {
+            "latitude": 4.070194,
+            "longitude": 21.824559
+          }
+        }
+      }
+    ],
+    "panels": [
+      "tree",
+      "entropy"
+    ]
+  },
+  "tree": {
+    "name": "NODE_0000000",
+    "node_attrs": {
+      "div": 0,
+      "country": {
+        "value": "Uganda",
+        "confidence": {
+          "Uganda": 0.494,
+          "USA": 0.311,
+          "France": 0.124,
+          "Peru": 0.0312,
+          "United Kingdom": 0.014,
+          "Tanzania": 0.013,
+          "Zambia": 0.0122
+        },
+        "entropy": 1.249
+      },
+      "virus": {
+        "value": "Human alphaherpesvirus 2"
+      },
+      "host": {
+        "value": "Homo sapiens"
+      },
+      "region": {
+        "value": "Africa",
+        "confidence": {
+          "Africa": 0.521,
+          "North America": 0.33,
+          "Europe": 0.122,
+          "South America": 0.0278
+        },
+        "entropy": 1.062
+      }
+    },
+    "branch_attrs": {
+      "mutations": {}
+    },
+    "children": [
+      {
+        "name": "NODE_0000001",
+        "node_attrs": {
+          "div": 0.00132,
+          "country": {
+            "value": "Uganda",
+            "confidence": {
+              "Uganda": 0.708,
+              "France": 0.169,
+              "USA": 0.0965,
+              "Peru": 0.0109,
+              "United Kingdom": 0.00528,
+              "Tanzania": 0.00491,
+              "Zambia": 0.00462
+            },
+            "entropy": 0.899
+          },
+          "virus": {
+            "value": "Human alphaherpesvirus 2"
+          },
+          "host": {
+            "value": "Homo sapiens"
+          },
+          "region": {
+            "value": "Africa",
+            "confidence": {
+              "Africa": 0.721,
+              "Europe": 0.155,
+              "North America": 0.115,
+              "South America": 0.00902
+            },
+            "entropy": 0.816
+          }
+        },
+        "branch_attrs": {
+          "mutations": {}
+        },
+        "children": [
+          {
+            "name": "2012-9333_KX574906_2011-XX-XX",
+            "node_attrs": {
+              "div": 0.00132,
+              "accession": "KX574906",
+              "url": "https://www.ncbi.nlm.nih.gov/nuccore/KX574906",
+              "author": {
+                "author": "Koelle et al",
+                "title": "Worldwide circulation of HSV-2 x HSV-1 recombinant strains",
+                "journal": "Sci Rep 7, 44084 (2017)",
+                "paper_url": "https://pubmed.ncbi.nlm.nih.gov/28287142",
+                "value": "Koelle et al"
+              },
+              "country": {
+                "value": "Uganda",
+                "confidence": {
+                  "Uganda": 1.0
+                },
+                "entropy": -1e-12
+              },
+              "virus": {
+                "value": "Human alphaherpesvirus 2"
+              },
+              "host": {
+                "value": "Homo sapiens"
+              },
+              "region": {
+                "value": "Africa",
+                "confidence": {
+                  "Africa": 1.0
+                },
+                "entropy": -1e-12
+              },
+              "date": {
+                "value": "2011-XX-XX"
+              }
+            },
+            "branch_attrs": {
+              "mutations": {}
+            }
+          },
+          {
+            "name": "NODE_0000002",
+            "node_attrs": {
+              "div": 0.0043,
+              "country": {
+                "value": "France",
+                "confidence": {
+                  "France": 0.991,
+                  "Uganda": 0.00702
+                },
+                "entropy": 0.0566
+              },
+              "virus": {
+                "value": "Human alphaherpesvirus 2"
+              },
+              "host": {
+                "value": "Homo sapiens"
+              },
+              "region": {
+                "value": "Europe",
+                "confidence": {
+                  "Europe": 0.985,
+                  "Africa": 0.0125,
+                  "North America": 0.00249
+                },
+                "entropy": 0.0879
+              }
+            },
+            "branch_attrs": {
+              "mutations": {
+                "nuc": [
+                  "C341T",
+                  "G391A"
+                ],
+                "HSV2_gL": [
+                  "A114V",
+                  "D131N"
+                ]
+              },
+              "labels": {
+                "aa": "HSV2_gL: A114V, D131N"
+              }
+            },
+            "children": [
+              {
+                "name": "pat1_KF588450_2008-XX-XX",
+                "node_attrs": {
+                  "div": 0.00579,
+                  "accession": "KF588450",
+                  "url": "https://www.ncbi.nlm.nih.gov/nuccore/KF588450",
+                  "author": {
+                    "author": "Burrel et al",
+                    "title": "Genetic diversity within alphaherpesviruses: characterization of a",
+                    "journal": "Unpublished",
+                    "value": "Burrel et al"
+                  },
+                  "country": {
+                    "value": "France",
+                    "confidence": {
+                      "France": 1.0
+                    },
+                    "entropy": -1e-12
+                  },
+                  "virus": {
+                    "value": "Human alphaherpesvirus 2"
+                  },
+                  "host": {
+                    "value": "Homo sapiens"
+                  },
+                  "region": {
+                    "value": "Europe",
+                    "confidence": {
+                      "Europe": 1.0
+                    },
+                    "entropy": -1e-12
+                  },
+                  "date": {
+                    "value": "2008-XX-XX"
+                  }
+                },
+                "branch_attrs": {
+                  "mutations": {
+                    "nuc": [
+                      "A666G"
+                    ]
+                  }
+                }
+              },
+              {
+                "name": "NODE_0000003",
+                "node_attrs": {
+                  "div": 0.0043,
+                  "country": {
+                    "value": "France",
+                    "confidence": {
+                      "France": 1.0
+                    },
+                    "entropy": 0.00204
+                  },
+                  "virus": {
+                    "value": "Human alphaherpesvirus 2"
+                  },
+                  "host": {
+                    "value": "Homo sapiens"
+                  },
+                  "region": {
+                    "value": "Europe",
+                    "confidence": {
+                      "Europe": 0.999
+                    },
+                    "entropy": 0.00558
+                  }
+                },
+                "branch_attrs": {
+                  "mutations": {}
+                },
+                "children": [
+                  {
+                    "name": "pat6_KF588455_2008-XX-XX",
+                    "node_attrs": {
+                      "div": 0.0043,
+                      "accession": "KF588455",
+                      "url": "https://www.ncbi.nlm.nih.gov/nuccore/KF588455",
+                      "author": {
+                        "author": "Burrel et al",
+                        "title": "Genetic diversity within alphaherpesviruses: characterization of a",
+                        "journal": "Unpublished",
+                        "value": "Burrel et al"
+                      },
+                      "country": {
+                        "value": "France",
+                        "confidence": {
+                          "France": 1.0
+                        },
+                        "entropy": -1e-12
+                      },
+                      "virus": {
+                        "value": "Human alphaherpesvirus 2"
+                      },
+                      "host": {
+                        "value": "Homo sapiens"
+                      },
+                      "region": {
+                        "value": "Europe",
+                        "confidence": {
+                          "Europe": 1.0
+                        },
+                        "entropy": -1e-12
+                      },
+                      "date": {
+                        "value": "2008-XX-XX"
+                      }
+                    },
+                    "branch_attrs": {
+                      "mutations": {}
+                    }
+                  },
+                  {
+                    "name": "NODE_0000004",
+                    "node_attrs": {
+                      "div": 0.0043,
+                      "country": {
+                        "value": "France",
+                        "confidence": {
+                          "France": 1.0
+                        },
+                        "entropy": 0.000694
+                      },
+                      "virus": {
+                        "value": "Human alphaherpesvirus 2"
+                      },
+                      "host": {
+                        "value": "Homo sapiens"
+                      },
+                      "region": {
+                        "value": "Europe",
+                        "confidence": {
+                          "Europe": 1.0
+                        },
+                        "entropy": 0.00221
+                      }
+                    },
+                    "branch_attrs": {
+                      "mutations": {}
+                    },
+                    "children": [
+                      {
+                        "name": "pat2_KF588451_2010-XX-XX",
+                        "node_attrs": {
+                          "div": 0.00579,
+                          "accession": "KF588451",
+                          "url": "https://www.ncbi.nlm.nih.gov/nuccore/KF588451",
+                          "author": {
+                            "author": "Burrel et al",
+                            "title": "Genetic diversity within alphaherpesviruses: characterization of a",
+                            "journal": "Unpublished",
+                            "value": "Burrel et al"
+                          },
+                          "country": {
+                            "value": "France",
+                            "confidence": {
+                              "France": 1.0
+                            },
+                            "entropy": -1e-12
+                          },
+                          "virus": {
+                            "value": "Human alphaherpesvirus 2"
+                          },
+                          "host": {
+                            "value": "Homo sapiens"
+                          },
+                          "region": {
+                            "value": "Europe",
+                            "confidence": {
+                              "Europe": 1.0
+                            },
+                            "entropy": -1e-12
+                          },
+                          "date": {
+                            "value": "2010-XX-XX"
+                          }
+                        },
+                        "branch_attrs": {
+                          "mutations": {
+                            "nuc": [
+                              "C342G"
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "name": "pat8_KF588457_2009-XX-XX",
+                        "node_attrs": {
+                          "div": 0.00579,
+                          "accession": "KF588457",
+                          "url": "https://www.ncbi.nlm.nih.gov/nuccore/KF588457",
+                          "author": {
+                            "author": "Burrel et al",
+                            "title": "Genetic diversity within alphaherpesviruses: characterization of a",
+                            "journal": "Unpublished",
+                            "value": "Burrel et al"
+                          },
+                          "country": {
+                            "value": "France",
+                            "confidence": {
+                              "France": 1.0
+                            },
+                            "entropy": -1e-12
+                          },
+                          "virus": {
+                            "value": "Human alphaherpesvirus 2"
+                          },
+                          "host": {
+                            "value": "Homo sapiens"
+                          },
+                          "region": {
+                            "value": "Europe",
+                            "confidence": {
+                              "Europe": 1.0
+                            },
+                            "entropy": -1e-12
+                          },
+                          "date": {
+                            "value": "2009-XX-XX"
+                          }
+                        },
+                        "branch_attrs": {
+                          "mutations": {
+                            "nuc": [
+                              "C627T"
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "NODE_0000005",
+        "node_attrs": {
+          "div": 0.00316,
+          "country": {
+            "value": "USA",
+            "confidence": {
+              "USA": 0.975,
+              "Peru": 0.0139,
+              "Uganda": 0.00779,
+              "France": 0.00163
+            },
+            "entropy": 0.146
+          },
+          "virus": {
+            "value": "Human alphaherpesvirus 2"
+          },
+          "host": {
+            "value": "Homo sapiens"
+          },
+          "region": {
+            "value": "North America",
+            "confidence": {
+              "North America": 0.97,
+              "Africa": 0.0188,
+              "South America": 0.00858,
+              "Europe": 0.00251
+            },
+            "entropy": 0.16
+          }
+        },
+        "branch_attrs": {
+          "mutations": {
+            "nuc": [
+              "A82C",
+              "G94A",
+              "T111G"
+            ],
+            "HSV2_gL": [
+              "I28L",
+              "V32I"
+            ]
+          },
+          "labels": {
+            "aa": "HSV2_gL: I28L, V32I"
+          }
+        },
+        "children": [
+          {
+            "name": "123_PP099987_2024-06-10",
+            "node_attrs": {
+              "div": 0.00465,
+              "accession": "PP099987",
+              "url": "https://www.ncbi.nlm.nih.gov/nuccore/PP099987",
+              "author": {
+                "author": "Casto et al",
+                "title": "Viral genomic variation and the severity of genital HSV-2 infection",
+                "journal": "J Infect Dis (2024) In press",
+                "paper_url": "https://pubmed.ncbi.nlm.nih.gov/38805234",
+                "value": "Casto et al A"
+              },
+              "country": {
+                "value": "USA",
+                "confidence": {
+                  "USA": 1.0
+                },
+                "entropy": -1e-12
+              },
+              "virus": {
+                "value": "Human alphaherpesvirus 2"
+              },
+              "host": {
+                "value": "Homo sapiens"
+              },
+              "region": {
+                "value": "North America",
+                "confidence": {
+                  "North America": 1.0
+                },
+                "entropy": -1e-12
+              },
+              "date": {
+                "value": "2024-06-10"
+              }
+            },
+            "branch_attrs": {
+              "mutations": {
+                "nuc": [
+                  "C423T"
+                ]
+              }
+            }
+          },
+          {
+            "name": "NODE_0000006",
+            "node_attrs": {
+              "div": 0.00316,
+              "country": {
+                "value": "USA",
+                "confidence": {
+                  "USA": 0.973,
+                  "Peru": 0.0252
+                },
+                "entropy": 0.132
+              },
+              "virus": {
+                "value": "Human alphaherpesvirus 2"
+              },
+              "host": {
+                "value": "Homo sapiens"
+              },
+              "region": {
+                "value": "North America",
+                "confidence": {
+                  "North America": 0.976,
+                  "South America": 0.0159,
+                  "Africa": 0.00781
+                },
+                "entropy": 0.131
+              }
+            },
+            "branch_attrs": {
+              "mutations": {}
+            },
+            "children": [
+              {
+                "name": "NODE_0000007",
+                "node_attrs": {
+                  "div": 0.00465,
+                  "country": {
+                    "value": "USA",
+                    "confidence": {
+                      "USA": 0.934,
+                      "Peru": 0.0641
+                    },
+                    "entropy": 0.252
+                  },
+                  "virus": {
+                    "value": "Human alphaherpesvirus 2"
+                  },
+                  "host": {
+                    "value": "Homo sapiens"
+                  },
+                  "region": {
+                    "value": "North America",
+                    "confidence": {
+                      "North America": 0.936,
+                      "South America": 0.0599,
+                      "Africa": 0.00369
+                    },
+                    "entropy": 0.256
+                  }
+                },
+                "branch_attrs": {
+                  "mutations": {
+                    "nuc": [
+                      "G279T"
+                    ]
+                  }
+                },
+                "children": [
+                  {
+                    "name": "2006-30839_KX574865_2005-XX-XX",
+                    "node_attrs": {
+                      "div": 0.00614,
+                      "accession": "KX574865",
+                      "url": "https://www.ncbi.nlm.nih.gov/nuccore/KX574865",
+                      "author": {
+                        "author": "Koelle et al",
+                        "title": "Worldwide circulation of HSV-2 x HSV-1 recombinant strains",
+                        "journal": "Sci Rep 7, 44084 (2017)",
+                        "paper_url": "https://pubmed.ncbi.nlm.nih.gov/28287142",
+                        "value": "Koelle et al"
+                      },
+                      "country": {
+                        "value": "Peru",
+                        "confidence": {
+                          "Peru": 1.0
+                        },
+                        "entropy": -1e-12
+                      },
+                      "virus": {
+                        "value": "Human alphaherpesvirus 2"
+                      },
+                      "host": {
+                        "value": "Homo sapiens"
+                      },
+                      "region": {
+                        "value": "South America",
+                        "confidence": {
+                          "South America": 1.0
+                        },
+                        "entropy": -1e-12
+                      },
+                      "date": {
+                        "value": "2005-XX-XX"
+                      }
+                    },
+                    "branch_attrs": {
+                      "mutations": {
+                        "nuc": [
+                          "G633A"
+                        ]
+                      }
+                    }
+                  },
+                  {
+                    "name": "NODE_0000008",
+                    "node_attrs": {
+                      "div": 0.00465,
+                      "country": {
+                        "value": "USA",
+                        "confidence": {
+                          "USA": 0.995,
+                          "Peru": 0.00523
+                        },
+                        "entropy": 0.0349
+                      },
+                      "virus": {
+                        "value": "Human alphaherpesvirus 2"
+                      },
+                      "host": {
+                        "value": "Homo sapiens"
+                      },
+                      "region": {
+                        "value": "North America",
+                        "confidence": {
+                          "North America": 0.994,
+                          "South America": 0.0052
+                        },
+                        "entropy": 0.0381
+                      }
+                    },
+                    "branch_attrs": {
+                      "mutations": {}
+                    },
+                    "children": [
+                      {
+                        "name": "105_PP100018_2024-06-10",
+                        "node_attrs": {
+                          "div": 0.00614,
+                          "accession": "PP100018",
+                          "url": "https://www.ncbi.nlm.nih.gov/nuccore/PP100018",
+                          "author": {
+                            "author": "Casto et al",
+                            "title": "Viral genomic variation and the severity of genital HSV-2 infection",
+                            "journal": "J Infect Dis (2024) In press",
+                            "paper_url": "https://pubmed.ncbi.nlm.nih.gov/38805234",
+                            "value": "Casto et al A"
+                          },
+                          "country": {
+                            "value": "USA",
+                            "confidence": {
+                              "USA": 1.0
+                            },
+                            "entropy": -1e-12
+                          },
+                          "virus": {
+                            "value": "Human alphaherpesvirus 2"
+                          },
+                          "host": {
+                            "value": "Homo sapiens"
+                          },
+                          "region": {
+                            "value": "North America",
+                            "confidence": {
+                              "North America": 1.0
+                            },
+                            "entropy": -1e-12
+                          },
+                          "date": {
+                            "value": "2024-06-10"
+                          }
+                        },
+                        "branch_attrs": {
+                          "mutations": {
+                            "nuc": [
+                              "C605G"
+                            ],
+                            "HSV2_gL": [
+                              "S202W"
+                            ]
+                          },
+                          "labels": {
+                            "aa": "HSV2_gL: S202W"
+                          }
+                        }
+                      },
+                      {
+                        "name": "NODE_0000009",
+                        "node_attrs": {
+                          "div": 0.00465,
+                          "country": {
+                            "value": "USA",
+                            "confidence": {
+                              "USA": 0.998,
+                              "Peru": 0.00236
+                            },
+                            "entropy": 0.0177
+                          },
+                          "virus": {
+                            "value": "Human alphaherpesvirus 2"
+                          },
+                          "host": {
+                            "value": "Homo sapiens"
+                          },
+                          "region": {
+                            "value": "North America",
+                            "confidence": {
+                              "North America": 0.997,
+                              "South America": 0.00244
+                            },
+                            "entropy": 0.0199
+                          }
+                        },
+                        "branch_attrs": {
+                          "mutations": {}
+                        },
+                        "children": [
+                          {
+                            "name": "127_PP099991_2024-06-10",
+                            "node_attrs": {
+                              "div": 0.00465,
+                              "accession": "PP099991",
+                              "url": "https://www.ncbi.nlm.nih.gov/nuccore/PP099991",
+                              "author": {
+                                "author": "Casto et al",
+                                "title": "Viral genomic variation and the severity of genital HSV-2 infection",
+                                "journal": "J Infect Dis (2024) In press",
+                                "paper_url": "https://pubmed.ncbi.nlm.nih.gov/38805234",
+                                "value": "Casto et al A"
+                              },
+                              "country": {
+                                "value": "USA",
+                                "confidence": {
+                                  "USA": 1.0
+                                },
+                                "entropy": -1e-12
+                              },
+                              "virus": {
+                                "value": "Human alphaherpesvirus 2"
+                              },
+                              "host": {
+                                "value": "Homo sapiens"
+                              },
+                              "region": {
+                                "value": "North America",
+                                "confidence": {
+                                  "North America": 1.0
+                                },
+                                "entropy": -1e-12
+                              },
+                              "date": {
+                                "value": "2024-06-10"
+                              }
+                            },
+                            "branch_attrs": {
+                              "mutations": {}
+                            }
+                          },
+                          {
+                            "name": "NODE_0000010",
+                            "node_attrs": {
+                              "div": 0.00465,
+                              "country": {
+                                "value": "USA",
+                                "confidence": {
+                                  "USA": 0.98,
+                                  "Peru": 0.019
+                                },
+                                "entropy": 0.103
+                              },
+                              "virus": {
+                                "value": "Human alphaherpesvirus 2"
+                              },
+                              "host": {
+                                "value": "Homo sapiens"
+                              },
+                              "region": {
+                                "value": "North America",
+                                "confidence": {
+                                  "North America": 0.977,
+                                  "South America": 0.0206,
+                                  "Africa": 0.0016
+                                },
+                                "entropy": 0.115
+                              }
+                            },
+                            "branch_attrs": {
+                              "mutations": {}
+                            },
+                            "children": [
+                              {
+                                "name": "NODE_0000011",
+                                "node_attrs": {
+                                  "div": 0.00465,
+                                  "country": {
+                                    "value": "USA",
+                                    "confidence": {
+                                      "USA": 0.998,
+                                      "Peru": 0.00171
+                                    },
+                                    "entropy": 0.0147
+                                  },
+                                  "virus": {
+                                    "value": "Human alphaherpesvirus 2"
+                                  },
+                                  "host": {
+                                    "value": "Homo sapiens"
+                                  },
+                                  "region": {
+                                    "value": "North America",
+                                    "confidence": {
+                                      "North America": 0.997,
+                                      "South America": 0.002
+                                    },
+                                    "entropy": 0.0193
+                                  }
+                                },
+                                "branch_attrs": {
+                                  "mutations": {}
+                                },
+                                "children": [
+                                  {
+                                    "name": "104_PP100014_2024-06-10",
+                                    "node_attrs": {
+                                      "div": 0.00614,
+                                      "accession": "PP100014",
+                                      "url": "https://www.ncbi.nlm.nih.gov/nuccore/PP100014",
+                                      "author": {
+                                        "author": "Casto et al",
+                                        "title": "Viral genomic variation and the severity of genital HSV-2 infection",
+                                        "journal": "J Infect Dis (2024) In press",
+                                        "paper_url": "https://pubmed.ncbi.nlm.nih.gov/38805234",
+                                        "value": "Casto et al A"
+                                      },
+                                      "country": {
+                                        "value": "USA",
+                                        "confidence": {
+                                          "USA": 1.0
+                                        },
+                                        "entropy": -1e-12
+                                      },
+                                      "virus": {
+                                        "value": "Human alphaherpesvirus 2"
+                                      },
+                                      "host": {
+                                        "value": "Homo sapiens"
+                                      },
+                                      "region": {
+                                        "value": "North America",
+                                        "confidence": {
+                                          "North America": 1.0
+                                        },
+                                        "entropy": -1e-12
+                                      },
+                                      "date": {
+                                        "value": "2024-06-10"
+                                      }
+                                    },
+                                    "branch_attrs": {
+                                      "mutations": {
+                                        "nuc": [
+                                          "C364T"
+                                        ],
+                                        "HSV2_gL": [
+                                          "R122C"
+                                        ]
+                                      },
+                                      "labels": {
+                                        "aa": "HSV2_gL: R122C"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "name": "2013-37246_MH790601_2013-XX-XX",
+                                    "node_attrs": {
+                                      "div": 0.00614,
+                                      "accession": "MH790601",
+                                      "url": "https://www.ncbi.nlm.nih.gov/nuccore/MH790601",
+                                      "author": {
+                                        "author": "Roychoudhury et al",
+                                        "title": "HSV2 whole genome sequences from clinical isolates",
+                                        "journal": "Unpublished",
+                                        "value": "Roychoudhury et al"
+                                      },
+                                      "country": {
+                                        "value": "USA",
+                                        "confidence": {
+                                          "USA": 1.0
+                                        },
+                                        "entropy": -1e-12
+                                      },
+                                      "virus": {
+                                        "value": "Human alphaherpesvirus 2"
+                                      },
+                                      "host": {
+                                        "value": "Homo sapiens"
+                                      },
+                                      "region": {
+                                        "value": "North America",
+                                        "confidence": {
+                                          "North America": 1.0
+                                        },
+                                        "entropy": -1e-12
+                                      },
+                                      "date": {
+                                        "value": "2013-XX-XX"
+                                      }
+                                    },
+                                    "branch_attrs": {
+                                      "mutations": {
+                                        "nuc": [
+                                          "C402G"
+                                        ]
+                                      }
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "NODE_0000012",
+                                "node_attrs": {
+                                  "div": 0.00465,
+                                  "country": {
+                                    "value": "USA",
+                                    "confidence": {
+                                      "USA": 0.565,
+                                      "Peru": 0.412,
+                                      "Uganda": 0.00578,
+                                      "Zambia": 0.00501,
+                                      "United Kingdom": 0.00465,
+                                      "Tanzania": 0.00429,
+                                      "France": 0.0035
+                                    },
+                                    "entropy": 0.812
+                                  },
+                                  "virus": {
+                                    "value": "Human alphaherpesvirus 2"
+                                  },
+                                  "host": {
+                                    "value": "Homo sapiens"
+                                  },
+                                  "region": {
+                                    "value": "North America",
+                                    "confidence": {
+                                      "North America": 0.556,
+                                      "South America": 0.419,
+                                      "Africa": 0.0183,
+                                      "Europe": 0.00698
+                                    },
+                                    "entropy": 0.799
+                                  }
+                                },
+                                "branch_attrs": {
+                                  "mutations": {}
+                                },
+                                "children": [
+                                  {
+                                    "name": "DISS29_MK106001_2019-01-30",
+                                    "node_attrs": {
+                                      "div": 0.00614,
+                                      "accession": "MK106001",
+                                      "url": "https://www.ncbi.nlm.nih.gov/nuccore/MK106001",
+                                      "author": {
+                                        "author": "Akhtar et al",
+                                        "title": "Genotypic and phenotypic diversity within the neonatal HSV-2",
+                                        "journal": "Unpublished",
+                                        "value": "Akhtar et al"
+                                      },
+                                      "country": {
+                                        "value": "USA",
+                                        "confidence": {
+                                          "USA": 0.483,
+                                          "Peru": 0.386,
+                                          "Uganda": 0.0315,
+                                          "United Kingdom": 0.0265,
+                                          "Zambia": 0.0261,
+                                          "Tanzania": 0.0248,
+                                          "France": 0.0218
+                                        },
+                                        "entropy": 1.194
+                                      },
+                                      "virus": {
+                                        "value": "Human alphaherpesvirus 2"
+                                      },
+                                      "host": {
+                                        "value": "Homo sapiens"
+                                      },
+                                      "region": {
+                                        "value": "North America",
+                                        "confidence": {
+                                          "North America": 0.475,
+                                          "South America": 0.41,
+                                          "Africa": 0.0762,
+                                          "Europe": 0.0386
+                                        },
+                                        "entropy": 1.041
+                                      },
+                                      "date": {
+                                        "value": "2019-01-30"
+                                      }
+                                    },
+                                    "branch_attrs": {
+                                      "mutations": {
+                                        "nuc": [
+                                          "C518T"
+                                        ],
+                                        "HSV2_gL": [
+                                          "S173L"
+                                        ]
+                                      },
+                                      "labels": {
+                                        "aa": "HSV2_gL: S173L"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "name": "2007-39303_KX574878_2007-XX-XX",
+                                    "node_attrs": {
+                                      "div": 0.00614,
+                                      "accession": "KX574878",
+                                      "url": "https://www.ncbi.nlm.nih.gov/nuccore/KX574878",
+                                      "author": {
+                                        "author": "Koelle et al",
+                                        "title": "Worldwide circulation of HSV-2 x HSV-1 recombinant strains",
+                                        "journal": "Sci Rep 7, 44084 (2017)",
+                                        "paper_url": "https://pubmed.ncbi.nlm.nih.gov/28287142",
+                                        "value": "Koelle et al"
+                                      },
+                                      "country": {
+                                        "value": "Peru",
+                                        "confidence": {
+                                          "Peru": 1.0
+                                        },
+                                        "entropy": -1e-12
+                                      },
+                                      "virus": {
+                                        "value": "Human alphaherpesvirus 2"
+                                      },
+                                      "host": {
+                                        "value": "Homo sapiens"
+                                      },
+                                      "region": {
+                                        "value": "South America",
+                                        "confidence": {
+                                          "South America": 1.0
+                                        },
+                                        "entropy": -1e-12
+                                      },
+                                      "date": {
+                                        "value": "2007-XX-XX"
+                                      }
+                                    },
+                                    "branch_attrs": {
+                                      "mutations": {
+                                        "nuc": [
+                                          "T603G"
+                                        ]
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "NODE_0000013",
+                "node_attrs": {
+                  "div": 0.00316,
+                  "country": {
+                    "value": "USA",
+                    "confidence": {
+                      "USA": 0.958,
+                      "Peru": 0.0363,
+                      "Zambia": 0.00435
+                    },
+                    "entropy": 0.193
+                  },
+                  "virus": {
+                    "value": "Human alphaherpesvirus 2"
+                  },
+                  "host": {
+                    "value": "Homo sapiens"
+                  },
+                  "region": {
+                    "value": "North America",
+                    "confidence": {
+                      "North America": 0.961,
+                      "South America": 0.022,
+                      "Africa": 0.0165
+                    },
+                    "entropy": 0.193
+                  }
+                },
+                "branch_attrs": {
+                  "mutations": {}
+                },
+                "children": [
+                  {
+                    "name": "NODE_0000014",
+                    "node_attrs": {
+                      "div": 0.00316,
+                      "country": {
+                        "value": "USA",
+                        "confidence": {
+                          "USA": 0.478,
+                          "Peru": 0.344,
+                          "Zambia": 0.166,
+                          "Uganda": 0.00361,
+                          "United Kingdom": 0.00286,
+                          "Tanzania": 0.00264,
+                          "France": 0.00215
+                        },
+                        "entropy": 1.084
+                      },
+                      "virus": {
+                        "value": "Human alphaherpesvirus 2"
+                      },
+                      "host": {
+                        "value": "Homo sapiens"
+                      },
+                      "region": {
+                        "value": "North America",
+                        "confidence": {
+                          "North America": 0.576,
+                          "Africa": 0.211,
+                          "South America": 0.207,
+                          "Europe": 0.00519
+                        },
+                        "entropy": 0.999
+                      }
+                    },
+                    "branch_attrs": {
+                      "mutations": {}
+                    },
+                    "children": [
+                      {
+                        "name": "2006-29060_KX574864_2005-XX-XX",
+                        "node_attrs": {
+                          "div": 0.00465,
+                          "accession": "KX574864",
+                          "url": "https://www.ncbi.nlm.nih.gov/nuccore/KX574864",
+                          "author": {
+                            "author": "Koelle et al",
+                            "title": "Worldwide circulation of HSV-2 x HSV-1 recombinant strains",
+                            "journal": "Sci Rep 7, 44084 (2017)",
+                            "paper_url": "https://pubmed.ncbi.nlm.nih.gov/28287142",
+                            "value": "Koelle et al"
+                          },
+                          "country": {
+                            "value": "Zambia",
+                            "confidence": {
+                              "Zambia": 1.0
+                            },
+                            "entropy": -1e-12
+                          },
+                          "virus": {
+                            "value": "Human alphaherpesvirus 2"
+                          },
+                          "host": {
+                            "value": "Homo sapiens"
+                          },
+                          "region": {
+                            "value": "Africa",
+                            "confidence": {
+                              "Africa": 1.0
+                            },
+                            "entropy": -1e-12
+                          },
+                          "date": {
+                            "value": "2005-XX-XX"
+                          }
+                        },
+                        "branch_attrs": {
+                          "mutations": {
+                            "nuc": [
+                              "G585T"
+                            ],
+                            "HSV2_gL": [
+                              "Q195H"
+                            ]
+                          },
+                          "labels": {
+                            "aa": "HSV2_gL: Q195H"
+                          }
+                        }
+                      },
+                      {
+                        "name": "2006-45028_KX574867_2005-XX-XX",
+                        "node_attrs": {
+                          "div": 0.00465,
+                          "accession": "KX574867",
+                          "url": "https://www.ncbi.nlm.nih.gov/nuccore/KX574867",
+                          "author": {
+                            "author": "Koelle et al",
+                            "title": "Worldwide circulation of HSV-2 x HSV-1 recombinant strains",
+                            "journal": "Sci Rep 7, 44084 (2017)",
+                            "paper_url": "https://pubmed.ncbi.nlm.nih.gov/28287142",
+                            "value": "Koelle et al"
+                          },
+                          "country": {
+                            "value": "Peru",
+                            "confidence": {
+                              "Peru": 1.0
+                            },
+                            "entropy": -1e-12
+                          },
+                          "virus": {
+                            "value": "Human alphaherpesvirus 2"
+                          },
+                          "host": {
+                            "value": "Homo sapiens"
+                          },
+                          "region": {
+                            "value": "South America",
+                            "confidence": {
+                              "South America": 1.0
+                            },
+                            "entropy": -1e-12
+                          },
+                          "date": {
+                            "value": "2005-XX-XX"
+                          }
+                        },
+                        "branch_attrs": {
+                          "mutations": {
+                            "nuc": [
+                              "C530T"
+                            ],
+                            "HSV2_gL": [
+                              "P177L"
+                            ]
+                          },
+                          "labels": {
+                            "aa": "HSV2_gL: P177L"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "name": "NODE_0000015",
+                    "node_attrs": {
+                      "div": 0.00316,
+                      "country": {
+                        "value": "USA",
+                        "confidence": {
+                          "USA": 0.996,
+                          "Peru": 0.00369
+                        },
+                        "entropy": 0.0294
+                      },
+                      "virus": {
+                        "value": "Human alphaherpesvirus 2"
+                      },
+                      "host": {
+                        "value": "Homo sapiens"
+                      },
+                      "region": {
+                        "value": "North America",
+                        "confidence": {
+                          "North America": 0.995,
+                          "South America": 0.00254,
+                          "Africa": 0.00219
+                        },
+                        "entropy": 0.0346
+                      }
+                    },
+                    "branch_attrs": {
+                      "mutations": {}
+                    },
+                    "children": [
+                      {
+                        "name": "NODE_0000016",
+                        "node_attrs": {
+                          "div": 0.00316,
+                          "country": {
+                            "value": "USA",
+                            "confidence": {
+                              "USA": 0.992,
+                              "Peru": 0.00466,
+                              "Uganda": 0.00106
+                            },
+                            "entropy": 0.0594
+                          },
+                          "virus": {
+                            "value": "Human alphaherpesvirus 2"
+                          },
+                          "host": {
+                            "value": "Homo sapiens"
+                          },
+                          "region": {
+                            "value": "North America",
+                            "confidence": {
+                              "North America": 0.989,
+                              "Africa": 0.00548,
+                              "South America": 0.00461,
+                              "Europe": 0.0013
+                            },
+                            "entropy": 0.0733
+                          }
+                        },
+                        "branch_attrs": {
+                          "mutations": {}
+                        },
+                        "children": [
+                          {
+                            "name": "85_PP100028_2024-06-10",
+                            "node_attrs": {
+                              "div": 0.00465,
+                              "accession": "PP100028",
+                              "url": "https://www.ncbi.nlm.nih.gov/nuccore/PP100028",
+                              "author": {
+                                "author": "Casto et al",
+                                "title": "Viral genomic variation and the severity of genital HSV-2 infection",
+                                "journal": "J Infect Dis (2024) In press",
+                                "paper_url": "https://pubmed.ncbi.nlm.nih.gov/38805234",
+                                "value": "Casto et al A"
+                              },
+                              "country": {
+                                "value": "USA",
+                                "confidence": {
+                                  "USA": 1.0
+                                },
+                                "entropy": -1e-12
+                              },
+                              "virus": {
+                                "value": "Human alphaherpesvirus 2"
+                              },
+                              "host": {
+                                "value": "Homo sapiens"
+                              },
+                              "region": {
+                                "value": "North America",
+                                "confidence": {
+                                  "North America": 1.0
+                                },
+                                "entropy": -1e-12
+                              },
+                              "date": {
+                                "value": "2024-06-10"
+                              }
+                            },
+                            "branch_attrs": {
+                              "mutations": {
+                                "nuc": [
+                                  "T96G"
+                                ],
+                                "HSV2_gL": [
+                                  "I32M"
+                                ]
+                              },
+                              "labels": {
+                                "aa": "HSV2_gL: I32M"
+                              }
+                            }
+                          },
+                          {
+                            "name": "CNS03_MK105995_2019-01-30",
+                            "node_attrs": {
+                              "div": 0.00316,
+                              "accession": "MK105995",
+                              "url": "https://www.ncbi.nlm.nih.gov/nuccore/MK105995",
+                              "author": {
+                                "author": "Akhtar et al",
+                                "title": "Genotypic and phenotypic diversity within the neonatal HSV-2",
+                                "journal": "Unpublished",
+                                "value": "Akhtar et al"
+                              },
+                              "country": {
+                                "value": "USA",
+                                "confidence": {
+                                  "USA": 0.868,
+                                  "Peru": 0.0417,
+                                  "Uganda": 0.0235,
+                                  "United Kingdom": 0.019,
+                                  "Tanzania": 0.0176,
+                                  "Zambia": 0.0163,
+                                  "France": 0.0144
+                                },
+                                "entropy": 0.618
+                              },
+                              "virus": {
+                                "value": "Human alphaherpesvirus 2"
+                              },
+                              "host": {
+                                "value": "Homo sapiens"
+                              },
+                              "region": {
+                                "value": "North America",
+                                "confidence": {
+                                  "North America": 0.862,
+                                  "Africa": 0.0611,
+                                  "South America": 0.0488,
+                                  "Europe": 0.0281
+                                },
+                                "entropy": 0.546
+                              },
+                              "date": {
+                                "value": "2019-01-30"
+                              }
+                            },
+                            "branch_attrs": {
+                              "mutations": {}
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "name": "NODE_0000017",
+                        "node_attrs": {
+                          "div": 0.00316,
+                          "country": {
+                            "value": "USA",
+                            "confidence": {
+                              "USA": 1.0
+                            },
+                            "entropy": 0.00308
+                          },
+                          "virus": {
+                            "value": "Human alphaherpesvirus 2"
+                          },
+                          "host": {
+                            "value": "Homo sapiens"
+                          },
+                          "region": {
+                            "value": "North America",
+                            "confidence": {
+                              "North America": 0.999
+                            },
+                            "entropy": 0.00487
+                          }
+                        },
+                        "branch_attrs": {
+                          "mutations": {}
+                        },
+                        "children": [
+                          {
+                            "name": "NODE_0000018",
+                            "node_attrs": {
+                              "div": 0.00316,
+                              "country": {
+                                "value": "USA",
+                                "confidence": {
+                                  "USA": 1.0
+                                },
+                                "entropy": 0.00473
+                              },
+                              "virus": {
+                                "value": "Human alphaherpesvirus 2"
+                              },
+                              "host": {
+                                "value": "Homo sapiens"
+                              },
+                              "region": {
+                                "value": "North America",
+                                "confidence": {
+                                  "North America": 0.999
+                                },
+                                "entropy": 0.00842
+                              }
+                            },
+                            "branch_attrs": {
+                              "mutations": {}
+                            },
+                            "children": [
+                              {
+                                "name": "12_PP100091_2024-06-10",
+                                "node_attrs": {
+                                  "div": 0.00465,
+                                  "accession": "PP100091",
+                                  "url": "https://www.ncbi.nlm.nih.gov/nuccore/PP100091",
+                                  "author": {
+                                    "author": "Casto et al",
+                                    "title": "Viral genomic variation and the severity of genital HSV-2 infection",
+                                    "journal": "J Infect Dis (2024) In press",
+                                    "paper_url": "https://pubmed.ncbi.nlm.nih.gov/38805234",
+                                    "value": "Casto et al A"
+                                  },
+                                  "country": {
+                                    "value": "USA",
+                                    "confidence": {
+                                      "USA": 1.0
+                                    },
+                                    "entropy": -1e-12
+                                  },
+                                  "virus": {
+                                    "value": "Human alphaherpesvirus 2"
+                                  },
+                                  "host": {
+                                    "value": "Homo sapiens"
+                                  },
+                                  "region": {
+                                    "value": "North America",
+                                    "confidence": {
+                                      "North America": 1.0
+                                    },
+                                    "entropy": -1e-12
+                                  },
+                                  "date": {
+                                    "value": "2024-06-10"
+                                  }
+                                },
+                                "branch_attrs": {
+                                  "mutations": {
+                                    "nuc": [
+                                      "G151A"
+                                    ],
+                                    "HSV2_gL": [
+                                      "D51N"
+                                    ]
+                                  },
+                                  "labels": {
+                                    "aa": "HSV2_gL: D51N"
+                                  }
+                                }
+                              },
+                              {
+                                "name": "NODE_0000019",
+                                "node_attrs": {
+                                  "div": 0.00465,
+                                  "country": {
+                                    "value": "USA",
+                                    "confidence": {
+                                      "USA": 0.994,
+                                      "Peru": 0.00258,
+                                      "Uganda": 0.001
+                                    },
+                                    "entropy": 0.0455
+                                  },
+                                  "virus": {
+                                    "value": "Human alphaherpesvirus 2"
+                                  },
+                                  "host": {
+                                    "value": "Homo sapiens"
+                                  },
+                                  "region": {
+                                    "value": "North America",
+                                    "confidence": {
+                                      "North America": 0.991,
+                                      "Africa": 0.00435,
+                                      "South America": 0.00321,
+                                      "Europe": 0.00123
+                                    },
+                                    "entropy": 0.0591
+                                  }
+                                },
+                                "branch_attrs": {
+                                  "mutations": {
+                                    "nuc": [
+                                      "G197A"
+                                    ],
+                                    "HSV2_gL": [
+                                      "R66H"
+                                    ]
+                                  },
+                                  "labels": {
+                                    "aa": "HSV2_gL: R66H"
+                                  }
+                                },
+                                "children": [
+                                  {
+                                    "name": "135_PP099983_2024-06-10",
+                                    "node_attrs": {
+                                      "div": 0.00465,
+                                      "accession": "PP099983",
+                                      "url": "https://www.ncbi.nlm.nih.gov/nuccore/PP099983",
+                                      "author": {
+                                        "author": "Casto et al",
+                                        "title": "Viral genomic variation and the severity of genital HSV-2 infection",
+                                        "journal": "J Infect Dis (2024) In press",
+                                        "paper_url": "https://pubmed.ncbi.nlm.nih.gov/38805234",
+                                        "value": "Casto et al A"
+                                      },
+                                      "country": {
+                                        "value": "USA",
+                                        "confidence": {
+                                          "USA": 1.0
+                                        },
+                                        "entropy": -1e-12
+                                      },
+                                      "virus": {
+                                        "value": "Human alphaherpesvirus 2"
+                                      },
+                                      "host": {
+                                        "value": "Homo sapiens"
+                                      },
+                                      "region": {
+                                        "value": "North America",
+                                        "confidence": {
+                                          "North America": 1.0
+                                        },
+                                        "entropy": -1e-12
+                                      },
+                                      "date": {
+                                        "value": "2024-06-10"
+                                      }
+                                    },
+                                    "branch_attrs": {
+                                      "mutations": {}
+                                    }
+                                  },
+                                  {
+                                    "name": "CT_9_MT364888_2020-08-23",
+                                    "node_attrs": {
+                                      "div": 0.00614,
+                                      "accession": "MT364888",
+                                      "url": "https://www.ncbi.nlm.nih.gov/nuccore/MT364888",
+                                      "author": {
+                                        "author": "Casto et al",
+                                        "title": "Herpes Simplex Virus Mistyping due to HSV-1 x HSV-2 Interspecies",
+                                        "journal": "Viruses 12 (8), E860 (2020)",
+                                        "paper_url": "https://pubmed.ncbi.nlm.nih.gov/32781734",
+                                        "value": "Casto et al B"
+                                      },
+                                      "country": {
+                                        "value": "USA",
+                                        "confidence": {
+                                          "USA": 0.815,
+                                          "Peru": 0.0556,
+                                          "Uganda": 0.0332,
+                                          "United Kingdom": 0.027,
+                                          "Tanzania": 0.025,
+                                          "Zambia": 0.0231,
+                                          "France": 0.0207
+                                        },
+                                        "entropy": 0.797
+                                      },
+                                      "virus": {
+                                        "value": "Human alphaherpesvirus 2"
+                                      },
+                                      "host": {
+                                        "value": "Homo sapiens"
+                                      },
+                                      "region": {
+                                        "value": "North America",
+                                        "confidence": {
+                                          "North America": 0.81,
+                                          "Africa": 0.0838,
+                                          "South America": 0.0665,
+                                          "Europe": 0.04
+                                        },
+                                        "entropy": 0.688
+                                      },
+                                      "date": {
+                                        "value": "2020-08-23"
+                                      }
+                                    },
+                                    "branch_attrs": {
+                                      "mutations": {
+                                        "nuc": [
+                                          "G391A"
+                                        ],
+                                        "HSV2_gL": [
+                                          "D131N"
+                                        ]
+                                      },
+                                      "labels": {
+                                        "aa": "HSV2_gL: D131N"
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "name": "NODE_0000020",
+                            "node_attrs": {
+                              "div": 0.00316,
+                              "country": {
+                                "value": "USA",
+                                "confidence": {
+                                  "USA": 1.0
+                                },
+                                "entropy": 0.0015
+                              },
+                              "virus": {
+                                "value": "Human alphaherpesvirus 2"
+                              },
+                              "host": {
+                                "value": "Homo sapiens"
+                              },
+                              "region": {
+                                "value": "North America",
+                                "confidence": {
+                                  "North America": 1.0
+                                },
+                                "entropy": 0.00282
+                              }
+                            },
+                            "branch_attrs": {
+                              "mutations": {}
+                            },
+                            "children": [
+                              {
+                                "name": "NODE_0000021",
+                                "node_attrs": {
+                                  "div": 0.00316,
+                                  "country": {
+                                    "value": "USA",
+                                    "confidence": {
+                                      "USA": 1.0
+                                    },
+                                    "entropy": 0.00274
+                                  },
+                                  "virus": {
+                                    "value": "Human alphaherpesvirus 2"
+                                  },
+                                  "host": {
+                                    "value": "Homo sapiens"
+                                  },
+                                  "region": {
+                                    "value": "North America",
+                                    "confidence": {
+                                      "North America": 0.999
+                                    },
+                                    "entropy": 0.00498
+                                  }
+                                },
+                                "branch_attrs": {
+                                  "mutations": {}
+                                },
+                                "children": [
+                                  {
+                                    "name": "125_PP099989_2024-06-10",
+                                    "node_attrs": {
+                                      "div": 0.00465,
+                                      "accession": "PP099989",
+                                      "url": "https://www.ncbi.nlm.nih.gov/nuccore/PP099989",
+                                      "author": {
+                                        "author": "Casto et al",
+                                        "title": "Viral genomic variation and the severity of genital HSV-2 infection",
+                                        "journal": "J Infect Dis (2024) In press",
+                                        "paper_url": "https://pubmed.ncbi.nlm.nih.gov/38805234",
+                                        "value": "Casto et al A"
+                                      },
+                                      "country": {
+                                        "value": "USA",
+                                        "confidence": {
+                                          "USA": 1.0
+                                        },
+                                        "entropy": -1e-12
+                                      },
+                                      "virus": {
+                                        "value": "Human alphaherpesvirus 2"
+                                      },
+                                      "host": {
+                                        "value": "Homo sapiens"
+                                      },
+                                      "region": {
+                                        "value": "North America",
+                                        "confidence": {
+                                          "North America": 1.0
+                                        },
+                                        "entropy": -1e-12
+                                      },
+                                      "date": {
+                                        "value": "2024-06-10"
+                                      }
+                                    },
+                                    "branch_attrs": {
+                                      "mutations": {
+                                        "nuc": [
+                                          "A653G"
+                                        ],
+                                        "HSV2_gL": [
+                                          "H218R"
+                                        ]
+                                      },
+                                      "labels": {
+                                        "aa": "HSV2_gL: H218R"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "name": "35_PP100080_2024-06-10",
+                                    "node_attrs": {
+                                      "div": 0.00465,
+                                      "accession": "PP100080",
+                                      "url": "https://www.ncbi.nlm.nih.gov/nuccore/PP100080",
+                                      "author": {
+                                        "author": "Casto et al",
+                                        "title": "Viral genomic variation and the severity of genital HSV-2 infection",
+                                        "journal": "J Infect Dis (2024) In press",
+                                        "paper_url": "https://pubmed.ncbi.nlm.nih.gov/38805234",
+                                        "value": "Casto et al A"
+                                      },
+                                      "country": {
+                                        "value": "USA",
+                                        "confidence": {
+                                          "USA": 1.0
+                                        },
+                                        "entropy": -1e-12
+                                      },
+                                      "virus": {
+                                        "value": "Human alphaherpesvirus 2"
+                                      },
+                                      "host": {
+                                        "value": "Homo sapiens"
+                                      },
+                                      "region": {
+                                        "value": "North America",
+                                        "confidence": {
+                                          "North America": 1.0
+                                        },
+                                        "entropy": -1e-12
+                                      },
+                                      "date": {
+                                        "value": "2024-06-10"
+                                      }
+                                    },
+                                    "branch_attrs": {
+                                      "mutations": {
+                                        "nuc": [
+                                          "G112A"
+                                        ],
+                                        "HSV2_gL": [
+                                          "D38N"
+                                        ]
+                                      },
+                                      "labels": {
+                                        "aa": "HSV2_gL: D38N"
+                                      }
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "NODE_0000022",
+                                "node_attrs": {
+                                  "div": 0.00316,
+                                  "country": {
+                                    "value": "USA",
+                                    "confidence": {
+                                      "USA": 1.0
+                                    },
+                                    "entropy": 0.00196
+                                  },
+                                  "virus": {
+                                    "value": "Human alphaherpesvirus 2"
+                                  },
+                                  "host": {
+                                    "value": "Homo sapiens"
+                                  },
+                                  "region": {
+                                    "value": "North America",
+                                    "confidence": {
+                                      "North America": 1.0
+                                    },
+                                    "entropy": 0.00369
+                                  }
+                                },
+                                "branch_attrs": {
+                                  "mutations": {}
+                                },
+                                "children": [
+                                  {
+                                    "name": "2011-21761_KX574897_1998-XX-XX",
+                                    "node_attrs": {
+                                      "div": 0.00465,
+                                      "accession": "KX574897",
+                                      "url": "https://www.ncbi.nlm.nih.gov/nuccore/KX574897",
+                                      "author": {
+                                        "author": "Koelle et al",
+                                        "title": "Worldwide circulation of HSV-2 x HSV-1 recombinant strains",
+                                        "journal": "Sci Rep 7, 44084 (2017)",
+                                        "paper_url": "https://pubmed.ncbi.nlm.nih.gov/28287142",
+                                        "value": "Koelle et al"
+                                      },
+                                      "country": {
+                                        "value": "USA",
+                                        "confidence": {
+                                          "USA": 1.0
+                                        },
+                                        "entropy": -1e-12
+                                      },
+                                      "virus": {
+                                        "value": "Human alphaherpesvirus 2"
+                                      },
+                                      "host": {
+                                        "value": "Homo sapiens"
+                                      },
+                                      "region": {
+                                        "value": "North America",
+                                        "confidence": {
+                                          "North America": 1.0
+                                        },
+                                        "entropy": -1e-12
+                                      },
+                                      "date": {
+                                        "value": "1998-XX-XX"
+                                      }
+                                    },
+                                    "branch_attrs": {
+                                      "mutations": {
+                                        "nuc": [
+                                          "T523G"
+                                        ],
+                                        "HSV2_gL": [
+                                          "W175G"
+                                        ]
+                                      },
+                                      "labels": {
+                                        "aa": "HSV2_gL: W175G"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "name": "NODE_0000023",
+                                    "node_attrs": {
+                                      "div": 0.00316,
+                                      "country": {
+                                        "value": "USA",
+                                        "confidence": {
+                                          "USA": 1.0
+                                        },
+                                        "entropy": 0.00193
+                                      },
+                                      "virus": {
+                                        "value": "Human alphaherpesvirus 2"
+                                      },
+                                      "host": {
+                                        "value": "Homo sapiens"
+                                      },
+                                      "region": {
+                                        "value": "North America",
+                                        "confidence": {
+                                          "North America": 1.0
+                                        },
+                                        "entropy": 0.00456
+                                      }
+                                    },
+                                    "branch_attrs": {
+                                      "mutations": {}
+                                    },
+                                    "children": [
+                                      {
+                                        "name": "NODE_0000024",
+                                        "node_attrs": {
+                                          "div": 0.00316,
+                                          "country": {
+                                            "value": "USA",
+                                            "confidence": {
+                                              "USA": 1.0
+                                            },
+                                            "entropy": 0.00277
+                                          },
+                                          "virus": {
+                                            "value": "Human alphaherpesvirus 2"
+                                          },
+                                          "host": {
+                                            "value": "Homo sapiens"
+                                          },
+                                          "region": {
+                                            "value": "North America",
+                                            "confidence": {
+                                              "North America": 0.999
+                                            },
+                                            "entropy": 0.00513
+                                          }
+                                        },
+                                        "branch_attrs": {
+                                          "mutations": {}
+                                        },
+                                        "children": [
+                                          {
+                                            "name": "55_PP100047_2024-06-10",
+                                            "node_attrs": {
+                                              "div": 0.00465,
+                                              "accession": "PP100047",
+                                              "url": "https://www.ncbi.nlm.nih.gov/nuccore/PP100047",
+                                              "author": {
+                                                "author": "Casto et al",
+                                                "title": "Viral genomic variation and the severity of genital HSV-2 infection",
+                                                "journal": "J Infect Dis (2024) In press",
+                                                "paper_url": "https://pubmed.ncbi.nlm.nih.gov/38805234",
+                                                "value": "Casto et al A"
+                                              },
+                                              "country": {
+                                                "value": "USA",
+                                                "confidence": {
+                                                  "USA": 1.0
+                                                },
+                                                "entropy": -1e-12
+                                              },
+                                              "virus": {
+                                                "value": "Human alphaherpesvirus 2"
+                                              },
+                                              "host": {
+                                                "value": "Homo sapiens"
+                                              },
+                                              "region": {
+                                                "value": "North America",
+                                                "confidence": {
+                                                  "North America": 1.0
+                                                },
+                                                "entropy": -1e-12
+                                              },
+                                              "date": {
+                                                "value": "2024-06-10"
+                                              }
+                                            },
+                                            "branch_attrs": {
+                                              "mutations": {
+                                                "nuc": [
+                                                  "G638A"
+                                                ],
+                                                "HSV2_gL": [
+                                                  "R213Q"
+                                                ]
+                                              },
+                                              "labels": {
+                                                "aa": "HSV2_gL: R213Q"
+                                              }
+                                            }
+                                          },
+                                          {
+                                            "name": "8_PP100103_2024-06-10",
+                                            "node_attrs": {
+                                              "div": 0.00465,
+                                              "accession": "PP100103",
+                                              "url": "https://www.ncbi.nlm.nih.gov/nuccore/PP100103",
+                                              "author": {
+                                                "author": "Casto et al",
+                                                "title": "Viral genomic variation and the severity of genital HSV-2 infection",
+                                                "journal": "J Infect Dis (2024) In press",
+                                                "paper_url": "https://pubmed.ncbi.nlm.nih.gov/38805234",
+                                                "value": "Casto et al A"
+                                              },
+                                              "country": {
+                                                "value": "USA",
+                                                "confidence": {
+                                                  "USA": 1.0
+                                                },
+                                                "entropy": -1e-12
+                                              },
+                                              "virus": {
+                                                "value": "Human alphaherpesvirus 2"
+                                              },
+                                              "host": {
+                                                "value": "Homo sapiens"
+                                              },
+                                              "region": {
+                                                "value": "North America",
+                                                "confidence": {
+                                                  "North America": 1.0
+                                                },
+                                                "entropy": -1e-12
+                                              },
+                                              "date": {
+                                                "value": "2024-06-10"
+                                              }
+                                            },
+                                            "branch_attrs": {
+                                              "mutations": {
+                                                "nuc": [
+                                                  "C140T"
+                                                ],
+                                                "HSV2_gL": [
+                                                  "T47I"
+                                                ]
+                                              },
+                                              "labels": {
+                                                "aa": "HSV2_gL: T47I"
+                                              }
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "name": "NODE_0000025",
+                                        "node_attrs": {
+                                          "div": 0.00316,
+                                          "country": {
+                                            "value": "USA",
+                                            "confidence": {
+                                              "USA": 0.998
+                                            },
+                                            "entropy": 0.0153
+                                          },
+                                          "virus": {
+                                            "value": "Human alphaherpesvirus 2"
+                                          },
+                                          "host": {
+                                            "value": "Homo sapiens"
+                                          },
+                                          "region": {
+                                            "value": "North America",
+                                            "confidence": {
+                                              "North America": 0.995,
+                                              "Africa": 0.00371
+                                            },
+                                            "entropy": 0.0331
+                                          }
+                                        },
+                                        "branch_attrs": {
+                                          "mutations": {}
+                                        },
+                                        "children": [
+                                          {
+                                            "name": "NODE_0000026",
+                                            "node_attrs": {
+                                              "div": 0.00316,
+                                              "country": {
+                                                "value": "USA",
+                                                "confidence": {
+                                                  "USA": 1.0
+                                                },
+                                                "entropy": 0.00369
+                                              },
+                                              "virus": {
+                                                "value": "Human alphaherpesvirus 2"
+                                              },
+                                              "host": {
+                                                "value": "Homo sapiens"
+                                              },
+                                              "region": {
+                                                "value": "North America",
+                                                "confidence": {
+                                                  "North America": 0.999
+                                                },
+                                                "entropy": 0.0082
+                                              }
+                                            },
+                                            "branch_attrs": {
+                                              "mutations": {}
+                                            },
+                                            "children": [
+                                              {
+                                                "name": "116_PP100001_2024-06-10",
+                                                "node_attrs": {
+                                                  "div": 0.00465,
+                                                  "accession": "PP100001",
+                                                  "url": "https://www.ncbi.nlm.nih.gov/nuccore/PP100001",
+                                                  "author": {
+                                                    "author": "Casto et al",
+                                                    "title": "Viral genomic variation and the severity of genital HSV-2 infection",
+                                                    "journal": "J Infect Dis (2024) In press",
+                                                    "paper_url": "https://pubmed.ncbi.nlm.nih.gov/38805234",
+                                                    "value": "Casto et al A"
+                                                  },
+                                                  "country": {
+                                                    "value": "USA",
+                                                    "confidence": {
+                                                      "USA": 1.0
+                                                    },
+                                                    "entropy": -1e-12
+                                                  },
+                                                  "virus": {
+                                                    "value": "Human alphaherpesvirus 2"
+                                                  },
+                                                  "host": {
+                                                    "value": "Homo sapiens"
+                                                  },
+                                                  "region": {
+                                                    "value": "North America",
+                                                    "confidence": {
+                                                      "North America": 1.0
+                                                    },
+                                                    "entropy": -1e-12
+                                                  },
+                                                  "date": {
+                                                    "value": "2024-06-10"
+                                                  }
+                                                },
+                                                "branch_attrs": {
+                                                  "mutations": {
+                                                    "nuc": [
+                                                      "A511G"
+                                                    ],
+                                                    "HSV2_gL": [
+                                                      "T171A"
+                                                    ]
+                                                  },
+                                                  "labels": {
+                                                    "aa": "HSV2_gL: T171A"
+                                                  }
+                                                }
+                                              },
+                                              {
+                                                "name": "14_PP100089_2024-06-10",
+                                                "node_attrs": {
+                                                  "div": 0.00465,
+                                                  "accession": "PP100089",
+                                                  "url": "https://www.ncbi.nlm.nih.gov/nuccore/PP100089",
+                                                  "author": {
+                                                    "author": "Casto et al",
+                                                    "title": "Viral genomic variation and the severity of genital HSV-2 infection",
+                                                    "journal": "J Infect Dis (2024) In press",
+                                                    "paper_url": "https://pubmed.ncbi.nlm.nih.gov/38805234",
+                                                    "value": "Casto et al A"
+                                                  },
+                                                  "country": {
+                                                    "value": "USA",
+                                                    "confidence": {
+                                                      "USA": 1.0
+                                                    },
+                                                    "entropy": -1e-12
+                                                  },
+                                                  "virus": {
+                                                    "value": "Human alphaherpesvirus 2"
+                                                  },
+                                                  "host": {
+                                                    "value": "Homo sapiens"
+                                                  },
+                                                  "region": {
+                                                    "value": "North America",
+                                                    "confidence": {
+                                                      "North America": 1.0
+                                                    },
+                                                    "entropy": -1e-12
+                                                  },
+                                                  "date": {
+                                                    "value": "2024-06-10"
+                                                  }
+                                                },
+                                                "branch_attrs": {
+                                                  "mutations": {
+                                                    "nuc": [
+                                                      "A101G"
+                                                    ],
+                                                    "HSV2_gL": [
+                                                      "K34R"
+                                                    ]
+                                                  },
+                                                  "labels": {
+                                                    "aa": "HSV2_gL: K34R"
+                                                  }
+                                                }
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "name": "NODE_0000027",
+                                            "node_attrs": {
+                                              "div": 0.00316,
+                                              "country": {
+                                                "value": "USA",
+                                                "confidence": {
+                                                  "USA": 0.939,
+                                                  "Tanzania": 0.0297,
+                                                  "United Kingdom": 0.0235,
+                                                  "Peru": 0.0041,
+                                                  "Uganda": 0.00165
+                                                },
+                                                "entropy": 0.296
+                                              },
+                                              "virus": {
+                                                "value": "Human alphaherpesvirus 2"
+                                              },
+                                              "host": {
+                                                "value": "Homo sapiens"
+                                              },
+                                              "region": {
+                                                "value": "North America",
+                                                "confidence": {
+                                                  "North America": 0.904,
+                                                  "Africa": 0.0717,
+                                                  "Europe": 0.0211,
+                                                  "South America": 0.00356
+                                                },
+                                                "entropy": 0.382
+                                              }
+                                            },
+                                            "branch_attrs": {
+                                              "mutations": {}
+                                            },
+                                            "children": [
+                                              {
+                                                "name": "NODE_0000028",
+                                                "node_attrs": {
+                                                  "div": 0.00316,
+                                                  "country": {
+                                                    "value": "USA",
+                                                    "confidence": {
+                                                      "USA": 0.941,
+                                                      "Tanzania": 0.0233,
+                                                      "United Kingdom": 0.0191,
+                                                      "Peru": 0.00893,
+                                                      "Uganda": 0.00385,
+                                                      "Zambia": 0.00226,
+                                                      "France": 0.00186
+                                                    },
+                                                    "entropy": 0.31
+                                                  },
+                                                  "virus": {
+                                                    "value": "Human alphaherpesvirus 2"
+                                                  },
+                                                  "host": {
+                                                    "value": "Homo sapiens"
+                                                  },
+                                                  "region": {
+                                                    "value": "North America",
+                                                    "confidence": {
+                                                      "North America": 0.909,
+                                                      "Africa": 0.0624,
+                                                      "Europe": 0.019,
+                                                      "South America": 0.0101
+                                                    },
+                                                    "entropy": 0.382
+                                                  }
+                                                },
+                                                "branch_attrs": {
+                                                  "mutations": {}
+                                                },
+                                                "children": [
+                                                  {
+                                                    "name": "99_PP100040_2024-06-10",
+                                                    "node_attrs": {
+                                                      "div": 0.00614,
+                                                      "accession": "PP100040",
+                                                      "url": "https://www.ncbi.nlm.nih.gov/nuccore/PP100040",
+                                                      "author": {
+                                                        "author": "Casto et al",
+                                                        "title": "Viral genomic variation and the severity of genital HSV-2 infection",
+                                                        "journal": "J Infect Dis (2024) In press",
+                                                        "paper_url": "https://pubmed.ncbi.nlm.nih.gov/38805234",
+                                                        "value": "Casto et al A"
+                                                      },
+                                                      "country": {
+                                                        "value": "USA",
+                                                        "confidence": {
+                                                          "USA": 1.0
+                                                        },
+                                                        "entropy": -1e-12
+                                                      },
+                                                      "virus": {
+                                                        "value": "Human alphaherpesvirus 2"
+                                                      },
+                                                      "host": {
+                                                        "value": "Homo sapiens"
+                                                      },
+                                                      "region": {
+                                                        "value": "North America",
+                                                        "confidence": {
+                                                          "North America": 1.0
+                                                        },
+                                                        "entropy": -1e-12
+                                                      },
+                                                      "date": {
+                                                        "value": "2024-06-10"
+                                                      }
+                                                    },
+                                                    "branch_attrs": {
+                                                      "mutations": {
+                                                        "nuc": [
+                                                          "C341T",
+                                                          "G391A"
+                                                        ],
+                                                        "HSV2_gL": [
+                                                          "A114V",
+                                                          "D131N"
+                                                        ]
+                                                      },
+                                                      "labels": {
+                                                        "aa": "HSV2_gL: A114V, D131N"
+                                                      }
+                                                    }
+                                                  },
+                                                  {
+                                                    "name": "SEM18_MK106004_2019-01-30",
+                                                    "node_attrs": {
+                                                      "div": 0.00473,
+                                                      "accession": "MK106004",
+                                                      "url": "https://www.ncbi.nlm.nih.gov/nuccore/MK106004",
+                                                      "author": {
+                                                        "author": "Akhtar et al",
+                                                        "title": "Genotypic and phenotypic diversity within the neonatal HSV-2",
+                                                        "journal": "Unpublished",
+                                                        "value": "Akhtar et al"
+                                                      },
+                                                      "country": {
+                                                        "value": "USA",
+                                                        "confidence": {
+                                                          "USA": 0.765,
+                                                          "Peru": 0.0615,
+                                                          "Tanzania": 0.0453,
+                                                          "United Kingdom": 0.0436,
+                                                          "Uganda": 0.0364,
+                                                          "Zambia": 0.0253,
+                                                          "France": 0.0227
+                                                        },
+                                                        "entropy": 0.953
+                                                      },
+                                                      "virus": {
+                                                        "value": "Human alphaherpesvirus 2"
+                                                      },
+                                                      "host": {
+                                                        "value": "Homo sapiens"
+                                                      },
+                                                      "region": {
+                                                        "value": "North America",
+                                                        "confidence": {
+                                                          "North America": 0.739,
+                                                          "Africa": 0.132,
+                                                          "South America": 0.0724,
+                                                          "Europe": 0.0571
+                                                        },
+                                                        "entropy": 0.845
+                                                      },
+                                                      "date": {
+                                                        "value": "2019-01-30"
+                                                      }
+                                                    },
+                                                    "branch_attrs": {
+                                                      "mutations": {
+                                                        "nuc": [
+                                                          "T654G"
+                                                        ],
+                                                        "HSV2_gL": [
+                                                          "H218Q"
+                                                        ]
+                                                      },
+                                                      "labels": {
+                                                        "aa": "HSV2_gL: H218Q"
+                                                      }
+                                                    }
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "name": "NODE_0000029",
+                                                "node_attrs": {
+                                                  "div": 0.00316,
+                                                  "country": {
+                                                    "value": "USA",
+                                                    "confidence": {
+                                                      "USA": 0.436,
+                                                      "Tanzania": 0.307,
+                                                      "United Kingdom": 0.234,
+                                                      "Peru": 0.0101,
+                                                      "Uganda": 0.00572,
+                                                      "Zambia": 0.00386,
+                                                      "France": 0.00342
+                                                    },
+                                                    "entropy": 1.181
+                                                  },
+                                                  "virus": {
+                                                    "value": "Human alphaherpesvirus 2"
+                                                  },
+                                                  "host": {
+                                                    "value": "Homo sapiens"
+                                                  },
+                                                  "region": {
+                                                    "value": "North America",
+                                                    "confidence": {
+                                                      "North America": 0.411,
+                                                      "Africa": 0.408,
+                                                      "Europe": 0.174,
+                                                      "South America": 0.00704
+                                                    },
+                                                    "entropy": 1.07
+                                                  }
+                                                },
+                                                "branch_attrs": {
+                                                  "mutations": {}
+                                                },
+                                                "children": [
+                                                  {
+                                                    "name": "2009-409_KX574902_2006-XX-XX",
+                                                    "node_attrs": {
+                                                      "div": 0.00465,
+                                                      "accession": "KX574902",
+                                                      "url": "https://www.ncbi.nlm.nih.gov/nuccore/KX574902",
+                                                      "author": {
+                                                        "author": "Koelle et al",
+                                                        "title": "Worldwide circulation of HSV-2 x HSV-1 recombinant strains",
+                                                        "journal": "Sci Rep 7, 44084 (2017)",
+                                                        "paper_url": "https://pubmed.ncbi.nlm.nih.gov/28287142",
+                                                        "value": "Koelle et al"
+                                                      },
+                                                      "country": {
+                                                        "value": "Tanzania",
+                                                        "confidence": {
+                                                          "Tanzania": 1.0
+                                                        },
+                                                        "entropy": -1e-12
+                                                      },
+                                                      "virus": {
+                                                        "value": "Human alphaherpesvirus 2"
+                                                      },
+                                                      "host": {
+                                                        "value": "Homo sapiens"
+                                                      },
+                                                      "region": {
+                                                        "value": "Africa",
+                                                        "confidence": {
+                                                          "Africa": 1.0
+                                                        },
+                                                        "entropy": -1e-12
+                                                      },
+                                                      "date": {
+                                                        "value": "2006-XX-XX"
+                                                      }
+                                                    },
+                                                    "branch_attrs": {
+                                                      "mutations": {
+                                                        "nuc": [
+                                                          "G10A"
+                                                        ],
+                                                        "HSV2_gL": [
+                                                          "V4I"
+                                                        ]
+                                                      },
+                                                      "labels": {
+                                                        "aa": "HSV2_gL: V4I"
+                                                      }
+                                                    }
+                                                  },
+                                                  {
+                                                    "name": "NODE_0000030",
+                                                    "node_attrs": {
+                                                      "div": 0.00316,
+                                                      "country": {
+                                                        "value": "United Kingdom",
+                                                        "confidence": {
+                                                          "United Kingdom": 0.608,
+                                                          "USA": 0.209,
+                                                          "Tanzania": 0.153,
+                                                          "Peru": 0.0123,
+                                                          "Uganda": 0.00778,
+                                                          "Zambia": 0.00567,
+                                                          "France": 0.00524
+                                                        },
+                                                        "entropy": 1.065
+                                                      },
+                                                      "virus": {
+                                                        "value": "Human alphaherpesvirus 2"
+                                                      },
+                                                      "host": {
+                                                        "value": "Homo sapiens"
+                                                      },
+                                                      "region": {
+                                                        "value": "Europe",
+                                                        "confidence": {
+                                                          "Europe": 0.578,
+                                                          "Africa": 0.213,
+                                                          "North America": 0.197,
+                                                          "South America": 0.0115
+                                                        },
+                                                        "entropy": 1.018
+                                                      }
+                                                    },
+                                                    "branch_attrs": {
+                                                      "mutations": {}
+                                                    },
+                                                    "children": [
+                                                      {
+                                                        "name": "HG52_NC_001798_2016-05-16",
+                                                        "node_attrs": {
+                                                          "div": 0.00316,
+                                                          "accession": "NC_001798",
+                                                          "url": "https://www.ncbi.nlm.nih.gov/nuccore/NC_001798",
+                                                          "author": {
+                                                            "author": "Davison et al",
+                                                            "title": "Evolution of sexually-transmitted and -transmissible human",
+                                                            "journal": "Unpublished",
+                                                            "value": "Davison et al"
+                                                          },
+                                                          "country": {
+                                                            "value": "United Kingdom",
+                                                            "confidence": {
+                                                              "United Kingdom": 1.0
+                                                            },
+                                                            "entropy": -1e-12
+                                                          },
+                                                          "virus": {
+                                                            "value": "Human alphaherpesvirus 2"
+                                                          },
+                                                          "host": {
+                                                            "value": "Homo sapiens"
+                                                          },
+                                                          "region": {
+                                                            "value": "Europe",
+                                                            "confidence": {
+                                                              "Europe": 1.0
+                                                            },
+                                                            "entropy": -1e-12
+                                                          },
+                                                          "date": {
+                                                            "value": "2016-05-16"
+                                                          }
+                                                        },
+                                                        "branch_attrs": {
+                                                          "mutations": {}
+                                                        }
+                                                      },
+                                                      {
+                                                        "name": "HSV2-H1227_KY922721_2017-09-27",
+                                                        "node_attrs": {
+                                                          "div": 0.00316,
+                                                          "accession": "KY922721",
+                                                          "url": "https://www.ncbi.nlm.nih.gov/nuccore/KY922721",
+                                                          "author": {
+                                                            "author": "Bowen et al",
+                                                            "title": "Genome sequence of seven herpes simplex virus 2 clinical isolates",
+                                                            "journal": "Unpublished",
+                                                            "value": "Bowen et al"
+                                                          },
+                                                          "country": {
+                                                            "value": "United Kingdom",
+                                                            "confidence": {
+                                                              "United Kingdom": 0.563,
+                                                              "USA": 0.197,
+                                                              "Tanzania": 0.153,
+                                                              "Peru": 0.0299,
+                                                              "Uganda": 0.0218,
+                                                              "Zambia": 0.0173,
+                                                              "France": 0.0167
+                                                            },
+                                                            "entropy": 1.258
+                                                          },
+                                                          "virus": {
+                                                            "value": "Human alphaherpesvirus 2"
+                                                          },
+                                                          "host": {
+                                                            "value": "Homo sapiens"
+                                                          },
+                                                          "region": {
+                                                            "value": "Europe",
+                                                            "confidence": {
+                                                              "Europe": 0.545,
+                                                              "Africa": 0.228,
+                                                              "North America": 0.193,
+                                                              "South America": 0.0339
+                                                            },
+                                                            "entropy": 1.1
+                                                          },
+                                                          "date": {
+                                                            "value": "2017-09-27"
+                                                          }
+                                                        },
+                                                        "branch_attrs": {
+                                                          "mutations": {}
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "root_sequence": {
+    "nuc": "ATGGGGTTCGTCTGTCTGTTTGGGCTTGTCGTTATGGGAGCCTGGGGGGCGTGGGGTGGGTCACAGGCAACCGAATATGTTATTCGTAGTGTTGTTGCCAAAGAGGTGGGTGACATACTAAGAGTGCCTTGCATGCGGACCCCCGCGGACGATGTTTCTTGGCGCTACGAGGCCCCGTCCGTTATTGACTATGCCCGCATAGACGGAATATTTCTTCGCTATCACTGCCCGGGGTTGGACACGTTTTTGTGGGATAGGCACGCCCAGAGGGCGTATCTGGTTAACCCCTTTCTCTTTGCGGCGGGATTTTTGGAGGACTTGAGTCACTCTGTGTTTCCGGCCGACACCCAGGAAACAACGACGCGCCGGGCCCTTTATAAAGAGATACGCGATGCGTTGGGCAGTCGAAAACAGGCCGTCAGCCACGCACCCGTCAGGGCCGGGTGTGTAAACTTTGACTACTCACGCACTCGCCGCTGCGTCGGGCGACGCGATTTACGGCCTGCCAACACCACGTCAACGTGGGAACCGCCTGTGTCGTCGGACGATGAAGCGAGCTCGCAGTCGAAGCCCCTCGCCACCCAGCCGCCCGTCCTCGCCCTTTCGAACGCCCCCCCACGGCGGGTCTCCCCGACGCGAGGTCGGCGCCGGCATACTCGCCTCCGACGCAAC",
+    "HSV2_gL": "MGFVCLFGLVVMGAWGAWGGSQATEYVIRSVVAKEVGDILRVPCMRTPADDVSWRYEAPSVIDYARIDGIFLRYHCPGLDTFLWDRHAQRAYLVNPFLFAAGFLEDLSHSVFPADTQETTTRRALYKEIRDALGSRKQAVSHAPVRAGCVNFDYSRTRRCVGRRDLRPANTTSTWEPPVSSDDEASSQSKPLATQPPVLALSNAPPRRVSPTRGRRRHTRLRRN"
+  }
+}

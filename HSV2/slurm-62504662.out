@@ -1,0 +1,1463 @@
+Running snakemake...
+Assuming unrestricted shared filesystem usage.
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 16
+Rules claiming more threads will be scaled down.
+Job stats:
+job                                count
+-------------------------------  -------
+align_protein_sequences                4
+all                                    1
+ancestral_tree_sequences               4
+check_number_ORFs_found                4
+colors                                 4
+create_codon_alignment                 4
+create_new_references                  4
+download_and_process_accessions        4
+edit_codon_fasta_headers               4
+edit_protein_fasta_headers             4
+export_tree                            4
+get_codon_sequences                    4
+get_protein_sequences                  4
+refine_tree_sequences                  4
+root_and_remove_outgroup               4
+strip_codon_alignment_gaps             4
+strip_protein_alignment_gaps           4
+traits_tree_sequences                  4
+translate_tree_sequences               4
+tree_sequences                         4
+total                                 77
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 17:08:23 2024]
+localrule create_new_references:
+    input: Configure/Input_Data/HSV2_reference_genome_NC_001798.gb
+    output: Results/HSV2_gD/HSV2_gD_reference.gb
+    log: Results/Logs/HSV2_gD/create_new_references.txt
+    jobid: 45
+    reason: Missing output files: Results/HSV2_gD/HSV2_gD_reference.gb
+    wildcards: gene=HSV2_gD
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 17:08:25 2024]
+Finished job 45.
+1 of 77 steps (1%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 17:08:25 2024]
+localrule download_and_process_accessions:
+    input: Configure/Input_Data/all_HSV2_accessions_091524.txt
+    output: Results/HSV2_gD/nucleotide.fasta, Results/HSV2_gD/metadata.tsv
+    log: Results/Logs/HSV2_gD/download_and_process_accessions.txt
+    jobid: 6
+    reason: Missing output files: Results/HSV2_gD/nucleotide.fasta, Results/HSV2_gD/metadata.tsv
+    wildcards: gene=HSV2_gD
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 18:27:35 2024]
+Finished job 6.
+2 of 77 steps (3%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 18:27:35 2024]
+localrule get_codon_sequences:
+    input: Results/HSV2_gD/nucleotide.fasta
+    output: Results/HSV2_gD/ORF_sequences/codon_temp.fasta
+    log: Results/Logs/HSV2_gD/get_codon_sequences.txt
+    jobid: 8
+    reason: Missing output files: Results/HSV2_gD/ORF_sequences/codon_temp.fasta; Input files updated by another job: Results/HSV2_gD/nucleotide.fasta
+    wildcards: gene=HSV2_gD
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 18:27:36 2024]
+Finished job 8.
+3 of 77 steps (4%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 18:27:36 2024]
+localrule create_new_references:
+    input: Configure/Input_Data/HSV2_reference_genome_NC_001798.gb
+    output: Results/HSV2_gB/HSV2_gB_reference.gb
+    log: Results/Logs/HSV2_gB/create_new_references.txt
+    jobid: 30
+    reason: Missing output files: Results/HSV2_gB/HSV2_gB_reference.gb
+    wildcards: gene=HSV2_gB
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 18:27:38 2024]
+Finished job 30.
+4 of 77 steps (5%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 18:27:38 2024]
+localrule get_protein_sequences:
+    input: Results/HSV2_gD/nucleotide.fasta
+    output: Results/HSV2_gD/ORF_sequences/protein_temp.fasta
+    log: Results/Logs/HSV2_gD/get_protein_sequences.txt
+    jobid: 7
+    reason: Missing output files: Results/HSV2_gD/ORF_sequences/protein_temp.fasta; Input files updated by another job: Results/HSV2_gD/nucleotide.fasta
+    wildcards: gene=HSV2_gD
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 18:27:38 2024]
+Finished job 7.
+5 of 77 steps (6%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 18:27:38 2024]
+localrule edit_protein_fasta_headers:
+    input: Results/HSV2_gD/ORF_sequences/protein_temp.fasta
+    output: Results/HSV2_gD/ORF_sequences/protein.fasta
+    log: Results/Logs/HSV2_gD/edit_protein_fasta_headers.txt
+    jobid: 39
+    reason: Missing output files: Results/HSV2_gD/ORF_sequences/protein.fasta; Input files updated by another job: Results/HSV2_gD/ORF_sequences/protein_temp.fasta
+    wildcards: gene=HSV2_gD
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 18:27:39 2024]
+Finished job 39.
+6 of 77 steps (8%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 18:27:39 2024]
+localrule check_number_ORFs_found:
+    input: Results/HSV2_gD/nucleotide.fasta, Results/HSV2_gD/ORF_sequences/protein_temp.fasta, Results/HSV2_gD/ORF_sequences/codon_temp.fasta
+    output: Results/HSV2_gD/ORF_sequences/ORF_extraction_verification.txt
+    jobid: 5
+    reason: Missing output files: Results/HSV2_gD/ORF_sequences/ORF_extraction_verification.txt; Input files updated by another job: Results/HSV2_gD/nucleotide.fasta, Results/HSV2_gD/ORF_sequences/protein_temp.fasta, Results/HSV2_gD/ORF_sequences/codon_temp.fasta
+    wildcards: gene=HSV2_gD
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 18:27:40 2024]
+Finished job 5.
+7 of 77 steps (9%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 18:27:40 2024]
+localrule download_and_process_accessions:
+    input: Configure/Input_Data/all_HSV2_accessions_091524.txt
+    output: Results/HSV2_gL/nucleotide.fasta, Results/HSV2_gL/metadata.tsv
+    log: Results/Logs/HSV2_gL/download_and_process_accessions.txt
+    jobid: 14
+    reason: Missing output files: Results/HSV2_gL/nucleotide.fasta, Results/HSV2_gL/metadata.tsv
+    wildcards: gene=HSV2_gL
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 19:48:46 2024]
+Finished job 14.
+8 of 77 steps (10%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 19:48:47 2024]
+localrule colors:
+    input: Configure/Input_Data/color_schemes.tsv, Configure/Input_Data/color_orderings.tsv, Results/HSV2_gL/metadata.tsv
+    output: Results/HSV2_gL/Trees/colors.tsv
+    jobid: 76
+    reason: Missing output files: Results/HSV2_gL/Trees/colors.tsv; Input files updated by another job: Results/HSV2_gL/metadata.tsv
+    wildcards: gene=HSV2_gL
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 19:48:49 2024]
+Finished job 76.
+9 of 77 steps (12%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 19:48:49 2024]
+localrule get_codon_sequences:
+    input: Results/HSV2_gL/nucleotide.fasta
+    output: Results/HSV2_gL/ORF_sequences/codon_temp.fasta
+    log: Results/Logs/HSV2_gL/get_codon_sequences.txt
+    jobid: 16
+    reason: Missing output files: Results/HSV2_gL/ORF_sequences/codon_temp.fasta; Input files updated by another job: Results/HSV2_gL/nucleotide.fasta
+    wildcards: gene=HSV2_gL
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 19:48:50 2024]
+Finished job 16.
+10 of 77 steps (13%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 19:48:50 2024]
+localrule edit_codon_fasta_headers:
+    input: Results/HSV2_gL/ORF_sequences/codon_temp.fasta
+    output: Results/HSV2_gL/ORF_sequences/codon.fasta
+    log: Results/Logs/HSV2_gL/edit_codon_fasta_headers.txt
+    jobid: 70
+    reason: Missing output files: Results/HSV2_gL/ORF_sequences/codon.fasta; Input files updated by another job: Results/HSV2_gL/ORF_sequences/codon_temp.fasta
+    wildcards: gene=HSV2_gL
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 19:48:51 2024]
+Finished job 70.
+11 of 77 steps (14%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 19:48:51 2024]
+localrule create_new_references:
+    input: Configure/Input_Data/HSV2_reference_genome_NC_001798.gb
+    output: Results/HSV2_gL/HSV2_gL_reference.gb
+    log: Results/Logs/HSV2_gL/create_new_references.txt
+    jobid: 75
+    reason: Missing output files: Results/HSV2_gL/HSV2_gL_reference.gb
+    wildcards: gene=HSV2_gL
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 19:48:52 2024]
+Finished job 75.
+12 of 77 steps (16%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 19:48:52 2024]
+localrule edit_codon_fasta_headers:
+    input: Results/HSV2_gD/ORF_sequences/codon_temp.fasta
+    output: Results/HSV2_gD/ORF_sequences/codon.fasta
+    log: Results/Logs/HSV2_gD/edit_codon_fasta_headers.txt
+    jobid: 40
+    reason: Missing output files: Results/HSV2_gD/ORF_sequences/codon.fasta; Input files updated by another job: Results/HSV2_gD/ORF_sequences/codon_temp.fasta
+    wildcards: gene=HSV2_gD
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 19:48:53 2024]
+Finished job 40.
+13 of 77 steps (17%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 19:48:53 2024]
+localrule colors:
+    input: Configure/Input_Data/color_schemes.tsv, Configure/Input_Data/color_orderings.tsv, Results/HSV2_gD/metadata.tsv
+    output: Results/HSV2_gD/Trees/colors.tsv
+    jobid: 46
+    reason: Missing output files: Results/HSV2_gD/Trees/colors.tsv; Input files updated by another job: Results/HSV2_gD/metadata.tsv
+    wildcards: gene=HSV2_gD
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 19:48:53 2024]
+Finished job 46.
+14 of 77 steps (18%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 19:48:53 2024]
+localrule get_protein_sequences:
+    input: Results/HSV2_gL/nucleotide.fasta
+    output: Results/HSV2_gL/ORF_sequences/protein_temp.fasta
+    log: Results/Logs/HSV2_gL/get_protein_sequences.txt
+    jobid: 15
+    reason: Missing output files: Results/HSV2_gL/ORF_sequences/protein_temp.fasta; Input files updated by another job: Results/HSV2_gL/nucleotide.fasta
+    wildcards: gene=HSV2_gL
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 19:48:54 2024]
+Finished job 15.
+15 of 77 steps (19%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 19:48:54 2024]
+localrule check_number_ORFs_found:
+    input: Results/HSV2_gL/nucleotide.fasta, Results/HSV2_gL/ORF_sequences/protein_temp.fasta, Results/HSV2_gL/ORF_sequences/codon_temp.fasta
+    output: Results/HSV2_gL/ORF_sequences/ORF_extraction_verification.txt
+    jobid: 13
+    reason: Missing output files: Results/HSV2_gL/ORF_sequences/ORF_extraction_verification.txt; Input files updated by another job: Results/HSV2_gL/ORF_sequences/protein_temp.fasta, Results/HSV2_gL/nucleotide.fasta, Results/HSV2_gL/ORF_sequences/codon_temp.fasta
+    wildcards: gene=HSV2_gL
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 19:48:54 2024]
+Finished job 13.
+16 of 77 steps (21%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 19:48:54 2024]
+localrule create_new_references:
+    input: Configure/Input_Data/HSV2_reference_genome_NC_001798.gb
+    output: Results/HSV2_gH/HSV2_gH_reference.gb
+    log: Results/Logs/HSV2_gH/create_new_references.txt
+    jobid: 60
+    reason: Missing output files: Results/HSV2_gH/HSV2_gH_reference.gb
+    wildcards: gene=HSV2_gH
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 19:48:55 2024]
+Finished job 60.
+17 of 77 steps (22%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 19:48:55 2024]
+localrule align_protein_sequences:
+    input: Results/HSV2_gD/ORF_sequences/protein.fasta
+    output: Results/HSV2_gD/Alignments/protein.fasta
+    log: Results/Logs/HSV2_gD/align_protein_sequences.txt
+    jobid: 38
+    reason: Missing output files: Results/HSV2_gD/Alignments/protein.fasta; Input files updated by another job: Results/HSV2_gD/ORF_sequences/protein.fasta
+    wildcards: gene=HSV2_gD
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 19:48:59 2024]
+Finished job 38.
+18 of 77 steps (23%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 19:48:59 2024]
+localrule strip_protein_alignment_gaps:
+    input: Results/HSV2_gD/Alignments/protein.fasta
+    output: Results/HSV2_gD/Alignments/protein_ungapped.fasta
+    log: Results/Logs/HSV2_gD/strip_protein_alignment_gaps.txt
+    jobid: 41
+    reason: Missing output files: Results/HSV2_gD/Alignments/protein_ungapped.fasta; Input files updated by another job: Results/HSV2_gD/Alignments/protein.fasta
+    wildcards: gene=HSV2_gD
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 19:49:00 2024]
+Finished job 41.
+19 of 77 steps (25%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 19:49:00 2024]
+localrule edit_protein_fasta_headers:
+    input: Results/HSV2_gL/ORF_sequences/protein_temp.fasta
+    output: Results/HSV2_gL/ORF_sequences/protein.fasta
+    log: Results/Logs/HSV2_gL/edit_protein_fasta_headers.txt
+    jobid: 69
+    reason: Missing output files: Results/HSV2_gL/ORF_sequences/protein.fasta; Input files updated by another job: Results/HSV2_gL/ORF_sequences/protein_temp.fasta
+    wildcards: gene=HSV2_gL
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 19:49:01 2024]
+Finished job 69.
+20 of 77 steps (26%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 19:49:01 2024]
+localrule create_codon_alignment:
+    input: Results/HSV2_gD/Alignments/protein.fasta, Results/HSV2_gD/ORF_sequences/codon.fasta
+    output: Results/HSV2_gD/Alignments/codon.fasta
+    log: Results/Logs/HSV2_gD/create_codon_alignment.txt
+    jobid: 37
+    reason: Missing output files: Results/HSV2_gD/Alignments/codon.fasta; Input files updated by another job: Results/HSV2_gD/ORF_sequences/codon.fasta, Results/HSV2_gD/Alignments/protein.fasta
+    wildcards: gene=HSV2_gD
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 19:49:02 2024]
+Finished job 37.
+21 of 77 steps (27%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 19:49:02 2024]
+localrule strip_codon_alignment_gaps:
+    input: Results/HSV2_gD/Alignments/codon.fasta
+    output: Results/HSV2_gD/Alignments/codon_ungapped.fasta
+    log: Results/Logs/HSV2_gD/strip_codon_alignment_gaps.txt
+    jobid: 36
+    reason: Missing output files: Results/HSV2_gD/Alignments/codon_ungapped.fasta; Input files updated by another job: Results/HSV2_gD/Alignments/codon.fasta
+    wildcards: gene=HSV2_gD
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 19:49:03 2024]
+Finished job 36.
+22 of 77 steps (29%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 19:49:03 2024]
+localrule tree_sequences:
+    input: Results/HSV2_gD/Alignments/codon_ungapped.fasta
+    output: Results/HSV2_gD/Trees/tree_raw.nwk
+    log: Results/Logs/HSV2_gD/tree_sequences.txt
+    jobid: 35
+    reason: Missing output files: Results/HSV2_gD/Trees/tree_raw.nwk; Input files updated by another job: Results/HSV2_gD/Alignments/codon_ungapped.fasta
+    wildcards: gene=HSV2_gD
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 19:49:09 2024]
+Finished job 35.
+23 of 77 steps (30%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 19:49:09 2024]
+localrule root_and_remove_outgroup:
+    input: Results/HSV2_gD/Trees/tree_raw.nwk, Results/HSV2_gD/Alignments/protein_ungapped.fasta, Results/HSV2_gD/Alignments/codon_ungapped.fasta
+    output: Results/HSV2_gD/Trees/tree_no_outgroup.nwk, Results/HSV2_gD/Alignments/protein_ungapped_no_outgroup.fasta, Results/HSV2_gD/Alignments/codon_ungapped_no_outgroup.fasta
+    log: Results/Logs/HSV2_gD/root_and_remove_outgroup.txt
+    jobid: 34
+    reason: Missing output files: Results/HSV2_gD/Alignments/codon_ungapped_no_outgroup.fasta, Results/HSV2_gD/Trees/tree_no_outgroup.nwk; Input files updated by another job: Results/HSV2_gD/Alignments/codon_ungapped.fasta, Results/HSV2_gD/Trees/tree_raw.nwk, Results/HSV2_gD/Alignments/protein_ungapped.fasta
+    wildcards: gene=HSV2_gD
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 19:49:10 2024]
+Finished job 34.
+24 of 77 steps (31%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 19:49:10 2024]
+localrule refine_tree_sequences:
+    input: Results/HSV2_gD/Alignments/codon_ungapped_no_outgroup.fasta, Results/HSV2_gD/Trees/tree_no_outgroup.nwk, Results/HSV2_gD/metadata.tsv
+    output: Results/HSV2_gD/Trees/tree.nwk, Results/HSV2_gD/Trees/tree_branch_lengths.json
+    log: Results/Logs/HSV2_gD/refine_tree_sequences.txt
+    jobid: 33
+    reason: Missing output files: Results/HSV2_gD/Trees/tree_branch_lengths.json, Results/HSV2_gD/Trees/tree.nwk; Input files updated by another job: Results/HSV2_gD/metadata.tsv, Results/HSV2_gD/Alignments/codon_ungapped_no_outgroup.fasta, Results/HSV2_gD/Trees/tree_no_outgroup.nwk
+    wildcards: gene=HSV2_gD
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 19:49:12 2024]
+Finished job 33.
+25 of 77 steps (32%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 19:49:12 2024]
+localrule ancestral_tree_sequences:
+    input: Results/HSV2_gD/Trees/tree.nwk, Results/HSV2_gD/Alignments/codon_ungapped_no_outgroup.fasta
+    output: Results/HSV2_gD/Trees/tree_muts.json
+    log: Results/Logs/HSV2_gD/ancestral_tree_sequences.txt
+    jobid: 43
+    reason: Missing output files: Results/HSV2_gD/Trees/tree_muts.json; Input files updated by another job: Results/HSV2_gD/Trees/tree.nwk, Results/HSV2_gD/Alignments/codon_ungapped_no_outgroup.fasta
+    wildcards: gene=HSV2_gD
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 19:49:14 2024]
+Finished job 43.
+26 of 77 steps (34%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 19:49:14 2024]
+localrule align_protein_sequences:
+    input: Results/HSV2_gL/ORF_sequences/protein.fasta
+    output: Results/HSV2_gL/Alignments/protein.fasta
+    log: Results/Logs/HSV2_gL/align_protein_sequences.txt
+    jobid: 68
+    reason: Missing output files: Results/HSV2_gL/Alignments/protein.fasta; Input files updated by another job: Results/HSV2_gL/ORF_sequences/protein.fasta
+    wildcards: gene=HSV2_gL
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 19:49:15 2024]
+Finished job 68.
+27 of 77 steps (35%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 19:49:15 2024]
+localrule create_codon_alignment:
+    input: Results/HSV2_gL/Alignments/protein.fasta, Results/HSV2_gL/ORF_sequences/codon.fasta
+    output: Results/HSV2_gL/Alignments/codon.fasta
+    log: Results/Logs/HSV2_gL/create_codon_alignment.txt
+    jobid: 67
+    reason: Missing output files: Results/HSV2_gL/Alignments/codon.fasta; Input files updated by another job: Results/HSV2_gL/ORF_sequences/codon.fasta, Results/HSV2_gL/Alignments/protein.fasta
+    wildcards: gene=HSV2_gL
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 19:49:16 2024]
+Finished job 67.
+28 of 77 steps (36%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 19:49:16 2024]
+localrule strip_codon_alignment_gaps:
+    input: Results/HSV2_gL/Alignments/codon.fasta
+    output: Results/HSV2_gL/Alignments/codon_ungapped.fasta
+    log: Results/Logs/HSV2_gL/strip_codon_alignment_gaps.txt
+    jobid: 66
+    reason: Missing output files: Results/HSV2_gL/Alignments/codon_ungapped.fasta; Input files updated by another job: Results/HSV2_gL/Alignments/codon.fasta
+    wildcards: gene=HSV2_gL
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 19:49:17 2024]
+Finished job 66.
+29 of 77 steps (38%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 19:49:17 2024]
+localrule translate_tree_sequences:
+    input: Results/HSV2_gD/Trees/tree.nwk, Results/HSV2_gD/Trees/tree_muts.json, Results/HSV2_gD/HSV2_gD_reference.gb
+    output: Results/HSV2_gD/Trees/tree_aa_muts.json, Results/HSV2_gD/Augur_AA_Alignements/HSV2_gD.fasta
+    log: Results/Logs/HSV2_gD/translate_tree_sequences.txt
+    jobid: 44
+    reason: Missing output files: Results/HSV2_gD/Trees/tree_aa_muts.json; Input files updated by another job: Results/HSV2_gD/HSV2_gD_reference.gb, Results/HSV2_gD/Trees/tree.nwk, Results/HSV2_gD/Trees/tree_muts.json
+    wildcards: gene=HSV2_gD
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 19:49:19 2024]
+Finished job 44.
+30 of 77 steps (39%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 19:49:19 2024]
+localrule strip_protein_alignment_gaps:
+    input: Results/HSV2_gL/Alignments/protein.fasta
+    output: Results/HSV2_gL/Alignments/protein_ungapped.fasta
+    log: Results/Logs/HSV2_gL/strip_protein_alignment_gaps.txt
+    jobid: 71
+    reason: Missing output files: Results/HSV2_gL/Alignments/protein_ungapped.fasta; Input files updated by another job: Results/HSV2_gL/Alignments/protein.fasta
+    wildcards: gene=HSV2_gL
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 19:49:20 2024]
+Finished job 71.
+31 of 77 steps (40%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 19:49:20 2024]
+localrule download_and_process_accessions:
+    input: Configure/Input_Data/all_HSV2_accessions_091524.txt
+    output: Results/HSV2_gB/nucleotide.fasta, Results/HSV2_gB/metadata.tsv
+    log: Results/Logs/HSV2_gB/download_and_process_accessions.txt
+    jobid: 2
+    reason: Missing output files: Results/HSV2_gB/nucleotide.fasta, Results/HSV2_gB/metadata.tsv
+    wildcards: gene=HSV2_gB
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+Traceback (most recent call last):
+  File "/fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/HSV2/.snakemake/scripts/tmpbv3_zbcw.download_NCBI_sequences.py", line 490, in <module>
+    main()
+  File "/fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/HSV2/.snakemake/scripts/tmpbv3_zbcw.download_NCBI_sequences.py", line 478, in main
+    read_and_process_accession_list(
+  File "/fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/HSV2/.snakemake/scripts/tmpbv3_zbcw.download_NCBI_sequences.py", line 211, in read_and_process_accession_list
+    entrez_genbank = Entrez.efetch(
+                     ^^^^^^^^^^^^^^
+  File "/fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/HSV2/.snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_/lib/python3.11/site-packages/Bio/Entrez/__init__.py", line 201, in efetch
+    return _open(request)
+           ^^^^^^^^^^^^^^
+  File "/fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/HSV2/.snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_/lib/python3.11/site-packages/Bio/Entrez/__init__.py", line 634, in _open
+    handle = urlopen(request)
+             ^^^^^^^^^^^^^^^^
+  File "/fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/HSV2/.snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_/lib/python3.11/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/HSV2/.snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_/lib/python3.11/urllib/request.py", line 525, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/HSV2/.snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_/lib/python3.11/urllib/request.py", line 634, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/HSV2/.snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_/lib/python3.11/urllib/request.py", line 563, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/HSV2/.snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_/lib/python3.11/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/HSV2/.snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_/lib/python3.11/urllib/request.py", line 643, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 400: Bad Request
+RuleException:
+CalledProcessError in file /fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/HSV2/Rules/download_and_process_accessions.smk, line 40:
+Command 'source /home/ccarr/miniconda3/bin/activate '/fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/HSV2/.snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_'; set -euo pipefail;  python /fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/HSV2/.snakemake/scripts/tmpbv3_zbcw.download_NCBI_sequences.py' returned non-zero exit status 1.
+[Mon Sep 16 20:58:15 2024]
+Error in rule download_and_process_accessions:
+    jobid: 2
+    input: Configure/Input_Data/all_HSV2_accessions_091524.txt
+    output: Results/HSV2_gB/nucleotide.fasta, Results/HSV2_gB/metadata.tsv
+    log: Results/Logs/HSV2_gB/download_and_process_accessions.txt (check log file(s) for error details)
+    conda-env: /fh/fast/bloom_j/computational_notebooks/ccarr/2024/Herpesvirus-Glycoprotein-Analysis/HSV2/.snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+
+Removing output files of failed job download_and_process_accessions since they might be corrupted:
+Results/HSV2_gB/nucleotide.fasta, Results/HSV2_gB/metadata.tsv
+Trying to restart job 2.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 20:58:15 2024]
+localrule download_and_process_accessions:
+    input: Configure/Input_Data/all_HSV2_accessions_091524.txt
+    output: Results/HSV2_gB/nucleotide.fasta, Results/HSV2_gB/metadata.tsv
+    log: Results/Logs/HSV2_gB/download_and_process_accessions.txt
+    jobid: 2
+    reason: Missing output files: Results/HSV2_gB/nucleotide.fasta, Results/HSV2_gB/metadata.tsv
+    wildcards: gene=HSV2_gB
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 22:21:21 2024]
+Finished job 2.
+32 of 77 steps (42%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 22:21:21 2024]
+localrule get_codon_sequences:
+    input: Results/HSV2_gB/nucleotide.fasta
+    output: Results/HSV2_gB/ORF_sequences/codon_temp.fasta
+    log: Results/Logs/HSV2_gB/get_codon_sequences.txt
+    jobid: 4
+    reason: Missing output files: Results/HSV2_gB/ORF_sequences/codon_temp.fasta; Input files updated by another job: Results/HSV2_gB/nucleotide.fasta
+    wildcards: gene=HSV2_gB
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 22:21:21 2024]
+Finished job 4.
+33 of 77 steps (43%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 22:21:21 2024]
+localrule get_protein_sequences:
+    input: Results/HSV2_gB/nucleotide.fasta
+    output: Results/HSV2_gB/ORF_sequences/protein_temp.fasta
+    log: Results/Logs/HSV2_gB/get_protein_sequences.txt
+    jobid: 3
+    reason: Missing output files: Results/HSV2_gB/ORF_sequences/protein_temp.fasta; Input files updated by another job: Results/HSV2_gB/nucleotide.fasta
+    wildcards: gene=HSV2_gB
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 22:21:22 2024]
+Finished job 3.
+34 of 77 steps (44%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 22:21:22 2024]
+localrule check_number_ORFs_found:
+    input: Results/HSV2_gB/nucleotide.fasta, Results/HSV2_gB/ORF_sequences/protein_temp.fasta, Results/HSV2_gB/ORF_sequences/codon_temp.fasta
+    output: Results/HSV2_gB/ORF_sequences/ORF_extraction_verification.txt
+    jobid: 1
+    reason: Missing output files: Results/HSV2_gB/ORF_sequences/ORF_extraction_verification.txt; Input files updated by another job: Results/HSV2_gB/nucleotide.fasta, Results/HSV2_gB/ORF_sequences/codon_temp.fasta, Results/HSV2_gB/ORF_sequences/protein_temp.fasta
+    wildcards: gene=HSV2_gB
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 22:21:23 2024]
+Finished job 1.
+35 of 77 steps (45%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 22:21:23 2024]
+localrule edit_protein_fasta_headers:
+    input: Results/HSV2_gB/ORF_sequences/protein_temp.fasta
+    output: Results/HSV2_gB/ORF_sequences/protein.fasta
+    log: Results/Logs/HSV2_gB/edit_protein_fasta_headers.txt
+    jobid: 24
+    reason: Missing output files: Results/HSV2_gB/ORF_sequences/protein.fasta; Input files updated by another job: Results/HSV2_gB/ORF_sequences/protein_temp.fasta
+    wildcards: gene=HSV2_gB
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 22:21:24 2024]
+Finished job 24.
+36 of 77 steps (47%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 22:21:24 2024]
+localrule edit_codon_fasta_headers:
+    input: Results/HSV2_gB/ORF_sequences/codon_temp.fasta
+    output: Results/HSV2_gB/ORF_sequences/codon.fasta
+    log: Results/Logs/HSV2_gB/edit_codon_fasta_headers.txt
+    jobid: 25
+    reason: Missing output files: Results/HSV2_gB/ORF_sequences/codon.fasta; Input files updated by another job: Results/HSV2_gB/ORF_sequences/codon_temp.fasta
+    wildcards: gene=HSV2_gB
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 22:21:25 2024]
+Finished job 25.
+37 of 77 steps (48%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 22:21:25 2024]
+localrule download_and_process_accessions:
+    input: Configure/Input_Data/all_HSV2_accessions_091524.txt
+    output: Results/HSV2_gH/nucleotide.fasta, Results/HSV2_gH/metadata.tsv
+    log: Results/Logs/HSV2_gH/download_and_process_accessions.txt
+    jobid: 10
+    reason: Missing output files: Results/HSV2_gH/nucleotide.fasta, Results/HSV2_gH/metadata.tsv
+    wildcards: gene=HSV2_gH
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 23:45:37 2024]
+Finished job 10.
+38 of 77 steps (49%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 23:45:37 2024]
+localrule colors:
+    input: Configure/Input_Data/color_schemes.tsv, Configure/Input_Data/color_orderings.tsv, Results/HSV2_gH/metadata.tsv
+    output: Results/HSV2_gH/Trees/colors.tsv
+    jobid: 61
+    reason: Missing output files: Results/HSV2_gH/Trees/colors.tsv; Input files updated by another job: Results/HSV2_gH/metadata.tsv
+    wildcards: gene=HSV2_gH
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 23:45:39 2024]
+Finished job 61.
+39 of 77 steps (51%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 23:45:39 2024]
+localrule get_codon_sequences:
+    input: Results/HSV2_gH/nucleotide.fasta
+    output: Results/HSV2_gH/ORF_sequences/codon_temp.fasta
+    log: Results/Logs/HSV2_gH/get_codon_sequences.txt
+    jobid: 12
+    reason: Missing output files: Results/HSV2_gH/ORF_sequences/codon_temp.fasta; Input files updated by another job: Results/HSV2_gH/nucleotide.fasta
+    wildcards: gene=HSV2_gH
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 23:45:40 2024]
+Finished job 12.
+40 of 77 steps (52%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 23:45:40 2024]
+localrule edit_codon_fasta_headers:
+    input: Results/HSV2_gH/ORF_sequences/codon_temp.fasta
+    output: Results/HSV2_gH/ORF_sequences/codon.fasta
+    log: Results/Logs/HSV2_gH/edit_codon_fasta_headers.txt
+    jobid: 55
+    reason: Missing output files: Results/HSV2_gH/ORF_sequences/codon.fasta; Input files updated by another job: Results/HSV2_gH/ORF_sequences/codon_temp.fasta
+    wildcards: gene=HSV2_gH
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 23:45:41 2024]
+Finished job 55.
+41 of 77 steps (53%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 23:45:41 2024]
+localrule colors:
+    input: Configure/Input_Data/color_schemes.tsv, Configure/Input_Data/color_orderings.tsv, Results/HSV2_gB/metadata.tsv
+    output: Results/HSV2_gB/Trees/colors.tsv
+    jobid: 31
+    reason: Missing output files: Results/HSV2_gB/Trees/colors.tsv; Input files updated by another job: Results/HSV2_gB/metadata.tsv
+    wildcards: gene=HSV2_gB
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 23:45:42 2024]
+Finished job 31.
+42 of 77 steps (55%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 23:45:42 2024]
+localrule get_protein_sequences:
+    input: Results/HSV2_gH/nucleotide.fasta
+    output: Results/HSV2_gH/ORF_sequences/protein_temp.fasta
+    log: Results/Logs/HSV2_gH/get_protein_sequences.txt
+    jobid: 11
+    reason: Missing output files: Results/HSV2_gH/ORF_sequences/protein_temp.fasta; Input files updated by another job: Results/HSV2_gH/nucleotide.fasta
+    wildcards: gene=HSV2_gH
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 23:45:42 2024]
+Finished job 11.
+43 of 77 steps (56%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 23:45:42 2024]
+localrule edit_protein_fasta_headers:
+    input: Results/HSV2_gH/ORF_sequences/protein_temp.fasta
+    output: Results/HSV2_gH/ORF_sequences/protein.fasta
+    log: Results/Logs/HSV2_gH/edit_protein_fasta_headers.txt
+    jobid: 54
+    reason: Missing output files: Results/HSV2_gH/ORF_sequences/protein.fasta; Input files updated by another job: Results/HSV2_gH/ORF_sequences/protein_temp.fasta
+    wildcards: gene=HSV2_gH
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 23:45:43 2024]
+Finished job 54.
+44 of 77 steps (57%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 23:45:43 2024]
+localrule check_number_ORFs_found:
+    input: Results/HSV2_gH/nucleotide.fasta, Results/HSV2_gH/ORF_sequences/protein_temp.fasta, Results/HSV2_gH/ORF_sequences/codon_temp.fasta
+    output: Results/HSV2_gH/ORF_sequences/ORF_extraction_verification.txt
+    jobid: 9
+    reason: Missing output files: Results/HSV2_gH/ORF_sequences/ORF_extraction_verification.txt; Input files updated by another job: Results/HSV2_gH/ORF_sequences/protein_temp.fasta, Results/HSV2_gH/nucleotide.fasta, Results/HSV2_gH/ORF_sequences/codon_temp.fasta
+    wildcards: gene=HSV2_gH
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 23:45:44 2024]
+Finished job 9.
+45 of 77 steps (58%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 23:45:44 2024]
+localrule align_protein_sequences:
+    input: Results/HSV2_gH/ORF_sequences/protein.fasta
+    output: Results/HSV2_gH/Alignments/protein.fasta
+    log: Results/Logs/HSV2_gH/align_protein_sequences.txt
+    jobid: 53
+    reason: Missing output files: Results/HSV2_gH/Alignments/protein.fasta; Input files updated by another job: Results/HSV2_gH/ORF_sequences/protein.fasta
+    wildcards: gene=HSV2_gH
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 23:46:41 2024]
+Finished job 53.
+46 of 77 steps (60%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 23:46:41 2024]
+localrule create_codon_alignment:
+    input: Results/HSV2_gH/Alignments/protein.fasta, Results/HSV2_gH/ORF_sequences/codon.fasta
+    output: Results/HSV2_gH/Alignments/codon.fasta
+    log: Results/Logs/HSV2_gH/create_codon_alignment.txt
+    jobid: 52
+    reason: Missing output files: Results/HSV2_gH/Alignments/codon.fasta; Input files updated by another job: Results/HSV2_gH/ORF_sequences/codon.fasta, Results/HSV2_gH/Alignments/protein.fasta
+    wildcards: gene=HSV2_gH
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 23:46:42 2024]
+Finished job 52.
+47 of 77 steps (61%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 23:46:42 2024]
+localrule strip_codon_alignment_gaps:
+    input: Results/HSV2_gH/Alignments/codon.fasta
+    output: Results/HSV2_gH/Alignments/codon_ungapped.fasta
+    log: Results/Logs/HSV2_gH/strip_codon_alignment_gaps.txt
+    jobid: 51
+    reason: Missing output files: Results/HSV2_gH/Alignments/codon_ungapped.fasta; Input files updated by another job: Results/HSV2_gH/Alignments/codon.fasta
+    wildcards: gene=HSV2_gH
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 23:46:43 2024]
+Finished job 51.
+48 of 77 steps (62%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 23:46:43 2024]
+localrule tree_sequences:
+    input: Results/HSV2_gH/Alignments/codon_ungapped.fasta
+    output: Results/HSV2_gH/Trees/tree_raw.nwk
+    log: Results/Logs/HSV2_gH/tree_sequences.txt
+    jobid: 50
+    reason: Missing output files: Results/HSV2_gH/Trees/tree_raw.nwk; Input files updated by another job: Results/HSV2_gH/Alignments/codon_ungapped.fasta
+    wildcards: gene=HSV2_gH
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 23:46:48 2024]
+Finished job 50.
+49 of 77 steps (64%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 23:46:48 2024]
+localrule strip_protein_alignment_gaps:
+    input: Results/HSV2_gH/Alignments/protein.fasta
+    output: Results/HSV2_gH/Alignments/protein_ungapped.fasta
+    log: Results/Logs/HSV2_gH/strip_protein_alignment_gaps.txt
+    jobid: 56
+    reason: Missing output files: Results/HSV2_gH/Alignments/protein_ungapped.fasta; Input files updated by another job: Results/HSV2_gH/Alignments/protein.fasta
+    wildcards: gene=HSV2_gH
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 23:46:49 2024]
+Finished job 56.
+50 of 77 steps (65%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 23:46:49 2024]
+localrule root_and_remove_outgroup:
+    input: Results/HSV2_gH/Trees/tree_raw.nwk, Results/HSV2_gH/Alignments/protein_ungapped.fasta, Results/HSV2_gH/Alignments/codon_ungapped.fasta
+    output: Results/HSV2_gH/Trees/tree_no_outgroup.nwk, Results/HSV2_gH/Alignments/protein_ungapped_no_outgroup.fasta, Results/HSV2_gH/Alignments/codon_ungapped_no_outgroup.fasta
+    log: Results/Logs/HSV2_gH/root_and_remove_outgroup.txt
+    jobid: 49
+    reason: Missing output files: Results/HSV2_gH/Alignments/codon_ungapped_no_outgroup.fasta, Results/HSV2_gH/Trees/tree_no_outgroup.nwk; Input files updated by another job: Results/HSV2_gH/Alignments/protein_ungapped.fasta, Results/HSV2_gH/Trees/tree_raw.nwk, Results/HSV2_gH/Alignments/codon_ungapped.fasta
+    wildcards: gene=HSV2_gH
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 23:46:50 2024]
+Finished job 49.
+51 of 77 steps (66%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 23:46:50 2024]
+localrule refine_tree_sequences:
+    input: Results/HSV2_gH/Alignments/codon_ungapped_no_outgroup.fasta, Results/HSV2_gH/Trees/tree_no_outgroup.nwk, Results/HSV2_gH/metadata.tsv
+    output: Results/HSV2_gH/Trees/tree.nwk, Results/HSV2_gH/Trees/tree_branch_lengths.json
+    log: Results/Logs/HSV2_gH/refine_tree_sequences.txt
+    jobid: 48
+    reason: Missing output files: Results/HSV2_gH/Trees/tree.nwk, Results/HSV2_gH/Trees/tree_branch_lengths.json; Input files updated by another job: Results/HSV2_gH/Alignments/codon_ungapped_no_outgroup.fasta, Results/HSV2_gH/Trees/tree_no_outgroup.nwk, Results/HSV2_gH/metadata.tsv
+    wildcards: gene=HSV2_gH
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 23:46:52 2024]
+Finished job 48.
+52 of 77 steps (68%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 23:46:52 2024]
+localrule ancestral_tree_sequences:
+    input: Results/HSV2_gH/Trees/tree.nwk, Results/HSV2_gH/Alignments/codon_ungapped_no_outgroup.fasta
+    output: Results/HSV2_gH/Trees/tree_muts.json
+    log: Results/Logs/HSV2_gH/ancestral_tree_sequences.txt
+    jobid: 58
+    reason: Missing output files: Results/HSV2_gH/Trees/tree_muts.json; Input files updated by another job: Results/HSV2_gH/Trees/tree.nwk, Results/HSV2_gH/Alignments/codon_ungapped_no_outgroup.fasta
+    wildcards: gene=HSV2_gH
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 23:46:54 2024]
+Finished job 58.
+53 of 77 steps (69%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 23:46:55 2024]
+localrule translate_tree_sequences:
+    input: Results/HSV2_gH/Trees/tree.nwk, Results/HSV2_gH/Trees/tree_muts.json, Results/HSV2_gH/HSV2_gH_reference.gb
+    output: Results/HSV2_gH/Trees/tree_aa_muts.json, Results/HSV2_gH/Augur_AA_Alignements/HSV2_gH.fasta
+    log: Results/Logs/HSV2_gH/translate_tree_sequences.txt
+    jobid: 59
+    reason: Missing output files: Results/HSV2_gH/Trees/tree_aa_muts.json; Input files updated by another job: Results/HSV2_gH/Trees/tree.nwk, Results/HSV2_gH/HSV2_gH_reference.gb, Results/HSV2_gH/Trees/tree_muts.json
+    wildcards: gene=HSV2_gH
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 23:46:57 2024]
+Finished job 59.
+54 of 77 steps (70%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 23:46:57 2024]
+localrule traits_tree_sequences:
+    input: Results/HSV2_gH/Trees/tree.nwk, Results/HSV2_gH/metadata.tsv
+    output: Results/HSV2_gH/Trees/tree_traits.json
+    log: Results/Logs/HSV2_gH/traits_tree_sequences.txt
+    jobid: 57
+    reason: Missing output files: Results/HSV2_gH/Trees/tree_traits.json; Input files updated by another job: Results/HSV2_gH/Trees/tree.nwk, Results/HSV2_gH/metadata.tsv
+    wildcards: gene=HSV2_gH
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 23:47:01 2024]
+Finished job 57.
+55 of 77 steps (71%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 23:47:01 2024]
+localrule export_tree:
+    input: Results/HSV2_gH/Trees/tree.nwk, Results/HSV2_gH/metadata.tsv, Results/HSV2_gH/Trees/tree_branch_lengths.json, Results/HSV2_gH/Trees/tree_traits.json, Results/HSV2_gH/Trees/tree_muts.json, Results/HSV2_gH/Trees/tree_aa_muts.json, Configure/Input_Data/auspice_config.json, Results/HSV2_gH/Trees/colors.tsv, Configure/Input_Data/lat_longs.tsv
+    output: auspice/Herpesvirus-Glycoprotein-Analysis_HSV2_gH.json
+    jobid: 47
+    reason: Missing output files: auspice/Herpesvirus-Glycoprotein-Analysis_HSV2_gH.json; Input files updated by another job: Results/HSV2_gH/Trees/tree.nwk, Results/HSV2_gH/metadata.tsv, Results/HSV2_gH/Trees/tree_muts.json, Results/HSV2_gH/Trees/colors.tsv, Results/HSV2_gH/Trees/tree_aa_muts.json, Results/HSV2_gH/Trees/tree_branch_lengths.json, Results/HSV2_gH/Trees/tree_traits.json
+    wildcards: gene=HSV2_gH
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+WARNING: You've supplied a colors file with information for virus but none of the values found on the tree had associated colors. Auspice will generate its own color scale for this trait.
+
+Validating schema of 'Results/HSV2_gH/Trees/tree_muts.json'...
+Validating schema of 'Results/HSV2_gH/Trees/tree_aa_muts.json'...
+Validating config file Configure/Input_Data/auspice_config.json against the JSON schema
+Validating schema of 'Configure/Input_Data/auspice_config.json'...
+Validating produced JSON
+Validating schema of 'auspice/Herpesvirus-Glycoprotein-Analysis_HSV2_gH.json'...
+Validating that the JSON is internally consistent...
+Validation of 'auspice/Herpesvirus-Glycoprotein-Analysis_HSV2_gH.json' succeeded.
+
+[Mon Sep 16 23:47:03 2024]
+Finished job 47.
+56 of 77 steps (73%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 23:47:03 2024]
+localrule tree_sequences:
+    input: Results/HSV2_gL/Alignments/codon_ungapped.fasta
+    output: Results/HSV2_gL/Trees/tree_raw.nwk
+    log: Results/Logs/HSV2_gL/tree_sequences.txt
+    jobid: 65
+    reason: Missing output files: Results/HSV2_gL/Trees/tree_raw.nwk; Input files updated by another job: Results/HSV2_gL/Alignments/codon_ungapped.fasta
+    wildcards: gene=HSV2_gL
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 23:47:06 2024]
+Finished job 65.
+57 of 77 steps (74%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 23:47:06 2024]
+localrule root_and_remove_outgroup:
+    input: Results/HSV2_gL/Trees/tree_raw.nwk, Results/HSV2_gL/Alignments/protein_ungapped.fasta, Results/HSV2_gL/Alignments/codon_ungapped.fasta
+    output: Results/HSV2_gL/Trees/tree_no_outgroup.nwk, Results/HSV2_gL/Alignments/protein_ungapped_no_outgroup.fasta, Results/HSV2_gL/Alignments/codon_ungapped_no_outgroup.fasta
+    log: Results/Logs/HSV2_gL/root_and_remove_outgroup.txt
+    jobid: 64
+    reason: Missing output files: Results/HSV2_gL/Trees/tree_no_outgroup.nwk, Results/HSV2_gL/Alignments/codon_ungapped_no_outgroup.fasta; Input files updated by another job: Results/HSV2_gL/Alignments/protein_ungapped.fasta, Results/HSV2_gL/Trees/tree_raw.nwk, Results/HSV2_gL/Alignments/codon_ungapped.fasta
+    wildcards: gene=HSV2_gL
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 23:47:07 2024]
+Finished job 64.
+58 of 77 steps (75%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 23:47:07 2024]
+localrule refine_tree_sequences:
+    input: Results/HSV2_gL/Alignments/codon_ungapped_no_outgroup.fasta, Results/HSV2_gL/Trees/tree_no_outgroup.nwk, Results/HSV2_gL/metadata.tsv
+    output: Results/HSV2_gL/Trees/tree.nwk, Results/HSV2_gL/Trees/tree_branch_lengths.json
+    log: Results/Logs/HSV2_gL/refine_tree_sequences.txt
+    jobid: 63
+    reason: Missing output files: Results/HSV2_gL/Trees/tree_branch_lengths.json, Results/HSV2_gL/Trees/tree.nwk; Input files updated by another job: Results/HSV2_gL/Trees/tree_no_outgroup.nwk, Results/HSV2_gL/Alignments/codon_ungapped_no_outgroup.fasta, Results/HSV2_gL/metadata.tsv
+    wildcards: gene=HSV2_gL
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 23:47:09 2024]
+Finished job 63.
+59 of 77 steps (77%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 23:47:09 2024]
+localrule ancestral_tree_sequences:
+    input: Results/HSV2_gL/Trees/tree.nwk, Results/HSV2_gL/Alignments/codon_ungapped_no_outgroup.fasta
+    output: Results/HSV2_gL/Trees/tree_muts.json
+    log: Results/Logs/HSV2_gL/ancestral_tree_sequences.txt
+    jobid: 73
+    reason: Missing output files: Results/HSV2_gL/Trees/tree_muts.json; Input files updated by another job: Results/HSV2_gL/Trees/tree.nwk, Results/HSV2_gL/Alignments/codon_ungapped_no_outgroup.fasta
+    wildcards: gene=HSV2_gL
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 23:47:11 2024]
+Finished job 73.
+60 of 77 steps (78%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 23:47:12 2024]
+localrule translate_tree_sequences:
+    input: Results/HSV2_gL/Trees/tree.nwk, Results/HSV2_gL/Trees/tree_muts.json, Results/HSV2_gL/HSV2_gL_reference.gb
+    output: Results/HSV2_gL/Trees/tree_aa_muts.json, Results/HSV2_gL/Augur_AA_Alignements/HSV2_gL.fasta
+    log: Results/Logs/HSV2_gL/translate_tree_sequences.txt
+    jobid: 74
+    reason: Missing output files: Results/HSV2_gL/Trees/tree_aa_muts.json; Input files updated by another job: Results/HSV2_gL/Trees/tree_muts.json, Results/HSV2_gL/Trees/tree.nwk, Results/HSV2_gL/HSV2_gL_reference.gb
+    wildcards: gene=HSV2_gL
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 23:47:13 2024]
+Finished job 74.
+61 of 77 steps (79%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 23:47:13 2024]
+localrule traits_tree_sequences:
+    input: Results/HSV2_gL/Trees/tree.nwk, Results/HSV2_gL/metadata.tsv
+    output: Results/HSV2_gL/Trees/tree_traits.json
+    log: Results/Logs/HSV2_gL/traits_tree_sequences.txt
+    jobid: 72
+    reason: Missing output files: Results/HSV2_gL/Trees/tree_traits.json; Input files updated by another job: Results/HSV2_gL/Trees/tree.nwk, Results/HSV2_gL/metadata.tsv
+    wildcards: gene=HSV2_gL
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 23:47:16 2024]
+Finished job 72.
+62 of 77 steps (81%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 23:47:16 2024]
+localrule export_tree:
+    input: Results/HSV2_gL/Trees/tree.nwk, Results/HSV2_gL/metadata.tsv, Results/HSV2_gL/Trees/tree_branch_lengths.json, Results/HSV2_gL/Trees/tree_traits.json, Results/HSV2_gL/Trees/tree_muts.json, Results/HSV2_gL/Trees/tree_aa_muts.json, Configure/Input_Data/auspice_config.json, Results/HSV2_gL/Trees/colors.tsv, Configure/Input_Data/lat_longs.tsv
+    output: auspice/Herpesvirus-Glycoprotein-Analysis_HSV2_gL.json
+    jobid: 62
+    reason: Missing output files: auspice/Herpesvirus-Glycoprotein-Analysis_HSV2_gL.json; Input files updated by another job: Results/HSV2_gL/Trees/tree_branch_lengths.json, Results/HSV2_gL/Trees/tree.nwk, Results/HSV2_gL/Trees/colors.tsv, Results/HSV2_gL/Trees/tree_muts.json, Results/HSV2_gL/Trees/tree_traits.json, Results/HSV2_gL/Trees/tree_aa_muts.json, Results/HSV2_gL/metadata.tsv
+    wildcards: gene=HSV2_gL
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+WARNING: You've supplied a colors file with information for virus but none of the values found on the tree had associated colors. Auspice will generate its own color scale for this trait.
+
+Validating schema of 'Results/HSV2_gL/Trees/tree_muts.json'...
+Validating schema of 'Results/HSV2_gL/Trees/tree_aa_muts.json'...
+Validating config file Configure/Input_Data/auspice_config.json against the JSON schema
+Validating schema of 'Configure/Input_Data/auspice_config.json'...
+Validating produced JSON
+Validating schema of 'auspice/Herpesvirus-Glycoprotein-Analysis_HSV2_gL.json'...
+Validating that the JSON is internally consistent...
+Validation of 'auspice/Herpesvirus-Glycoprotein-Analysis_HSV2_gL.json' succeeded.
+
+[Mon Sep 16 23:47:18 2024]
+Finished job 62.
+63 of 77 steps (82%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 23:47:18 2024]
+localrule traits_tree_sequences:
+    input: Results/HSV2_gD/Trees/tree.nwk, Results/HSV2_gD/metadata.tsv
+    output: Results/HSV2_gD/Trees/tree_traits.json
+    log: Results/Logs/HSV2_gD/traits_tree_sequences.txt
+    jobid: 42
+    reason: Missing output files: Results/HSV2_gD/Trees/tree_traits.json; Input files updated by another job: Results/HSV2_gD/metadata.tsv, Results/HSV2_gD/Trees/tree.nwk
+    wildcards: gene=HSV2_gD
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 23:47:22 2024]
+Finished job 42.
+64 of 77 steps (83%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 23:47:22 2024]
+localrule align_protein_sequences:
+    input: Results/HSV2_gB/ORF_sequences/protein.fasta
+    output: Results/HSV2_gB/Alignments/protein.fasta
+    log: Results/Logs/HSV2_gB/align_protein_sequences.txt
+    jobid: 23
+    reason: Missing output files: Results/HSV2_gB/Alignments/protein.fasta; Input files updated by another job: Results/HSV2_gB/ORF_sequences/protein.fasta
+    wildcards: gene=HSV2_gB
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 23:49:23 2024]
+Finished job 23.
+65 of 77 steps (84%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 23:49:23 2024]
+localrule export_tree:
+    input: Results/HSV2_gD/Trees/tree.nwk, Results/HSV2_gD/metadata.tsv, Results/HSV2_gD/Trees/tree_branch_lengths.json, Results/HSV2_gD/Trees/tree_traits.json, Results/HSV2_gD/Trees/tree_muts.json, Results/HSV2_gD/Trees/tree_aa_muts.json, Configure/Input_Data/auspice_config.json, Results/HSV2_gD/Trees/colors.tsv, Configure/Input_Data/lat_longs.tsv
+    output: auspice/Herpesvirus-Glycoprotein-Analysis_HSV2_gD.json
+    jobid: 32
+    reason: Missing output files: auspice/Herpesvirus-Glycoprotein-Analysis_HSV2_gD.json; Input files updated by another job: Results/HSV2_gD/Trees/tree_muts.json, Results/HSV2_gD/Trees/tree_aa_muts.json, Results/HSV2_gD/metadata.tsv, Results/HSV2_gD/Trees/colors.tsv, Results/HSV2_gD/Trees/tree_traits.json, Results/HSV2_gD/Trees/tree_branch_lengths.json, Results/HSV2_gD/Trees/tree.nwk
+    wildcards: gene=HSV2_gD
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+WARNING: You've supplied a colors file with information for virus but none of the values found on the tree had associated colors. Auspice will generate its own color scale for this trait.
+
+Validating schema of 'Results/HSV2_gD/Trees/tree_muts.json'...
+Validating schema of 'Results/HSV2_gD/Trees/tree_aa_muts.json'...
+Validating config file Configure/Input_Data/auspice_config.json against the JSON schema
+Validating schema of 'Configure/Input_Data/auspice_config.json'...
+Validating produced JSON
+Validating schema of 'auspice/Herpesvirus-Glycoprotein-Analysis_HSV2_gD.json'...
+Validating that the JSON is internally consistent...
+Validation of 'auspice/Herpesvirus-Glycoprotein-Analysis_HSV2_gD.json' succeeded.
+
+[Mon Sep 16 23:49:25 2024]
+Finished job 32.
+66 of 77 steps (86%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 23:49:25 2024]
+localrule create_codon_alignment:
+    input: Results/HSV2_gB/Alignments/protein.fasta, Results/HSV2_gB/ORF_sequences/codon.fasta
+    output: Results/HSV2_gB/Alignments/codon.fasta
+    log: Results/Logs/HSV2_gB/create_codon_alignment.txt
+    jobid: 22
+    reason: Missing output files: Results/HSV2_gB/Alignments/codon.fasta; Input files updated by another job: Results/HSV2_gB/Alignments/protein.fasta, Results/HSV2_gB/ORF_sequences/codon.fasta
+    wildcards: gene=HSV2_gB
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 23:49:26 2024]
+Finished job 22.
+67 of 77 steps (87%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 23:49:26 2024]
+localrule strip_protein_alignment_gaps:
+    input: Results/HSV2_gB/Alignments/protein.fasta
+    output: Results/HSV2_gB/Alignments/protein_ungapped.fasta
+    log: Results/Logs/HSV2_gB/strip_protein_alignment_gaps.txt
+    jobid: 26
+    reason: Missing output files: Results/HSV2_gB/Alignments/protein_ungapped.fasta; Input files updated by another job: Results/HSV2_gB/Alignments/protein.fasta
+    wildcards: gene=HSV2_gB
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 23:49:27 2024]
+Finished job 26.
+68 of 77 steps (88%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 23:49:27 2024]
+localrule strip_codon_alignment_gaps:
+    input: Results/HSV2_gB/Alignments/codon.fasta
+    output: Results/HSV2_gB/Alignments/codon_ungapped.fasta
+    log: Results/Logs/HSV2_gB/strip_codon_alignment_gaps.txt
+    jobid: 21
+    reason: Missing output files: Results/HSV2_gB/Alignments/codon_ungapped.fasta; Input files updated by another job: Results/HSV2_gB/Alignments/codon.fasta
+    wildcards: gene=HSV2_gB
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 23:49:28 2024]
+Finished job 21.
+69 of 77 steps (90%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 23:49:28 2024]
+localrule tree_sequences:
+    input: Results/HSV2_gB/Alignments/codon_ungapped.fasta
+    output: Results/HSV2_gB/Trees/tree_raw.nwk
+    log: Results/Logs/HSV2_gB/tree_sequences.txt
+    jobid: 20
+    reason: Missing output files: Results/HSV2_gB/Trees/tree_raw.nwk; Input files updated by another job: Results/HSV2_gB/Alignments/codon_ungapped.fasta
+    wildcards: gene=HSV2_gB
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 23:49:32 2024]
+Finished job 20.
+70 of 77 steps (91%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 23:49:32 2024]
+localrule root_and_remove_outgroup:
+    input: Results/HSV2_gB/Trees/tree_raw.nwk, Results/HSV2_gB/Alignments/protein_ungapped.fasta, Results/HSV2_gB/Alignments/codon_ungapped.fasta
+    output: Results/HSV2_gB/Trees/tree_no_outgroup.nwk, Results/HSV2_gB/Alignments/protein_ungapped_no_outgroup.fasta, Results/HSV2_gB/Alignments/codon_ungapped_no_outgroup.fasta
+    log: Results/Logs/HSV2_gB/root_and_remove_outgroup.txt
+    jobid: 19
+    reason: Missing output files: Results/HSV2_gB/Alignments/codon_ungapped_no_outgroup.fasta, Results/HSV2_gB/Trees/tree_no_outgroup.nwk; Input files updated by another job: Results/HSV2_gB/Alignments/protein_ungapped.fasta, Results/HSV2_gB/Trees/tree_raw.nwk, Results/HSV2_gB/Alignments/codon_ungapped.fasta
+    wildcards: gene=HSV2_gB
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 23:49:33 2024]
+Finished job 19.
+71 of 77 steps (92%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 23:49:33 2024]
+localrule refine_tree_sequences:
+    input: Results/HSV2_gB/Alignments/codon_ungapped_no_outgroup.fasta, Results/HSV2_gB/Trees/tree_no_outgroup.nwk, Results/HSV2_gB/metadata.tsv
+    output: Results/HSV2_gB/Trees/tree.nwk, Results/HSV2_gB/Trees/tree_branch_lengths.json
+    log: Results/Logs/HSV2_gB/refine_tree_sequences.txt
+    jobid: 18
+    reason: Missing output files: Results/HSV2_gB/Trees/tree.nwk, Results/HSV2_gB/Trees/tree_branch_lengths.json; Input files updated by another job: Results/HSV2_gB/Alignments/codon_ungapped_no_outgroup.fasta, Results/HSV2_gB/metadata.tsv, Results/HSV2_gB/Trees/tree_no_outgroup.nwk
+    wildcards: gene=HSV2_gB
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 23:49:35 2024]
+Finished job 18.
+72 of 77 steps (94%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 23:49:35 2024]
+localrule traits_tree_sequences:
+    input: Results/HSV2_gB/Trees/tree.nwk, Results/HSV2_gB/metadata.tsv
+    output: Results/HSV2_gB/Trees/tree_traits.json
+    log: Results/Logs/HSV2_gB/traits_tree_sequences.txt
+    jobid: 27
+    reason: Missing output files: Results/HSV2_gB/Trees/tree_traits.json; Input files updated by another job: Results/HSV2_gB/metadata.tsv, Results/HSV2_gB/Trees/tree.nwk
+    wildcards: gene=HSV2_gB
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 23:49:42 2024]
+Finished job 27.
+73 of 77 steps (95%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 23:49:42 2024]
+localrule ancestral_tree_sequences:
+    input: Results/HSV2_gB/Trees/tree.nwk, Results/HSV2_gB/Alignments/codon_ungapped_no_outgroup.fasta
+    output: Results/HSV2_gB/Trees/tree_muts.json
+    log: Results/Logs/HSV2_gB/ancestral_tree_sequences.txt
+    jobid: 28
+    reason: Missing output files: Results/HSV2_gB/Trees/tree_muts.json; Input files updated by another job: Results/HSV2_gB/Alignments/codon_ungapped_no_outgroup.fasta, Results/HSV2_gB/Trees/tree.nwk
+    wildcards: gene=HSV2_gB
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 23:49:44 2024]
+Finished job 28.
+74 of 77 steps (96%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 23:49:44 2024]
+localrule translate_tree_sequences:
+    input: Results/HSV2_gB/Trees/tree.nwk, Results/HSV2_gB/Trees/tree_muts.json, Results/HSV2_gB/HSV2_gB_reference.gb
+    output: Results/HSV2_gB/Trees/tree_aa_muts.json, Results/HSV2_gB/Augur_AA_Alignements/HSV2_gB.fasta
+    log: Results/Logs/HSV2_gB/translate_tree_sequences.txt
+    jobid: 29
+    reason: Missing output files: Results/HSV2_gB/Trees/tree_aa_muts.json; Input files updated by another job: Results/HSV2_gB/Trees/tree_muts.json, Results/HSV2_gB/Trees/tree.nwk, Results/HSV2_gB/HSV2_gB_reference.gb
+    wildcards: gene=HSV2_gB
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+[Mon Sep 16 23:49:46 2024]
+Finished job 29.
+75 of 77 steps (97%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 23:49:46 2024]
+localrule export_tree:
+    input: Results/HSV2_gB/Trees/tree.nwk, Results/HSV2_gB/metadata.tsv, Results/HSV2_gB/Trees/tree_branch_lengths.json, Results/HSV2_gB/Trees/tree_traits.json, Results/HSV2_gB/Trees/tree_muts.json, Results/HSV2_gB/Trees/tree_aa_muts.json, Configure/Input_Data/auspice_config.json, Results/HSV2_gB/Trees/colors.tsv, Configure/Input_Data/lat_longs.tsv
+    output: auspice/Herpesvirus-Glycoprotein-Analysis_HSV2_gB.json
+    jobid: 17
+    reason: Missing output files: auspice/Herpesvirus-Glycoprotein-Analysis_HSV2_gB.json; Input files updated by another job: Results/HSV2_gB/Trees/tree_aa_muts.json, Results/HSV2_gB/Trees/tree_traits.json, Results/HSV2_gB/Trees/tree_muts.json, Results/HSV2_gB/metadata.tsv, Results/HSV2_gB/Trees/colors.tsv, Results/HSV2_gB/Trees/tree.nwk, Results/HSV2_gB/Trees/tree_branch_lengths.json
+    wildcards: gene=HSV2_gB
+    resources: tmpdir=/loc/scratch/62504662
+
+Activating conda environment: .snakemake/conda/84a18f42b065166a46a10eaa8fcfc382_
+WARNING: You've supplied a colors file with information for virus but none of the values found on the tree had associated colors. Auspice will generate its own color scale for this trait.
+
+Validating schema of 'Results/HSV2_gB/Trees/tree_muts.json'...
+Validating schema of 'Results/HSV2_gB/Trees/tree_aa_muts.json'...
+Validating config file Configure/Input_Data/auspice_config.json against the JSON schema
+Validating schema of 'Configure/Input_Data/auspice_config.json'...
+Validating produced JSON
+Validating schema of 'auspice/Herpesvirus-Glycoprotein-Analysis_HSV2_gB.json'...
+Validating that the JSON is internally consistent...
+Validation of 'auspice/Herpesvirus-Glycoprotein-Analysis_HSV2_gB.json' succeeded.
+
+[Mon Sep 16 23:49:49 2024]
+Finished job 17.
+76 of 77 steps (99%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Sep 16 23:49:49 2024]
+localrule all:
+    input: Results/HSV2_gB/ORF_sequences/ORF_extraction_verification.txt, Results/HSV2_gD/ORF_sequences/ORF_extraction_verification.txt, Results/HSV2_gH/ORF_sequences/ORF_extraction_verification.txt, Results/HSV2_gL/ORF_sequences/ORF_extraction_verification.txt, auspice/Herpesvirus-Glycoprotein-Analysis_HSV2_gB.json, auspice/Herpesvirus-Glycoprotein-Analysis_HSV2_gD.json, auspice/Herpesvirus-Glycoprotein-Analysis_HSV2_gH.json, auspice/Herpesvirus-Glycoprotein-Analysis_HSV2_gL.json
+    jobid: 0
+    reason: Input files updated by another job: Results/HSV2_gL/ORF_sequences/ORF_extraction_verification.txt, auspice/Herpesvirus-Glycoprotein-Analysis_HSV2_gD.json, auspice/Herpesvirus-Glycoprotein-Analysis_HSV2_gB.json, Results/HSV2_gD/ORF_sequences/ORF_extraction_verification.txt, Results/HSV2_gB/ORF_sequences/ORF_extraction_verification.txt, Results/HSV2_gH/ORF_sequences/ORF_extraction_verification.txt, auspice/Herpesvirus-Glycoprotein-Analysis_HSV2_gL.json, auspice/Herpesvirus-Glycoprotein-Analysis_HSV2_gH.json
+    resources: tmpdir=/loc/scratch/62504662
+
+[Mon Sep 16 23:49:49 2024]
+Finished job 0.
+77 of 77 steps (100%) done
+Complete log: .snakemake/log/2024-09-16T170816.449627.snakemake.log
+Run of snakemake complete.

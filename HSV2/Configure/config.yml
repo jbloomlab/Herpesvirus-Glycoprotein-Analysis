@@ -1,0 +1,355 @@
+#################################################---START INPUT DATA---#######################################################
+
+# List of accessions file
+Accession_list: Configure/Input_Data/all_HSV2_accessions_091524.txt 
+
+# Reference genbanks
+Reference_genbank: Configure/Input_Data/HSV2_reference_genome_NC_001798.gb
+Reference_accession: NC_001798
+
+# Genome size threshold filters for 
+# extracting genes from genomes
+Genome_size_threshold_lower: 500
+Genome_size_threshold_upper: 170000
+
+# ORF minumum size
+ORF_min_size:
+  HSV2_gB: 2580 # gB ~904 AA
+  HSV2_gD: 1000 # gD ~393 AA
+  HSV2_gH: 2400 # gH ~838 AA
+  HSV2_gL: 600 # gL ~224 AA
+
+# Maximum fraction of ambiuous bases allowed
+max_frac_N:
+  genes: 0
+
+# Remove duplicates 'Yes' or 'No'
+Remove_duplicates: 'Yes'
+
+# Sequences to remove
+Accessions_to_exclude: 
+  - KU310666 # highly diverged
+  - KU310665 # highly diverged
+
+# Sequences to make sure are included
+Accessions_to_include: []
+
+# Gene name groupings
+Gene_groupings:
+  HSV2_gB:
+    - UL27
+    - GLYCOPROTEIN B
+    - ENVELOPE GLYCOPROTEIN B
+    - ENVELOPE GLYCOPROTEIN B PRECURSOR
+  HSV2_gD:
+    - US6
+    - GLYCOPROTEIN D
+    - ENVELOPE GLYCOPROTEIN D
+    - ENVELOPE GLYCOPROTEIN D PRECURSOR
+    - GLYCOPROTEIN GD (US6)
+  HSV2_gH:
+    - UL22
+    - GLYCOPROTEIN H
+    - ENVELOPE GLYCOPROTEIN H
+    - ENVELOPE GLYCOPROTEIN H PRECURSOR
+  HSV2_gL:
+    - UL1
+    - GLYCOPROTEIN L
+    - ENVELOPE GLYCOPROTEIN L
+    - ENVELOPE GLYCOPROTEIN L PRECURSOR
+
+# Outgroup for rooting tree
+# HSV-1 NC_001806
+Outgroup: 17_NC_001806_2018-08-13
+
+# Auspice configuration
+Auspice_config: Configure/Input_Data/auspice_config.json
+Color_schemes: Configure/Input_Data/color_schemes.tsv
+Color_orderings: Configure/Input_Data/color_orderings.tsv
+Lat_longs: Configure/Input_Data/lat_longs.tsv
+
+# Tree titles
+Auspice_tree_titles:
+  HSV2_gB: "'Natural diversity of Herpes Simplex Virus Type 2 glycoprotein B'"
+  HSV2_gD: "'Natural diversity of Herpes Simplex Virus Type 2 glycoprotein D'"
+  HSV2_gH: "'Natural diversity of Herpes Simplex Virus Type 2 glycoprotein H'"
+  HSV2_gL: "'Natural diversity of Herpes Simplex Virus Type 2 glycoprotein L'"
+
+#################################################---END INPUT DATA---#########################################################
+
+#################################################---START DATA GROUPINGS---###################################################
+
+Asia:
+  - Israel
+  - Palestine
+  - Lebanon
+  - Jordan
+  - Syria
+  - Georgia
+  - Iraq
+  - Armenia
+  - Saudi Arabia
+  - Kuwait
+  - Yemen
+  - Bahrain
+  - Qatar
+  - Iran
+  - United Arab Emirates
+  - Oman
+  - Uzbekistan
+  - Afghanistan
+  - Kazakhstan
+  - Pakistan
+  - Tajikistan
+  - Maldives
+  - Kyrgyzstan
+  - India
+  - Sri Lanka
+  - Nepal
+  - Asia
+  - Bangladesh
+  - Myanmar
+  - Thailand
+  - Malaysia
+  - Mongolia
+  - Laos
+  - Singapore
+  - China
+  - Cambodia
+  - Vietnam
+  - Hong Kong
+  - Indonesia
+  - Brunei
+  - Taiwan
+  - Philippines
+  - Timor-Leste
+  - South Korea
+  - Japan
+
+Oceania:
+  - French Polynesia
+  - Palau
+  - Australia
+  - Papua New Guinea
+  - Oceania
+  - Micronesia
+  - Solomon Islands
+  - Vanuatu
+  - Marshall Islands
+  - New Zealand
+  - Kiribati
+  - Fiji
+
+Africa:
+  - Cabo Verde
+  - Gambia
+  - Guinea-Bissau
+  - Senegal
+  - Sierra Leone
+  - Guinea
+  - Liberia
+  - Mauritania
+  - CÃ´te d'Ivoire
+  - Morocco
+  - Mali
+  - Burkina Faso
+  - Ghana
+  - Togo
+  - Benin
+  - Algeria
+  - Sao Tome and Principe
+  - Nigeria
+  - Tunisia
+  - Niger
+  - Equatorial Guinea
+  - Gabon
+  - Cameroon
+  - Republic of the Congo
+  - Libya
+  - Namibia
+  - Angola
+  - Chad
+  - Central African Republic
+  - Democratic Republic of the Congo
+  - Africa
+  - Botswana
+  - South Africa
+  - Zambia
+  - Lesotho
+  - Sudan
+  - South Sudan
+  - Zimbabwe
+  - Burundi
+  - Rwanda
+  - Egypt
+  - Eswatini
+  - Uganda
+  - Malawi
+  - Mozambique
+  - Tanzania
+  - Kenya
+  - Ethiopia
+  - Djibouti
+  - Union of the Comoros
+  - Madagascar
+  - Somalia
+  - Seychelles
+  - Mauritius
+
+Europe:
+  - Iceland
+  - Portugal
+  - Ireland
+  - Spain
+  - United Kingdom
+  - Andorra
+  - France
+  - Belgium
+  - Netherlands
+  - Luxembourg
+  - Monaco
+  - Switzerland
+  - Norway
+  - Denmark
+  - Liechtenstein
+  - Germany
+  - Europe
+  - Italy
+  - Malta
+  - Slovenia
+  - Sweden
+  - Austria
+  - Croatia
+  - Czech Republic
+  - Bosnia and Herzegovina
+  - Poland
+  - Slovakia
+  - Montenegro
+  - Albania
+  - Hungary
+  - Serbia
+  - Kosovo
+  - North Macedonia
+  - Greece
+  - Lithuania
+  - Romania
+  - Bulgaria
+  - Latvia
+  - Estonia
+  - Finland
+  - Belarus
+  - Moldova
+  - Ukraine
+  - Cyprus
+  - Turkey
+  - Azerbaijan
+  - Russia
+
+South America:
+  - Argentina
+  - Uruguay
+  - Chile
+  - Paraguay
+  - Bolivia
+  - South America
+  - Brazil
+  - Peru
+  - Ecuador
+  - Colombia
+  - Suriname
+  - Guyana
+  - Venezuela
+  - Trinidad and Tobago
+  - Bonaire
+  - Curacao
+  - Aruba
+
+North America:
+  - Panama
+  - Costa Rica
+  - Grenada
+  - Nicaragua
+  - Saint Vincent and the Grenadines
+  - Barbados
+  - El Salvador
+  - Saint Lucia
+  - Honduras
+  - Dominica
+  - Guatemala
+  - Guadeloupe
+  - Belize
+  - Antigua and Barbuda
+  - Saint Kitts and Nevis
+  - Saint BarthÃ©lemy
+  - Sint Maarten
+  - Saint Martin
+  - Jamaica
+  - Dominican Republic
+  - Haiti
+  - Mexico
+  - Cuba
+  - Bahamas
+  - North America
+  - Bermuda
+  - USA
+  - Canada
+
+#################################################---END DATA GROUPINGS---#####################################################
+
+#################################################---START GENBANK FEATURES---#################################################
+
+Genbank_features:
+  - assembly_gap
+  - C_region
+  - CDS
+  - centromere
+  - D-loop
+  - D_segment
+  - exon
+  - gap
+  - gene
+  - iDNA
+  - intron
+  - J_segment
+  - mat_peptide
+  - misc_binding
+  - misc_difference
+  - misc_feature
+  - misc_recomb
+  - misc_RNA
+  - misc_structure
+  - mobile_element
+  - modified_base
+  - mRNA
+  - ncRNA
+  - N_region
+  - old_sequence
+  - operon
+  - oriT
+  - polyA_site
+  - precursor_RNA
+  - prim_transcript
+  - primer_bind
+  - propeptide
+  - protein_bind
+  - regulatory
+  - repeat_region
+  - rep_origin
+  - rRNA
+  - S_region
+  - sig_peptide
+  - source
+  - stem_loop
+  - STS
+  - telomere
+  - tmRNA
+  - transit_peptide
+  - tRNA
+  - unsure
+  - V_region
+  - V_segment
+  - variation
+  - 3'UTR
+  - 5'UTR
+
+#################################################---END GENBANK FEATURES---###################################################
