@@ -10,21 +10,33 @@ HSV1/Results/*
 HSV1/Results/HSV1_gB/*
 !HSV1/Results/HSV1_gB/metadata.tsv
 !HSV1/Results/HSV1_gB/nucleotide.fasta
+!HSV1/Results/HSV1_gB/Alignments
+HSV1/Results/HSV1_gB/Alignments/*
+!HSV1/Results/HSV1_gB/Alignments/protein_ungapped_no_outgroup.fasta
 
 !HSV1/Results/HSV1_gD
 HSV1/Results/HSV1_gD/*
 !HSV1/Results/HSV1_gD/metadata.tsv
 !HSV1/Results/HSV1_gD/nucleotide.fasta
+!HSV1/Results/HSV1_gD/Alignments
+HSV1/Results/HSV1_gD/Alignments/*
+!HSV1/Results/HSV1_gD/Alignments/protein_ungapped_no_outgroup.fasta
 
 !HSV1/Results/HSV1_gH
 HSV1/Results/HSV1_gH/*
 !HSV1/Results/HSV1_gH/metadata.tsv
 !HSV1/Results/HSV1_gH/nucleotide.fasta
+!HSV1/Results/HSV1_gH/Alignments
+HSV1/Results/HSV1_gH/Alignments/*
+!HSV1/Results/HSV1_gH/Alignments/protein_ungapped_no_outgroup.fasta
 
 !HSV1/Results/HSV1_gL
 HSV1/Results/HSV1_gL/*
 !HSV1/Results/HSV1_gL/metadata.tsv
 !HSV1/Results/HSV1_gL/nucleotide.fasta
+!HSV1/Results/HSV1_gL/Alignments
+HSV1/Results/HSV1_gL/Alignments/*
+!HSV1/Results/HSV1_gL/Alignments/protein_ungapped_no_outgroup.fasta
 ####################################---END HSV1---#########################################
 
 ####################################---START EBV---########################################
@@ -34,21 +46,33 @@ EBV/Results/*
 EBV/Results/EBV_gB/*
 !EBV/Results/EBV_gB/metadata.tsv
 !EBV/Results/EBV_gB/nucleotide.fasta
+!EBV/Results/EBV_gB/Alignments
+EBV/Results/EBV_gB/Alignments/*
+!EBV/Results/EBV_gB/Alignments/protein_ungapped_no_outgroup.fasta
 
 !EBV/Results/EBV_gp42
 EBV/Results/EBV_gp42/*
 !EBV/Results/EBV_gp42/metadata.tsv
 !EBV/Results/EBV_gp42/nucleotide.fasta
+!EBV/Results/EBV_gp42/Alignments
+EBV/Results/EBV_gp42/Alignments/*
+!EBV/Results/EBV_gp42/Alignments/protein_ungapped_no_outgroup.fasta
 
 !EBV/Results/EBV_gH
 EBV/Results/EBV_gH/*
 !EBV/Results/EBV_gH/metadata.tsv
 !EBV/Results/EBV_gH/nucleotide.fasta
+!EBV/Results/EBV_gH/Alignments
+EBV/Results/EBV_gH/Alignments/*
+!EBV/Results/EBV_gH/Alignments/protein_ungapped_no_outgroup.fasta
 
 !EBV/Results/EBV_gL
 EBV/Results/EBV_gL/*
 !EBV/Results/EBV_gL/metadata.tsv
 !EBV/Results/EBV_gL/nucleotide.fasta
+!EBV/Results/EBV_gL/Alignments
+EBV/Results/EBV_gL/Alignments/*
+!EBV/Results/EBV_gL/Alignments/protein_ungapped_no_outgroup.fasta
 ####################################---END EBV---##########################################
 
 ####################################---START HSV2---#######################################
@@ -58,19 +82,31 @@ HSV2/Results/*
 HSV2/Results/HSV2_gB/*
 !HSV2/Results/HSV2_gB/metadata.tsv
 !HSV2/Results/HSV2_gB/nucleotide.fasta
+!HSV2/Results/HSV2_gB/Alignments
+HSV2/Results/HSV2_gB/Alignments/*
+!HSV2/Results/HSV2_gB/Alignments/protein_ungapped_no_outgroup.fasta
 
 !HSV2/Results/HSV2_gD
 HSV2/Results/HSV2_gD/*
 !HSV2/Results/HSV2_gD/metadata.tsv
 !HSV2/Results/HSV2_gD/nucleotide.fasta
+!HSV2/Results/HSV2_gD/Alignments
+HSV2/Results/HSV2_gD/Alignments/*
+!HSV2/Results/HSV2_gD/Alignments/protein_ungapped_no_outgroup.fasta
 
 !HSV2/Results/HSV2_gH
 HSV2/Results/HSV2_gH/*
 !HSV2/Results/HSV2_gH/metadata.tsv
 !HSV2/Results/HSV2_gH/nucleotide.fasta
+!HSV2/Results/HSV2_gH/Alignments
+HSV2/Results/HSV2_gH/Alignments/*
+!HSV2/Results/HSV2_gH/Alignments/protein_ungapped_no_outgroup.fasta
 
 !HSV2/Results/HSV2_gL
 HSV2/Results/HSV2_gL/*
 !HSV2/Results/HSV2_gL/metadata.tsv
 !HSV2/Results/HSV2_gL/nucleotide.fasta
+!HSV2/Results/HSV2_gL/Alignments
+HSV2/Results/HSV2_gL/Alignments/*
+!HSV2/Results/HSV2_gL/Alignments/protein_ungapped_no_outgroup.fasta
 ####################################---END HSV2---#########################################

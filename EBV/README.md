@@ -40,3 +40,4 @@ sbatch run_snakemake_cluster.bash
 - [`Rules`](Rules/): Contains the snakemake rules used to run the pipeline.
 - [`Scripts`](Scripts/): Contains the custom [python](https://www.python.org/) scripts used for part of the analysis.
 - [`Results`](Results/): Contains the automatically generated results from the pipeline analysis.
+- [`auspice`](auspice/): Contains the automatically generated nextstrain tree files from the pipeline analysis. **Note these files are the manually copied to the outermost auspice directory for final visualization.**
