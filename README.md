@@ -8,7 +8,7 @@ Analysis performed by Caleb Carr.
 
 ## Nextstrain visualizations of the trees
 
-**The tree can be colored by several features (e.g., genotype, date, country) by selecting the corresponding option in the ***Color By*** dropdown. For example, the [HSV-1 gB tree](HSV1/Results/HSV1_gB/Alignments/protein_ungapped_no_outgroup.fasta) can be colored by amino acid identity at a position by selecting ***Genotype*** in the dropdown menu and then selecting ***HSV1_gB***. Entering a position will then color the tree by the amino acid identity at that position. Note that the protein numbering is relative to the [NCBI Virus](https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/) reference strains (***HSV-1: NC_001806.2, EBV: NC_007605.1, HSV-2: NC_001798.2***). Other features can be viewed by mousing over or clicking on the nodes and branches of the tree.**
+**The trees can be colored by several features (e.g., genotype, date, country) by selecting the corresponding option in the ***Color By*** dropdown. For example, the [HSV-1 gB tree](https://nextstrain.org/community/jbloomlab/Herpesvirus-Glycoprotein-Analysis/HSV1/gB) can be colored by amino acid identity at a position by selecting ***Genotype*** in the dropdown menu and then selecting ***HSV1_gB***. Entering a position will then color the tree by the amino acid identity at that position. Note that the protein numbering is relative to the [NCBI Virus](https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/) reference strains (***HSV-1: NC_001806.2, EBV: NC_007605.1, HSV-2: NC_001798.2***). Other features can be viewed by mousing over or clicking on the nodes and branches of the tree.**
 
 HSV-1: 
 - [glycoprotein B](https://nextstrain.org/community/jbloomlab/Herpesvirus-Glycoprotein-Analysis/HSV1/gB)
