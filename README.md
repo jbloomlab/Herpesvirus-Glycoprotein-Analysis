@@ -26,6 +26,8 @@ HSV2:
 
 ## Protein alignments of glycoproteins
 
+**Alignments are constructed relative to the [NCBI Virus](https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/) reference strains (***HSV-1: NC_001806.2, EBV: NC_007605.1, HSV-2: NC_001798.2***).**
+
 HSV1: 
 - [glycoprotein B](HSV1/Results/HSV1_gB/Alignments/protein_ungapped_no_outgroup.fasta)
 - [glycoprotein D](HSV1/Results/HSV1_gD/Alignments/protein_ungapped_no_outgroup.fasta)
