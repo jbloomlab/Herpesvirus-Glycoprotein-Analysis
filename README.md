@@ -6,7 +6,7 @@ Analysis performed by Caleb Carr.
 
 ## Nextstrain visualizations of the trees
 
-HSV1: 
+HSV-1: 
 - [glycoprotein B](https://nextstrain.org/community/jbloomlab/Herpesvirus-Glycoprotein-Analysis/HSV1/gB)
 - [glycoprotein D](https://nextstrain.org/community/jbloomlab/Herpesvirus-Glycoprotein-Analysis/HSV1/gD)
 - [glycoprotein H](https://nextstrain.org/community/jbloomlab/Herpesvirus-Glycoprotein-Analysis/HSV1/gH)
@@ -18,7 +18,7 @@ EBV:
 - [glycoprotein H](https://nextstrain.org/community/jbloomlab/Herpesvirus-Glycoprotein-Analysis/EBV/gH)
 - [glycoprotein L](https://nextstrain.org/community/jbloomlab/Herpesvirus-Glycoprotein-Analysis/EBV/gL)
 
-HSV2: 
+HSV-2: 
 - [glycoprotein B](https://nextstrain.org/community/jbloomlab/Herpesvirus-Glycoprotein-Analysis/HSV2/gB)
 - [glycoprotein D](https://nextstrain.org/community/jbloomlab/Herpesvirus-Glycoprotein-Analysis/HSV2/gD)
 - [glycoprotein H](https://nextstrain.org/community/jbloomlab/Herpesvirus-Glycoprotein-Analysis/HSV2/gH)
@@ -28,7 +28,7 @@ HSV2:
 
 **Alignments are constructed relative to the [NCBI Virus](https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/) reference strains (***HSV-1: NC_001806.2, EBV: NC_007605.1, HSV-2: NC_001798.2***).**
 
-HSV1: 
+HSV-1: 
 - [glycoprotein B](HSV1/Results/HSV1_gB/Alignments/protein_ungapped_no_outgroup.fasta)
 - [glycoprotein D](HSV1/Results/HSV1_gD/Alignments/protein_ungapped_no_outgroup.fasta)
 - [glycoprotein H](HSV1/Results/HSV1_gH/Alignments/protein_ungapped_no_outgroup.fasta)
@@ -40,7 +40,7 @@ EBV:
 - [glycoprotein H](EBV/Results/EBV_gH/Alignments/protein_ungapped_no_outgroup.fasta)
 - [glycoprotein L](EBV/Results/EBV_gL/Alignments/protein_ungapped_no_outgroup.fasta)
 
-HSV2: 
+HSV-2: 
 - [glycoprotein B](HSV2/Results/HSV2_gB/Alignments/protein_ungapped_no_outgroup.fasta)
 - [glycoprotein D](HSV2/Results/HSV2_gD/Alignments/protein_ungapped_no_outgroup.fasta)
 - [glycoprotein H](HSV2/Results/HSV2_gH/Alignments/protein_ungapped_no_outgroup.fasta)
