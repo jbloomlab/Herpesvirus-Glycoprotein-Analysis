@@ -1,7 +1,7 @@
 #################################################---START INPUT DATA---#######################################################
 
 # List of accessions file
-Accession_list: Configure/Input_Data/all_HSV1_accessions_091024.txt # all_HSV1_accessions_082024.txt
+Accession_list: Configure/Input_Data/all_HSV1_accessions_061526.txt # all_HSV1_accessions_082024.txt
 
 # Reference genbanks
 Reference_genbank: Configure/Input_Data/HSV1_reference_genome_NC_001806.gb

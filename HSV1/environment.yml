@@ -2,11 +2,10 @@ name: HSV1_nextstrain_analysis
 channels:
   - conda-forge
   - bioconda
-  - defaults
 
 dependencies:
-  - augur>=25.0.0
-  - auspice>=2.55.0
+  - augur
+  - auspice
   - emboss
   - jupyterlab
   - nextstrain-cli

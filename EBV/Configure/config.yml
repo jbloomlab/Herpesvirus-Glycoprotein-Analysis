@@ -1,7 +1,7 @@
 #################################################---START INPUT DATA---#######################################################
 
 # List of accessions file
-Accession_list: Configure/Input_Data/all_EBV_accessions_091024.txt 
+Accession_list: Configure/Input_Data/all_EBV_accessions_061126.txt 
 
 # Reference genbanks
 Reference_genbank: Configure/Input_Data/EBV_reference_genome_NC_007605.gb
